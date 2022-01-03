@@ -1,0 +1,62 @@
+//propiedades básicas de botón
+.at-btn {
+    border: none;
+    border-radius: 1rem;
+    cursor:pointer;
+    font-family: $font-primary;
+    font-size: $font-size;
+    padding: 0.4rem 0.8rem;
+    text-align:center;
+}
+// botón pequeño
+.at-btn-sm {
+    @extend .at-btn;
+    padding: 0.6rem 1.2rem;
+}
+// botón grande
+.at-btn-lg {
+    @extend .at-btn;
+    padding: 0.8rem 1.6rem;
+}
+// botón redondeado
+.at-btn-round {
+    @extend .at-btn;
+    border-radius: 5rem;
+}
+// botón con color solido primario
+.at-btn-primary {
+    @extend .at-btn;
+    @include button( color(primary, base) );
+}
+// botón con color solido secundario
+.at-btn-secondary {
+    @extend .at-btn;
+    @include button( color(secondary, base) );
+}
+// botón con color solido
+// .at-btn {
+//     @extend .at-btn;
+//     @include button( color(<colección>, <color>) );
+// }
+
+// botón con borde primario
+.at-btn-outline-primary {
+    @extend .at-btn;
+    @include button( transparent, color(primary, base) );
+    border: 0.1rem solid color(primary, base);
+}
+// botón con borde secundario
+.at-btn-outline-secondary {
+    @extend .at-btn;
+    @include button( transparent, color(secondary, base) );
+    border: 0.1rem solid color(secondary, base);
+}
+// botón con borde
+// .at-btn-outline {
+//     @extend .at-btn;
+//     @include button( transparent, color(grayscale, black) );
+//     border: 0.1rem solid color(<colección>, <color>);
+// }
+
+// botones con iconos
+
