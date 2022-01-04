@@ -1,0 +1,33 @@
+
+ul{
+    font-size: map-get($sizes , "small" );
+    &.square{
+        list-style: square;
+    }
+    &.circles{
+        list-style: circle;
+    }
+    &.inside{
+        list-style: inside;
+    }
+    &.outside{
+        list-style: outside;
+    }
+    &.image{
+        list-style-image: url();
+    }
+
+}
+ol{
+    font-size: map-get($sizes , "small" );
+    &.low-rom{
+        list-style: lower-roman;
+    }
+    &.up-rom{
+        list-style: upper-roman;
+    }
+    &.low-greek{
+        list-style: lower-greek;
+    }
+}
+

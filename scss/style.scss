@@ -1,11 +1,14 @@
 // Configuration
 @import './config/index';
 
-// Base
-@import './base/index';
+// Atoms
+@import './atoms/index';
 
-// Components
-@import './components/index';
+// Molecules
+@import './molecules/index';
+
+// Organisms
+@import './organisms/index';
 
 // pages
 @import './pages/index';
