@@ -71,36 +71,42 @@ hr {
 
 /* line 1, ../scss/atoms/_headding.scss */
 h1 {
+  color: #FFCA33;
   font-family: "Roboto", sans-serif;
   font-size: 3.6rem;
 }
 
-/* line 5, ../scss/atoms/_headding.scss */
+/* line 6, ../scss/atoms/_headding.scss */
 h2 {
+  color: #FFC627;
   font-family: "Roboto", sans-serif;
   font-size: 2.4rem;
 }
 
-/* line 9, ../scss/atoms/_headding.scss */
+/* line 11, ../scss/atoms/_headding.scss */
 h3 {
+  color: #FFC627;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
 }
 
-/* line 13, ../scss/atoms/_headding.scss */
+/* line 16, ../scss/atoms/_headding.scss */
 h4 {
+  color: #FFC627;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
 }
 
-/* line 17, ../scss/atoms/_headding.scss */
+/* line 21, ../scss/atoms/_headding.scss */
 h5 {
+  color: #FFC627;
   font-family: "Roboto", sans-serif;
   font-size: 1.4rem;
 }
 
-/* line 21, ../scss/atoms/_headding.scss */
+/* line 26, ../scss/atoms/_headding.scss */
 h6 {
+  color: #FFC627;
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
