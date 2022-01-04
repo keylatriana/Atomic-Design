@@ -133,7 +133,7 @@ ul.outside {
 }
 /* line 16, ../scss/atoms/_list.scss */
 ul.image {
-  list-style-image: url();
+  list-style-image: url(./../../images/check.png);
 }
 
 /* line 21, ../scss/atoms/_list.scss */
