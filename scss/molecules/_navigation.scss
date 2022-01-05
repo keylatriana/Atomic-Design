@@ -1,0 +1,17 @@
+.ml-nav-list {
+    display:flex;
+    font-size: map-get($sizes, "thumb");
+    font-weight: map-get($weights, "semi_bold");    
+}
+// menu de navegacion vertical (pantalla pequeña)
+.ml-nav-list-sm {
+    @extend .ml-nav-list;
+    @include nav(column, margin-bottom, 4rem, margin-right);
+}
+
+@include mq-min(lg){
+    // menu de navegacion horizontal (pantalla grande)
+    .ml-nav-list-lg {
+        @include nav(row, margin-right, 4rem, margin-bottom);
+    }
+}

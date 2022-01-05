@@ -5,10 +5,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Atomic Design</title>
 </head>
 
 <body>
-      <h1>Hola </h1>
+    <div style="padding: 4rem;">
+        <h2>Botones </h2>
+        <!-- Solidos normal y redondeados-->
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-primary">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-secondary">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-round">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-primary at-btn-round">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-secondary at-btn-round">Botón pequeño</button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn">Botón normal</button>
+            <button class="at-btn-primary">Botón normal</button>
+            <button class="at-btn-secondary">Botón normal</button>
+            <button class="at-btn-round">Botón normal</button>
+            <button class="at-btn-primary at-btn-round">Botón normal</button>
+            <button class="at-btn-secondary at-btn-round">Botón normal</button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-lg">Botón grande</button>
+            <button class="at-btn-lg at-btn-primary">Botón grande</button>
+            <button class="at-btn-lg at-btn-secondary">Botón grande</button>
+            <button class="at-btn-lg at-btn-round">Botón grande</button>
+            <button class="at-btn-lg at-btn-primary at-btn-round">Botón grande</button>
+            <button class="at-btn-lg at-btn-secondary at-btn-round">Botón grande</button>
+        </div>
+        <!-- Outline normal y redondeados-->
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm at-btn-outline">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-outline-primary">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-outline-secondary">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-outline at-btn-round">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-outline-primary at-btn-round">Botón pequeño</button>
+            <button class="at-btn-sm at-btn-outline-secondary at-btn-round">Botón pequeño</button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-outline">Botón normal</button>
+            <button class="at-btn-outline-primary">Botón normal</button>
+            <button class="at-btn-outline-secondary">Botón normal</button>
+            <button class="at-btn-outline at-btn-round">Botón normal</button>
+            <button class="at-btn-outline-primary at-btn-round">Botón normal</button>
+            <button class="at-btn-outline-secondary at-btn-round">Botón normal</button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-lg at-btn-outline">Botón grande</button>
+            <button class="at-btn-lg at-btn-outline-primary">Botón grande</button>
+            <button class="at-btn-lg at-btn-outline-secondary">Botón grande</button>
+            <button class="at-btn-lg at-btn-outline at-btn-round">Botón grande</button>
+            <button class="at-btn-lg at-btn-outline-primary at-btn-round">Botón grande</button>
+            <button class="at-btn-lg at-btn-outline-secondary at-btn-round">Botón grande</button>
+        </div>
+        <!-- Con texto e icono -->
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn-lg shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm at-btn-secondary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn-secondary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn-lg at-btn-secondary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm at-btn-outline-primary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn-outline-primary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+            <button class="at-btn-lg at-btn-outline-primary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+        </div>
+        <div style="margin-top: 3rem;">
+            <button class="at-btn-sm"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón pequeño</button>
+            <button class="at-btn"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón normal</button>
+            <button class="at-btn-lg"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón grande</button>
+        </div>
+    </div>
+      
+    <div style="padding: 4rem;">
+        <h2>Links</h2>
+        <div style="margin-top: 3rem;">
+            <a href="#">Este es un link</a>
+            <a href="#" class="underline-link">Este es un link subrayado</a>
+        </div>
+        <div style="margin-top: 3rem;">
+            <a href="#">Este es un link <i class="icon-chevron-right at-inline-icon" aria-hidden="true"></i></a>
+        </div>
+        <div style="margin-top: 3rem;">
+            <a href="#" class="at-btn">Este es un link</a>
+            <a href="#" class="at-btn-primary">Este es un link</a>
+            <a href="#" class="at-btn-secondary">Este es un link</a>
+            <a href="#" class="at-btn-outline">Este es un link</a>
+            <a href="#" class="at-btn-outline-primary">Este es un link</a>
+            <a href="#" class="at-btn-outline-secondary">Este es un link</a>
+        </div>
+    </div>
+    <div style="padding: 4rem;">
+        <h2>Menu de navegación</h2>
+        <div style="margin-top: 3rem;">
+            <nav>
+                <ul class="ml-nav-list-sm ml-nav-list-lg">
+                    <li>
+                        <a href="#">Menu1</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu2</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu3</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu4</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div style="margin-top: 3rem;">
+            <nav>
+                <ul class="ml-nav-list-sm">
+                    <li>
+                        <a href="#">Menu1</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu2</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu3</a>
+                    </li>
+                    <li>
+                        <a href="#">Menu4</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
 </body>
 
 </html>

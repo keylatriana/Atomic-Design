@@ -60,29 +60,48 @@
 } 
 
 // ==========================================================================
+// Mixins para la orientación de la barra de navegación: @include nav( ... );
+// ==========================================================================
+@mixin nav($direction, $marginClassName, $marginClassStyle, $marginUnset) {
+  flex-direction: $direction;
+
+  @if $marginClassName == 'margin-bottom' {
+    li:not(:last-child) {
+      #{$marginClassName}: $marginClassStyle;
+      #{$marginUnset}: unset;
+    }
+  } @else {
+    li:not(:last-child) {
+      #{$marginClassName}: $marginClassStyle;
+      #{$marginUnset}: unset;
+    }
+  }
+}
+
+// ==========================================================================
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
-@mixin button($bg, $color: #ffffff) {
+@mixin button($bg, $color: #ffffff, $border: transparent) {
   background: $bg;
   color: $color;
 
   // propiedades para botón outline
-  @if background == transparent{ 
+  @if $bg == transparent{ 
     &:hover {
-      background: darken($color, 7%);
+      background: $border;
       color: #ffffff;
       transition: background 0.2s ease;
       text-decoration: none;
     }
     &:focus {
-      background: darken($color, 7%);
+      background: darken($border, 7%);
       box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
       color: #ffffff;
       outline: 0;
       text-decoration: none;
     }
     &:active {
-      background: darken($color, 10%);
+      background: darken($border, 10%);
     }
     
   // propiedades para botón con background
