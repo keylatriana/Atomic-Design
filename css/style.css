@@ -111,44 +111,44 @@ h6 {
   font-size: 1.2rem;
 }
 
-/* line 2, ../scss/atoms/_list.scss */
+/* line 18, ../scss/atoms/_list.scss */
 ul {
   font-size: 1.4rem;
 }
-/* line 4, ../scss/atoms/_list.scss */
+/* line 20, ../scss/atoms/_list.scss */
 ul.square {
   list-style: square;
 }
-/* line 7, ../scss/atoms/_list.scss */
+/* line 23, ../scss/atoms/_list.scss */
 ul.circles {
   list-style: circle;
 }
-/* line 10, ../scss/atoms/_list.scss */
+/* line 26, ../scss/atoms/_list.scss */
 ul.inside {
   list-style: inside;
 }
-/* line 13, ../scss/atoms/_list.scss */
+/* line 29, ../scss/atoms/_list.scss */
 ul.outside {
   list-style: outside;
 }
-/* line 16, ../scss/atoms/_list.scss */
+/* line 32, ../scss/atoms/_list.scss */
 ul.image {
   list-style-image: url(./../../images/check.png);
 }
 
-/* line 21, ../scss/atoms/_list.scss */
+/* line 37, ../scss/atoms/_list.scss */
 ol {
   font-size: 1.4rem;
 }
-/* line 23, ../scss/atoms/_list.scss */
+/* line 39, ../scss/atoms/_list.scss */
 ol.low-rom {
   list-style: lower-roman;
 }
-/* line 26, ../scss/atoms/_list.scss */
+/* line 42, ../scss/atoms/_list.scss */
 ol.up-rom {
   list-style: upper-roman;
 }
-/* line 29, ../scss/atoms/_list.scss */
+/* line 45, ../scss/atoms/_list.scss */
 ol.low-greek {
   list-style: lower-greek;
 }
