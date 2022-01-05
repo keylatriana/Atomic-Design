@@ -142,7 +142,232 @@
             </nav>
         </div>
     </div>
-    
+    <main class="container">
+        <div class="validation-test">
+          <div class="validation-text__input">
+            <h2> Input por Tamaño</h2>
+            <div>
+              <input class="small" type="text " id="name" placeholder="Escribe tu nombre">
+              <input class="input-bottomless small" type="text" id="name" placeholder="Escribe tu nombre">
+              <input class="input-rounded small" type="text" id="name" placeholder="Escribe tu nombre">
+              <input class="outlinenone small" type="text" id="name" placeholder="Escribe tu nombre">
+              <input class="primary small" type="text" id="name" placeholder="Escribe tu nombre">
+              <input class="secondary small" type="text" id="name" placeholder="Escribe tu nombre">
+            </div>
+              <div>
+                <input type="text " id="name" placeholder="Escribe tu nombre">
+                <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="input-rounded" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="primary" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
+              </div>
+              <div>
+                <input class="medium " type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="input-bottomless medium " type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="input-rounded medium " type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="outlinenone medium " type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="primary medium" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="secondary medium" type="text" id="name" placeholder="Escribe tu nombre">
+              </div>
+              <div>
+                <input class="big" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="input-bottomless big" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="input-rounded big" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="outlinenone big" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="primary big" type="text" id="name" placeholder="Escribe tu nombre">
+                <input class="secondary big" type="text" id="name" placeholder="Escribe tu nombre">
+              </div>
+          </div>
+          <div class="validation-text__radio">
+            <h2> Radio Button</h2>
+            <div>
+              <label for="genero">Género</label>
+              <input type="radio" name="genero" id="Femenino" checked="checked">
+              <label for="Femenino">Femenino</label>
+              <input type="radio" name="genero" id="Masculino">
+              <label for="Masculino">Masculino</label>
+              <input type="radio" name="genero" id="indistinto">
+              <label for="indistinto">Prefiero no decirlo</label>
+            </div>
+            <div class="group">
+              <label class="lab" for="gener">Género</label>
+              <input type="radio" name="gener" id="mujer" checked="checked">
+              <label class="radio-primary" for="mujer">Femenino</label>
+              <input type="radio" name="gener" id="hombre">
+              <label class="radio-primary" for="hombre">Masculino</label>
+              <input type="radio" name="gener" id="preferencia">
+              <label class="radio-primary" for="preferencia">Prefiero no decirlo</label>
+            </div>
+            <hr>
+            <div class="group radio-list">
+              <label class="label-list" for="gener2">Género</label>
+              <input type="radio" name="gener2" id="woman" checked="checked">
+              <label class="radio-secondary" for="woman">Femenino</label>
+              <input type="radio" name="gener2" id="men">
+              <label class="radio-secondary" for="men">Masculino</label>
+              <input type="radio" name="gener2" id="preferences">
+              <label class="radio-secondary" for="preferences">Prefiero no decirlo</label>
+            </div>
+          </div>
+        </div>
+        <div class="form" style="margin-top: 3rem;">
+           <h2>Posicionamientos de inputs</h2>
+           <h4>--------input vertical--------</h4>
+            <div class="group group-list">
+              <label class="lab" for="name">Nombre</label>
+              <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre" >
+            </div>
+            
+            <div class="group group-list">
+              <label for="name">Cédula</label>
+              <input  type="text" id="name" placeholder="Escribe tu cédula">
+            </div>
+            <h4>--------input horizontal--------</h4>
+            <div class="group-row">
+                <label for="lastname">Apellido</label>
+                <input class="input-rounded" type="text" id="lastname" placeholder="Escribe tu apellido">
+            </div>
+            <h4>--------Radio button--------</h4>
+            <div class="group radio-colum">
+              <label class="label1" for="gener-1">Género</label>
+              <div>
+                <input type="radio" name="gener-1" id="mujer-1" checked="checked">
+                <label class="radio-primary label-list" for="mujer-1">Femenino</label>
+              </div>
+              <div>
+                <input type="radio" name="gener-1" id="hombre-1">
+                <label class="radio-primary label-list" for="hombre-1">Masculino</label>
+              </div>
+              <div>                  
+                <input type="radio" name="gener-1" id="preferencia-1">
+                <label class="radio-primary label-list"  for="preferencia-1">Prefiero no decirlo</label>
+              </div>
+            </div>
+            <h4>--------checkbox--------</h4>
+            <div class="check-list">
+              <label class="label-list" for="movie">¿Cuál es tu género de película favorita?</label>
+              <div class="gro1">
+                <label class=" label-list"><input type="checkbox" id="movie" checked="checked" > Romance</label>
+                <label class="label-list"><input type="checkbox" id="movie" > Acción</label> 
+                <label class="label-list"><input type="checkbox" id="movie"  > Ciencia Ficción</label> 
+                <label class="label-list"><input type="checkbox" id="movie"  > Thrillers</label> 
+                <label class="label-list"><input type="checkbox" id="movie"  > Terror</label> 
+                <label class="label-list"><input type="checkbox" id="movie"  > Otros</label> 
+              </div>
+            </div>
+            <div class="group-list">
+              <label for="msg">Mensaje</label>
+              <textarea class="input-rounded"  id="msg" name="user_message" placeholder="Escriba aquí su mensaje"></textarea>
+            </div>
+        </div>
+       <!--Estructura de una tabla de diseño sencillo -->
+       <div style="margin-top: 3rem;">
+         <h2>Diseño de tablas Simple</h2>
+        <table class="table table-simple" summary="Los grupos de música punk más famosos del Reino Unido">
+          <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+          <thead>
+            <tr>
+              <th scope="col" >Grupo</th>
+              <th scope="col">Año de formación</th>
+              <th scope="col">Número de álbumes</th>
+              <th scope="col" >Canción más conocida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Buzzcocks</th>
+              <td  data-th="Año:">1976</td>
+              <td data-th="Album:">9</td>
+              <td data-th="Canción conocida:">Ever fallen in love</td>
+            </tr>
+            <tr>
+              <th scope="row">The Clash</th>
+              <td data-th="Año:">1976</td>
+              <td data-th="Album:">6</td>
+              <td data-th="Canción conocida:">London Calling</td>
+            </tr>
+            <tr>
+              <th scope="row">The Stranglers</th>
+              <td data-th="Año:">1974</td>
+              <td data-th="Album:">17</td>
+              <td data-th="Canción conocida:">No More Heroes</td>
+            </tr>
+            <tr>
+              <th scope="row">Buzzcocks</th>
+              <td data-th="Año:">1976</td>
+              <td data-th="Album:">9</td>
+              <td data-th="Canción conocida:">Ever fallen in love</td>
+            </tr>
+            <tr>
+              <th scope="row">The Stranglers</th>
+              <td data-th="Año:">1974</td>
+              <td data-th="Album:">17</td>
+              <td data-th="Canción conocida:">No More Heroes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Número total de álbumes</th>
+              <td colspan="2">77</td>
+            </tr>
+          </tfoot>
+        </table>
+       </div>
+       <div style="margin-top: 3rem;">
+         <!--Estructura de una tabla de diseño de color negro , puede modificarse de color -->
+         <h2>Diseño de Tabla Black</h2>
+        <table class="table-black" summary="Los grupos de música punk más famosos del Reino Unido">
+          <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+          <thead>
+            <tr>
+              <th scope="col" >Grupo</th>
+              <th scope="col">Año de formación</th>
+              <th scope="col">Número de álbumes</th>
+              <th scope="col" >Canción más conocida</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Buzzcocks</th>
+              <td  data-th="Año:">1976</td>
+              <td data-th="Album:">9</td>
+              <td data-th="Canción conocida:">Ever fallen in love</td>
+            </tr>
+            <tr>
+              <th scope="row">The Clash</th>
+              <td data-th="Año:">1976</td>
+              <td data-th="Album:">6</td>
+              <td data-th="Canción conocida:">London Calling</td>
+            </tr>
+            <tr>
+              <th scope="row">The Stranglers</th>
+              <td data-th="Año:">1974</td>
+              <td data-th="Album:">17</td>
+              <td data-th="Canción conocida:">No More Heroes</td>
+            </tr>
+            <tr>
+              <th scope="row">Buzzcocks</th>
+              <td data-th="Año:">1976</td>
+              <td data-th="Album:">9</td>
+              <td data-th="Canción conocida:">Ever fallen in love</td>
+            </tr>
+            <tr>
+              <th scope="row">The Stranglers</th>
+              <td data-th="Año:">1974</td>
+              <td data-th="Album:">17</td>
+              <td data-th="Canción conocida:">No More Heroes</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Número total de álbumes</th>
+              <td colspan="2">77</td>
+            </tr>
+          </tfoot>
+        </table>
+       </div>
+    </main>    
 </body>
 
 </html>

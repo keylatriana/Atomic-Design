@@ -1,17 +1,16 @@
 //Diseño simple de tabla
 .table {
+    border: 1px solid #000;
     width: 100%;
-    border: 1px solid #000;
-
- th, td {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid #000;
-    border-collapse: collapse;
-    padding: 0.3em;
-    caption-side: bottom;
- }
+    th, td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        caption-side: bottom;
+        padding: 0.3em;
+        text-align: left;
+        vertical-align: top;
+        width: 25%;
+    }
  caption {
     padding: 0.3em;
     text-align: left;
@@ -21,15 +20,15 @@
 .table-black {
     width: 100%;
     th, td {
+        border-collapse: collapse;
+        caption-side: bottom;
+        padding: 0.3em;
         text-align: left;
         vertical-align: top;
-        border-collapse: collapse;
-        padding: 0.3em;
-        caption-side: bottom;
     }
     caption {
-        padding: 0.3em;
         color: #fff;
+        padding: 0.3em;
         background: #000;
     }
     th {
@@ -42,6 +41,7 @@
     }
 }
 @include mq-max (sm){
+    //Tabla responsive black
     .table-black {
         thead {
             display: none;
@@ -62,8 +62,9 @@
             text-align:left;
         }
     }
-     .table-2{ 
-         border: 0;
+    //Tabla responsive simple
+     .table-simple{ 
+        border: 0;
         display:block;
       > *,tr,td,th{ 
         display:block;
@@ -89,12 +90,11 @@
            }
             td{ 
             &:before {
-                    color: gray;
-                    content:attr(data-th)"  ";
-                    font-weight: 600;
-                    text-align:left;
-                }
-         
+                color: gray;
+                content:attr(data-th)"  ";
+                font-weight: 600;
+                text-align:left;
+            }
         }      
       }
     }

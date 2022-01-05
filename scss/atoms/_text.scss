@@ -1,3 +1,14 @@
-p {
-    margin-bottom: map-get($sizes, "base");
-  }
+p{
+    font-size: map-get($sizes, tiny);   
+    }
+    @include mq-min(md){
+        p{   
+            font-size: map-get($sizes,small);  
+        }
+    }
+    @include mq-min(lg){
+        p{
+            font-size: map-get($sizes,base) 
+        }
+    }
+    
