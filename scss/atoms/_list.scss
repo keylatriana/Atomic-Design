@@ -13,8 +13,6 @@
 //    color: red; /* Coloreamos la viñeta */  
 //    }
 
-
-
 ul{
     font-size: map-get($sizes , "small" );
     &.square{
@@ -30,7 +28,7 @@ ul{
         list-style: outside;
     }
     &.image{
-        list-style-image: url(./../../images/check.png);
+        list-style-image: url();
     }
 
 }
