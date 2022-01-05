@@ -1,0 +1,103 @@
+//Diseño simple de tabla
+.table {
+    width: 100%;
+    border: 1px solid #000;
+
+ th, td {
+    width: 25%;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    caption-side: bottom;
+ }
+ caption {
+    padding: 0.3em;
+    text-align: left;
+ }
+}
+//Estilo color negro en la tabla
+.table-black {
+    width: 100%;
+    th, td {
+        text-align: left;
+        vertical-align: top;
+        border-collapse: collapse;
+        padding: 0.3em;
+        caption-side: bottom;
+    }
+    caption {
+        padding: 0.3em;
+        color: #fff;
+        background: #000;
+    }
+    th {
+        background: #eee;
+    }
+    th, td{
+        &:hover{
+            background-color: rgb(207, 207, 207);
+        }
+    }
+}
+@include mq-max (sm){
+    .table-black {
+        thead {
+            display: none;
+        }
+        tr:nth-of-type(2n) {
+            background-color: inherit;
+        }
+        td {
+            display: flex;
+            text-align:left;
+            width: 120%;
+        }
+        td:before {
+            color: gray;
+            content:attr(data-th)"  ";
+            display: block;
+            font-weight: 600;
+            text-align:left;
+        }
+    }
+     .table-2{ 
+         border: 0;
+        display:block;
+      > *,tr,td,th{ 
+        display:block;
+        }
+        td,th{
+            width: 100%;
+        }
+      caption{
+          display: none;
+          visibility: hidden;
+      }
+      thead{ 
+          display:none 
+        }
+      tbody {
+          tr{ 
+              height:auto; 
+              padding:8px 0;
+           }
+           th{
+               background-color: grey;
+               text-align: center;
+           }
+            td{ 
+            &:before {
+                    color: gray;
+                    content:attr(data-th)"  ";
+                    font-weight: 600;
+                    text-align:left;
+                }
+         
+        }      
+      }
+    }
+   
+}
+

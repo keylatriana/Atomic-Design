@@ -1,0 +1,20 @@
+.group-list{
+    display: flex;
+    flex-wrap: wrap;
+    label {
+        display: block;
+        padding-left: 5px;
+        width: 100%;
+    }
+      input {
+        display: block;
+        box-sizing: border-box;
+        color: gray;
+    }
+}
+.group-row{
+    display: block;
+    label{
+        padding-left:5px ;
+    }
+}

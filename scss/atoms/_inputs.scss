@@ -1,0 +1,108 @@
+input,select,textarea{
+    color: color( secondary, base );
+    font-family: $font-primary;
+    margin:0.5rem;
+    outline-color:color(secondary,light);
+    padding: .5rem;
+    &.input-bottomless {
+        background-color: transparent;
+        border-color: transparent;
+        border-bottom: #6d6d6d solid 2px;
+    }
+    &.input-rounded{
+      border-radius: 5px;
+      border: solid .2px color(border,color-1);
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+    }
+    &.primary{
+      border: solid .2px color(primary,base);
+      outline-color:color(secondary,base);
+    }
+    &.secondary{
+      border: solid .2px color(secondary,base);
+      outline-color: color(primary,base);
+    }
+    &.outlinenone {
+      outline: none;
+      background-color:color(border,color-1);
+      border: 0;
+    }
+    // sizes
+      &.small{
+        padding:    ( $font-size - 1rem ) ( $font-size );
+       font-size:  ( $font-size - .50rem );
+      }
+      &.medium{
+        padding:    ( $font-size - .90rem ) ( $font-size );
+        font-size:  ( $font-size - .35rem );
+      }
+      &.big{
+        font-size: map-get($sizes, small);
+        padding: 10px 20px;
+      }
+
+}
+// ==========================================================================
+// Radio Button con estilos
+// ==========================================================================
+ .group {
+    .radio-secondary{
+      &:before{
+      border: 2px solid color(controls,dark);
+      }
+    } 
+    .radio-primary{
+      &:before{
+        border: 2px solid color(primary,base);
+        }
+    }
+    .radio-secondary, .radio-primary{
+      display: inline-block;
+      color: color(secondary,base);
+      cursor: pointer;
+      position: relative;
+      padding: 5px 15px 5px 30px;
+      border-radius: 5px;
+      -webkit-transition: all .3s ease;
+      -o-transition: all .3s ease;
+      transition: all .3s ease;
+      &:hover {
+        background-color: rgb(206, 205, 205);
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 23%;
+        left: 5px;
+        border-radius: 50%;
+        background: none;
+      }
+      &:hover::before{
+        background-color: white;
+      }
+    }
+    input[type="radio"]{ 
+      display: none;
+      &:checked + label:before { 
+        display: none;
+      }
+      &:checked + .radio-primary{
+        background-color: color(primary,base);
+        border-radius: 2px;
+        color: #fff;
+        margin: 5px;
+        padding: 5px 15px;
+      }
+      &:checked + .radio-secondary{
+        background-color: color(controls,dark); 
+        border-radius: 2px;
+        color: #fff;
+        margin: 5px;
+        padding: 5px 15px;
+      }
+  }
+ }
+
