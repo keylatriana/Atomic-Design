@@ -434,37 +434,153 @@ h1 {
 h2 {
   color: #FFC627;
   font-family: "Josefin Sans", sans-serif;
+<<<<<<< HEAD
   font-size: 2.4rem;
+=======
+  font-size: 2.8rem;
+>>>>>>> 25f033b119fe53cf78d8781a61e026d16d8b6a89
 }
 
 /* line 11, ../scss/atoms/_headding.scss */
 h3 {
+<<<<<<< HEAD
   color: #FFC627;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
+=======
+  color: #0D2240;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.2rem;
+>>>>>>> 25f033b119fe53cf78d8781a61e026d16d8b6a89
 }
 
 /* line 16, ../scss/atoms/_headding.scss */
 h4 {
+<<<<<<< HEAD
   color: #FFC627;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+=======
+  color: #0074FC;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+>>>>>>> 25f033b119fe53cf78d8781a61e026d16d8b6a89
 }
 
 /* line 21, ../scss/atoms/_headding.scss */
 h5 {
+<<<<<<< HEAD
   color: #FFC627;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
+=======
+  color: #532e00;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+>>>>>>> 25f033b119fe53cf78d8781a61e026d16d8b6a89
 }
 
 /* line 26, ../scss/atoms/_headding.scss */
 h6 {
+<<<<<<< HEAD
   color: #FFC627;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.2rem;
 }
 
+=======
+  color: #001B3D;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 720px) {
+  /* line 33, ../scss/atoms/_headding.scss */
+  h1 {
+    color: #FFCA33;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.6rem;
+  }
+
+  /* line 38, ../scss/atoms/_headding.scss */
+  h2 {
+    color: #FFC627;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+  }
+
+  /* line 43, ../scss/atoms/_headding.scss */
+  h3 {
+    color: #0D2240;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.6rem;
+  }
+
+  /* line 48, ../scss/atoms/_headding.scss */
+  h4 {
+    color: #0074FC;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.2rem;
+  }
+
+  /* line 53, ../scss/atoms/_headding.scss */
+  h5 {
+    color: #532e00;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+  }
+
+  /* line 58, ../scss/atoms/_headding.scss */
+  h6 {
+    color: #001B3D;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 66, ../scss/atoms/_headding.scss */
+  h1 {
+    color: #FFCA33;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4.8rem;
+  }
+
+  /* line 71, ../scss/atoms/_headding.scss */
+  h2 {
+    color: #FFC627;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+  }
+
+  /* line 76, ../scss/atoms/_headding.scss */
+  h3 {
+    color: #0D2240;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.6rem;
+  }
+
+  /* line 81, ../scss/atoms/_headding.scss */
+  h4 {
+    color: #0074FC;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.4rem;
+  }
+
+  /* line 86, ../scss/atoms/_headding.scss */
+  h5 {
+    color: #532e00;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+  }
+
+  /* line 91, ../scss/atoms/_headding.scss */
+  h6 {
+    color: #001B3D;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.6rem;
+  }
+}
+>>>>>>> 25f033b119fe53cf78d8781a61e026d16d8b6a89
 /* line 1, ../scss/atoms/_icons.scss */
 .icon-bars:before {
   content: "\e900";
