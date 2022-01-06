@@ -3,6 +3,7 @@ a{
     outline: 0;
     text-decoration: none;
     transition: color .1s ease-out;
+    vertical-align: middle;
 
     // Link subrayado
     &.underline-link{

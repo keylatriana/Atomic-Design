@@ -86,7 +86,8 @@
   color: $color;
 
   // propiedades para botón outline
-  @if $bg == transparent{ 
+  @if $bg == transparent{
+    background: #ffffff;
     &:hover {
       background: $border;
       color: #ffffff;
@@ -106,6 +107,7 @@
     
   // propiedades para botón con background
   } @else{
+    background: $bg;
     &:hover {
       background: darken($bg, 7%);
       transition: background 0.2s ease;
@@ -124,13 +126,11 @@
   &.disabled,
   &:disabled {
     opacity: 0.55;
-    color: color(grayscale, gray-5);
-    background: color(grayscale, white);
-    border: 1px solid color(grayscale, gray-5);
+    color: $color;
     box-shadow: none;
     cursor: auto;
     &:hover {
-      background: color(grayscale, white);
+      background: $bg;
     }
     &:focus {
       box-shadow: none;

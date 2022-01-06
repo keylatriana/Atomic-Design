@@ -70,3 +70,13 @@
     border: 0.1rem solid color(secondary, base);
 }
 
+// boton de input inline
+.at-btn-input {
+    border-radius: 0 0.3rem 0.3rem 0;
+    margin-left: -1rem;
+}
+
+.at-btn-input-round {
+    @extend .at-btn-input;
+    border-radius: 0 5rem 5rem 0;
+}
