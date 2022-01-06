@@ -423,6 +423,134 @@ body {
   box-shadow: none;
 }
 
+/* line 1, ../scss/atoms/_headding.scss */
+h1 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.6rem;
+}
+
+/* line 6, ../scss/atoms/_headding.scss */
+h2 {
+  color: #FFC627;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.8rem;
+}
+
+/* line 11, ../scss/atoms/_headding.scss */
+h3 {
+  color: #0D2240;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.2rem;
+}
+
+/* line 16, ../scss/atoms/_headding.scss */
+h4 {
+  color: #0074FC;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+/* line 21, ../scss/atoms/_headding.scss */
+h5 {
+  color: #532e00;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+/* line 26, ../scss/atoms/_headding.scss */
+h6 {
+  color: #001B3D;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 720px) {
+  /* line 33, ../scss/atoms/_headding.scss */
+  h1 {
+    color: #FFCA33;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.6rem;
+  }
+
+  /* line 38, ../scss/atoms/_headding.scss */
+  h2 {
+    color: #FFC627;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+  }
+
+  /* line 43, ../scss/atoms/_headding.scss */
+  h3 {
+    color: #0D2240;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.6rem;
+  }
+
+  /* line 48, ../scss/atoms/_headding.scss */
+  h4 {
+    color: #0074FC;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.2rem;
+  }
+
+  /* line 53, ../scss/atoms/_headding.scss */
+  h5 {
+    color: #532e00;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+  }
+
+  /* line 58, ../scss/atoms/_headding.scss */
+  h6 {
+    color: #001B3D;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 66, ../scss/atoms/_headding.scss */
+  h1 {
+    color: #FFCA33;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4.8rem;
+  }
+
+  /* line 71, ../scss/atoms/_headding.scss */
+  h2 {
+    color: #FFC627;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+  }
+
+  /* line 76, ../scss/atoms/_headding.scss */
+  h3 {
+    color: #0D2240;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.6rem;
+  }
+
+  /* line 81, ../scss/atoms/_headding.scss */
+  h4 {
+    color: #0074FC;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3.4rem;
+  }
+
+  /* line 86, ../scss/atoms/_headding.scss */
+  h5 {
+    color: #532e00;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+  }
+
+  /* line 91, ../scss/atoms/_headding.scss */
+  h6 {
+    color: #001B3D;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.6rem;
+  }
+}
 /* line 1, ../scss/atoms/_icons.scss */
 .icon-bars:before {
   content: "\e900";
@@ -602,6 +730,48 @@ a.underline-link:hover {
   text-decoration: none;
 }
 
+/* line 18, ../scss/atoms/_list.scss */
+ul {
+  font-size: 1.4rem;
+}
+/* line 20, ../scss/atoms/_list.scss */
+ul.square {
+  list-style: square;
+}
+/* line 23, ../scss/atoms/_list.scss */
+ul.circles {
+  list-style: circle;
+}
+/* line 26, ../scss/atoms/_list.scss */
+ul.inside {
+  list-style: inside;
+}
+/* line 29, ../scss/atoms/_list.scss */
+ul.outside {
+  list-style: outside;
+}
+/* line 32, ../scss/atoms/_list.scss */
+ul.image {
+  list-style-image: url();
+}
+
+/* line 36, ../scss/atoms/_list.scss */
+ol {
+  font-size: 1.4rem;
+}
+/* line 38, ../scss/atoms/_list.scss */
+ol.low-rom {
+  list-style: lower-roman;
+}
+/* line 41, ../scss/atoms/_list.scss */
+ol.up-rom {
+  list-style: upper-roman;
+}
+/* line 44, ../scss/atoms/_list.scss */
+ol.low-greek {
+  list-style: lower-greek;
+}
+
 /* line 1, ../scss/atoms/_text.scss */
 p {
   font-size: 1.2rem;
@@ -619,11 +789,275 @@ p {
     font-size: 1.6rem;
   }
 }
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-flex {
+  display: flex;
+}
+
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-inline-flex {
+  display: inline-flex;
+}
+
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-block {
+  display: block;
+}
+
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-inline-block {
+  display: inline-block;
+}
+
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-grid {
+  display: grid;
+}
+
+/* line 4, ../scss/molecules/_flexbox.scss */
+.d-none {
+  display: none;
+}
+
+@media (min-width: 540px) {
+  /* line 12, ../scss/molecules/_flexbox.scss */
+  .d-sm-flex {
+    display: flex;
+  }
+
+  /* line 12, ../scss/molecules/_flexbox.scss */
+  .d-sm-block {
+    display: block;
+  }
+
+  /* line 12, ../scss/molecules/_flexbox.scss */
+  .d-sm-grid {
+    display: grid;
+  }
+
+  /* line 12, ../scss/molecules/_flexbox.scss */
+  .d-sm-none {
+    display: none;
+  }
+
+  /* line 12, ../scss/molecules/_flexbox.scss */
+  .d-sm-inline-block {
+    display: inline-block;
+  }
+}
+@media (min-width: 720px) {
+  /* line 21, ../scss/molecules/_flexbox.scss */
+  .d-md-flex {
+    display: flex;
+  }
+
+  /* line 21, ../scss/molecules/_flexbox.scss */
+  .d-md-block {
+    display: block;
+  }
+
+  /* line 21, ../scss/molecules/_flexbox.scss */
+  .d-md-grid {
+    display: grid;
+  }
+
+  /* line 21, ../scss/molecules/_flexbox.scss */
+  .d-md-none {
+    display: none;
+  }
+
+  /* line 21, ../scss/molecules/_flexbox.scss */
+  .d-md-inline-block {
+    display: inline-block;
+  }
+}
+@media (min-width: 960px) {
+  /* line 30, ../scss/molecules/_flexbox.scss */
+  .d-lg-flex {
+    display: flex;
+  }
+
+  /* line 30, ../scss/molecules/_flexbox.scss */
+  .d-lg-block {
+    display: block;
+  }
+
+  /* line 30, ../scss/molecules/_flexbox.scss */
+  .d-lg-grid {
+    display: grid;
+  }
+
+  /* line 30, ../scss/molecules/_flexbox.scss */
+  .d-lg-none {
+    display: none;
+  }
+
+  /* line 30, ../scss/molecules/_flexbox.scss */
+  .d-lg-inline-block {
+    display: inline-block;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 39, ../scss/molecules/_flexbox.scss */
+  .d-xl-flex {
+    display: flex;
+  }
+
+  /* line 39, ../scss/molecules/_flexbox.scss */
+  .d-xl-block {
+    display: block;
+  }
+
+  /* line 39, ../scss/molecules/_flexbox.scss */
+  .d-xl-grid {
+    display: grid;
+  }
+
+  /* line 39, ../scss/molecules/_flexbox.scss */
+  .d-xl-none {
+    display: none;
+  }
+
+  /* line 39, ../scss/molecules/_flexbox.scss */
+  .d-xl-inline-block {
+    display: inline-block;
+  }
+}
+/* line 48, ../scss/molecules/_flexbox.scss */
+.fd-row {
+  display: row;
+}
+
+/* line 48, ../scss/molecules/_flexbox.scss */
+.fd-row-reverse {
+  display: row-reverse;
+}
+
+/* line 48, ../scss/molecules/_flexbox.scss */
+.fd-column {
+  display: column;
+}
+
+/* line 48, ../scss/molecules/_flexbox.scss */
+.fd-column-reverse {
+  display: column-reverse;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-flex-start {
+  justify-content: flex-start;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-center {
+  justify-content: center;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-space-between {
+  justify-content: space-between;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-space-around {
+  justify-content: space-around;
+}
+
+/* line 56, ../scss/molecules/_flexbox.scss */
+.jc-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* line 64, ../scss/molecules/_flexbox.scss */
+.ai-flex-start {
+  align-items: flex-start;
+}
+
+/* line 64, ../scss/molecules/_flexbox.scss */
+.ai-flex-end {
+  align-items: flex-end;
+}
+
+/* line 64, ../scss/molecules/_flexbox.scss */
+.ai-center {
+  align-items: center;
+}
+
+/* line 64, ../scss/molecules/_flexbox.scss */
+.ai-baseline {
+  align-items: baseline;
+}
+
+/* line 64, ../scss/molecules/_flexbox.scss */
+.ai-stretch {
+  align-items: stretch;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-flex-start {
+  align-content: flex-start;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-flex-end {
+  align-content: flex-end;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-center {
+  align-content: center;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-space-between {
+  align-content: space-between;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-space-around {
+  align-content: space-around;
+}
+
+/* line 72, ../scss/molecules/_flexbox.scss */
+.ac-stretch {
+  align-content: stretch;
+}
+
+/* line 80, ../scss/molecules/_flexbox.scss */
+.as-flex-start {
+  align-self: flex-start;
+}
+
+/* line 80, ../scss/molecules/_flexbox.scss */
+.as-flex-end {
+  align-self: flex-end;
+}
+
+/* line 80, ../scss/molecules/_flexbox.scss */
+.as-center {
+  align-self: center;
+}
+
+/* line 80, ../scss/molecules/_flexbox.scss */
+.as-baseline {
+  align-self: baseline;
+}
+
+/* line 80, ../scss/molecules/_flexbox.scss */
+.as-stretch {
+  align-self: stretch;
+}
+
 /* line 1, ../scss/molecules/_grid.scss */
 .container {
   width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -636,16 +1070,327 @@ p {
 @media (min-width: 960px) {
   /* line 1, ../scss/molecules/_grid.scss */
   .container {
-    max-width: 1240px;
-  }
-}
-@media (min-width: 1440px) {
-  /* line 1, ../scss/molecules/_grid.scss */
-  .container {
-    max-width: 1305px;
+    max-width: 1140px;
   }
 }
 
+/* line 19, ../scss/molecules/_grid.scss */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1rem;
+}
+@media (max-width: 539px) {
+  /* line 19, ../scss/molecules/_grid.scss */
+  .grid {
+    grid-gap: 0;
+  }
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-1 {
+  grid-column: span 1;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-2 {
+  grid-column: span 2;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-3 {
+  grid-column: span 3;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-4 {
+  grid-column: span 4;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-5 {
+  grid-column: span 5;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-6 {
+  grid-column: span 6;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-7 {
+  grid-column: span 7;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-8 {
+  grid-column: span 8;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-9 {
+  grid-column: span 9;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-10 {
+  grid-column: span 10;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-11 {
+  grid-column: span 11;
+}
+
+/* line 29, ../scss/molecules/_grid.scss */
+.grid-12 {
+  grid-column: span 12;
+}
+
+@media (min-width: 540px) {
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-1 {
+    grid-column: span 1;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-2 {
+    grid-column: span 2;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-3 {
+    grid-column: span 3;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-4 {
+    grid-column: span 4;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-5 {
+    grid-column: span 5;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-6 {
+    grid-column: span 6;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-7 {
+    grid-column: span 7;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-8 {
+    grid-column: span 8;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-9 {
+    grid-column: span 9;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-10 {
+    grid-column: span 10;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-11 {
+    grid-column: span 11;
+  }
+
+  /* line 36, ../scss/molecules/_grid.scss */
+  .grid-sm-12 {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 720px) {
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-1 {
+    grid-column: span 1;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-2 {
+    grid-column: span 2;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-3 {
+    grid-column: span 3;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-4 {
+    grid-column: span 4;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-5 {
+    grid-column: span 5;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-6 {
+    grid-column: span 6;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-7 {
+    grid-column: span 7;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-8 {
+    grid-column: span 8;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-9 {
+    grid-column: span 9;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-10 {
+    grid-column: span 10;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-11 {
+    grid-column: span 11;
+  }
+
+  /* line 44, ../scss/molecules/_grid.scss */
+  .grid-md-12 {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 960px) {
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-1 {
+    grid-column: span 1;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-2 {
+    grid-column: span 2;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-3 {
+    grid-column: span 3;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-4 {
+    grid-column: span 4;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-5 {
+    grid-column: span 5;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-6 {
+    grid-column: span 6;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-7 {
+    grid-column: span 7;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-8 {
+    grid-column: span 8;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-9 {
+    grid-column: span 9;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-10 {
+    grid-column: span 10;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-11 {
+    grid-column: span 11;
+  }
+
+  /* line 52, ../scss/molecules/_grid.scss */
+  .grid-lg-12 {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-1 {
+    grid-column: span 1;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-2 {
+    grid-column: span 2;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-3 {
+    grid-column: span 3;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-4 {
+    grid-column: span 4;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-5 {
+    grid-column: span 5;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-6 {
+    grid-column: span 6;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-7 {
+    grid-column: span 7;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-8 {
+    grid-column: span 8;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-9 {
+    grid-column: span 9;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-10 {
+    grid-column: span 10;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-11 {
+    grid-column: span 11;
+  }
+
+  /* line 60, ../scss/molecules/_grid.scss */
+  .grid-xl-12 {
+    grid-column: span 12;
+  }
+}
 /* line 2, ../scss/molecules/_input-checkbox.scss */
 .check-list .label-list {
   display: block;
