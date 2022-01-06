@@ -1,0 +1,47 @@
+// ==========================================================================
+// VIÑETAS DE COLOR 
+// ==========================================================================
+//ul {
+//    list-style: none; /* Quitamos los marcadores */
+//    padding: 0;
+//    margin-left: 10px; /* Separamos la lista de la izquierda */
+//    }
+
+//  li::before { /* Añadimos contenido antes de cada elemento de la lista */
+//    content: "\2022"; /* Insertamos el marcador */
+//    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+//    color: red; /* Coloreamos la viñeta */  
+//    }
+
+
+
+ul{
+    font-size: map-get($sizes , "small" );
+    &.square{
+        list-style: square;
+    }
+    &.circles{
+        list-style: circle;
+    }
+    &.inside{
+        list-style: inside;
+    }
+    &.outside{
+        list-style: outside;
+    }
+    &.image{
+        list-style-image: url();
+    }
+}
+ol{
+    font-size: map-get($sizes , "small" );
+    &.low-rom{
+        list-style: lower-roman;
+    }
+    &.up-rom{
+        list-style: upper-roman;
+    }
+    &.low-greek{
+        list-style: lower-greek;
+    }
+}
