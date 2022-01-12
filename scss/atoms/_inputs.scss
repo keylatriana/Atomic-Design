@@ -88,7 +88,7 @@ input[type="checkbox"]{
 // ==========================================================================
 // Input type submit
 // ==========================================================================
-input[type="submit"]{
+input[type="submit"], input[type="button"]{
   border: none;
     border-radius: 0.3rem;
     font-family: $font-primary;
@@ -96,7 +96,23 @@ input[type="submit"]{
     margin: 0.5rem 0;
     padding: 0.6rem 1.2rem;
     text-align: center;
-}
+    &.btn-primary {
+      @include button( color(primary, base) );
+    }
+    &.btn-secondary {
+      @include button( color(secondary, base) );
+    }
+    &.btn-outline-primary{
+      @include button( transparent, color(primary, base), color(primary, base) );
+      border: 0.1rem solid color(primary, base);
+    }
+    // botón con borde secundario
+    &.btn-outline-secondary {
+        @include button( transparent, color(secondary, base), color(secondary, base) );
+        border: 0.1rem solid color(secondary, base);
+    }
+  }
+
 //Segundo estilo de Radio Button
 .group {
   .radio-secondary{

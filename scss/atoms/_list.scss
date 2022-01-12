@@ -18,8 +18,12 @@
 ul{
     font-family: $font-primary;
     font-size: map-get($sizes , "small" );
+<<<<<<< HEAD
     color: color(primary,light);
     list-style: disc;
+=======
+    color: color(secondary,base);
+>>>>>>> 64382e551c18908f67d6e60a057bc3f399fcced2
     &.square{
         list-style: square;
     }
@@ -39,8 +43,12 @@ ul{
 ol{
     font-size: map-get($sizes , "small" );
     font-family: $font-primary;
+<<<<<<< HEAD
     color: color(primary,light);
     list-style:decimal;
+=======
+    color: color(secondary,base);
+>>>>>>> 64382e551c18908f67d6e60a057bc3f399fcced2
     &.low-rom{
         list-style: lower-roman;
     }
