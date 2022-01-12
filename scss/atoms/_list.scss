@@ -19,6 +19,7 @@ ul{
     font-family: $font-primary;
     font-size: map-get($sizes , "small" );
     color: color(primary,light);
+    list-style: disc;
     &.square{
         list-style: square;
     }
@@ -39,6 +40,7 @@ ol{
     font-size: map-get($sizes , "small" );
     font-family: $font-primary;
     color: color(primary,light);
+    list-style:decimal;
     &.low-rom{
         list-style: lower-roman;
     }

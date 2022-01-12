@@ -860,6 +860,54 @@ input[type="submit"] {
   padding: 5px 15px;
 }
 
+/* line 18, ../scss/atoms/_list.scss */
+ul {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f5d16e;
+  list-style: disc;
+}
+/* line 23, ../scss/atoms/_list.scss */
+ul.square {
+  list-style: square;
+}
+/* line 26, ../scss/atoms/_list.scss */
+ul.circles {
+  list-style: circle;
+}
+/* line 29, ../scss/atoms/_list.scss */
+ul.inside {
+  list-style: inside;
+}
+/* line 32, ../scss/atoms/_list.scss */
+ul.outside {
+  list-style: outside;
+}
+/* line 35, ../scss/atoms/_list.scss */
+ul.image {
+  list-style-image: url();
+}
+
+/* line 39, ../scss/atoms/_list.scss */
+ol {
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f5d16e;
+  list-style: decimal;
+}
+/* line 44, ../scss/atoms/_list.scss */
+ol.low-rom {
+  list-style: lower-roman;
+}
+/* line 47, ../scss/atoms/_list.scss */
+ol.up-rom {
+  list-style: upper-roman;
+}
+/* line 50, ../scss/atoms/_list.scss */
+ol.low-greek {
+  list-style: lower-greek;
+}
+
 /* line 1, ../scss/atoms/_links.scss */
 a {
   color: #666666;
