@@ -5,6 +5,7 @@
 $colors: (
    primary: (
       base     : #FFCA33,
+      light    : #f5d16e,
       dark     : #FFC627
    ),
    secondary: (
@@ -20,16 +21,6 @@ $colors: (
       five     : #FF0000,
       six      : #FF6C00
    ),
-   alerts: (
-      sucess   : #28A745,
-      error    : #EE0004,
-      warning  : #FFC100,
-      info     : #0074FC
-   ),
-   controls:(
-      base     : #0D2240,
-      dark     : #0056B3,
-   ),
    grayscale: (
       white    : #ffffff,
       gray-1   : #f2f2f2, 
@@ -41,9 +32,5 @@ $colors: (
       gray-7   : #4A4A4A,
       base     : #1b1b1b,
       black    : #000000
-   ),
-   border:(
-      color-1  : #ced4da,
-      color-2  : #999999
    )
 );

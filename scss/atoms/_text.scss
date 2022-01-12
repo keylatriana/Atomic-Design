@@ -1,14 +1,15 @@
 p{
-    font-size: map-get($sizes, tiny);   
+    @include text(1.2rem,1.4);
+    text-align: justify
     }
     @include mq-min(md){
         p{   
-            font-size: map-get($sizes,small);  
+            @include text(1.4rem,1.6); 
         }
     }
     @include mq-min(lg){
         p{
-            font-size: map-get($sizes,base) 
+            @include text(2rem,2);
         }
     }
     

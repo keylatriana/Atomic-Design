@@ -1,0 +1,17 @@
+.ml-input-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    input { 
+        display: block;
+    }
+}
+
+.ml-input-btn-group-block {
+    @extend .ml-input-btn-group;
+
+    input { 
+        flex: 1 0 auto;
+    }
+}

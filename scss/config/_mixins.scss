@@ -82,11 +82,11 @@
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border: transparent) {
-  background: $bg;
   color: $color;
 
   // propiedades para botón outline
-  @if $bg == transparent{ 
+  @if $bg == transparent{
+    background: #ffffff;
     &:hover {
       background: $border;
       color: #ffffff;
@@ -106,6 +106,7 @@
     
   // propiedades para botón con background
   } @else{
+    background: $bg;
     &:hover {
       background: darken($bg, 7%);
       transition: background 0.2s ease;
@@ -113,24 +114,22 @@
     }
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
+      // box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
       text-decoration: none;
     }
     &:active {
       background: darken($bg, 10%);
     }
   }
-  // pendiente-----------------------------------------------------------
+  
   &.disabled,
   &:disabled {
     opacity: 0.55;
-    color: color(grayscale, gray-5);
-    background: color(grayscale, white);
-    border: 1px solid color(grayscale, gray-5);
+    color: $color;
     box-shadow: none;
     cursor: auto;
     &:hover {
-      background: color(grayscale, white);
+      background: $bg;
     }
     &:focus {
       box-shadow: none;
@@ -139,51 +138,11 @@
 }
 
 // ==========================================================================
-// Mixins para la generación de los spaciados ( margins y paddings )
+// Mixins para el texto @include text(1.2rem,1.6) 
 // ==========================================================================
-@mixin list-spacing($className, $styleName) {
-  @each $name, $space in $sizes {
-    #{$className}-#{$name} {
-      #{$styleName}: $space;
-    }
-  }
-}
-
-// ==========================================================================
-// Mixins para la generación de los colores de los textos y backgrounds
-// ==========================================================================
-
-@mixin color-modifiers(
-  $attribute: "background",
-  $prefix: "-",
-  $separator: "-"
-) {
-  @each $name, $color in $colors {
-    &#{$prefix}#{$name} {
-      @each $tone, $hex in $color {
-        &#{$separator}#{"" + $tone} {
-          #{$attribute}: $hex;
-        }
-      }
-    }
-  }
-}
-
-// ==========================================================================
-// Mixins BEM selectors (Block, Element, Modifier)
-// ==========================================================================
-// Ej.: @include e(title) {}
-@mixin e($element) {
-  &__#{$element} {
-    @content;
-  }
-}
-
-// Ej.: @include m(primary) {}
-@mixin m($modifier) {
-  &--#{$modifier} {
-    @content;
-  }
+@mixin text($tamano, $line-height) {
+      font-size: $tamano;
+      line-height:$line-height;
 }
 
 // ==========================================================================
@@ -220,9 +179,6 @@
   appearance: ($value);
 }
 
-// ==========================================================================
-// Mixins para eliminar apariencia por defecto del navegador
-// ==========================================================================
 // Funcion que define los colores del sistema basado en el mapa de colores establecido en las variables
 @function color($color, $tone) {
   @if map-has-key($colors, $color) {
@@ -267,4 +223,28 @@
   background: linear-gradient($direction, $color-stops);
 }
 
+// ==========================================================================
+// Titulos : @include titles (3.6rem){}
+// ==========================================================================
+
+@mixin titles($tamano){
+  h1{
+    font-size: $tamano;
+  }
+  h2{
+    font-size: $tamano - 0.6rem;
+  }
+  h3{
+    font-size: $tamano - 1.4rem;
+  }
+  h4{
+    font-size: $tamano - 1.8rem;
+  }
+  h5{
+    font-size: $tamano - 2rem;
+  }
+  h6{
+    font-size: $tamano - 2.2rem;
+  }
+}
 
