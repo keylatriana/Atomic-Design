@@ -82,7 +82,6 @@
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border: transparent) {
-  background: $bg;
   color: $color;
 
   // propiedades para botón outline
@@ -115,14 +114,14 @@
     }
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
+      // box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
       text-decoration: none;
     }
     &:active {
       background: darken($bg, 10%);
     }
   }
-  // pendiente-----------------------------------------------------------
+  
   &.disabled,
   &:disabled {
     opacity: 0.55;
@@ -139,51 +138,11 @@
 }
 
 // ==========================================================================
-// Mixins para la generación de los spaciados ( margins y paddings )
+// Mixins para el texto @include text(1.2rem,1.6) 
 // ==========================================================================
-@mixin list-spacing($className, $styleName) {
-  @each $name, $space in $sizes {
-    #{$className}-#{$name} {
-      #{$styleName}: $space;
-    }
-  }
-}
-
-// ==========================================================================
-// Mixins para la generación de los colores de los textos y backgrounds
-// ==========================================================================
-
-@mixin color-modifiers(
-  $attribute: "background",
-  $prefix: "-",
-  $separator: "-"
-) {
-  @each $name, $color in $colors {
-    &#{$prefix}#{$name} {
-      @each $tone, $hex in $color {
-        &#{$separator}#{"" + $tone} {
-          #{$attribute}: $hex;
-        }
-      }
-    }
-  }
-}
-
-// ==========================================================================
-// Mixins BEM selectors (Block, Element, Modifier)
-// ==========================================================================
-// Ej.: @include e(title) {}
-@mixin e($element) {
-  &__#{$element} {
-    @content;
-  }
-}
-
-// Ej.: @include m(primary) {}
-@mixin m($modifier) {
-  &--#{$modifier} {
-    @content;
-  }
+@mixin text($tamano, $line-height) {
+      font-size: $tamano;
+      line-height:$line-height;
 }
 
 // ==========================================================================
@@ -220,9 +179,6 @@
   appearance: ($value);
 }
 
-// ==========================================================================
-// Mixins para eliminar apariencia por defecto del navegador
-// ==========================================================================
 // Funcion que define los colores del sistema basado en el mapa de colores establecido en las variables
 @function color($color, $tone) {
   @if map-has-key($colors, $color) {
