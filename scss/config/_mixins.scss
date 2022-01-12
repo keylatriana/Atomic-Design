@@ -82,7 +82,6 @@
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border: transparent) {
-  background: $bg;
   color: $color;
 
   // propiedades para botón outline
@@ -115,14 +114,14 @@
     }
     &:focus {
       outline: 0;
-      box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
+      // box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
       text-decoration: none;
     }
     &:active {
       background: darken($bg, 10%);
     }
   }
-  // pendiente-----------------------------------------------------------
+  
   &.disabled,
   &:disabled {
     opacity: 0.55;
