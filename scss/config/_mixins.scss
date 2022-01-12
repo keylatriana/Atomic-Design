@@ -224,27 +224,39 @@
 }
 
 // ==========================================================================
-// Titulos : @include titles (3.6rem){}
+// Titulos : @include titles (3.6rem, color, font-family){}
 // ==========================================================================
 
-@mixin titles($tamano){
+@mixin titles($tamano, $color, $font-family){
   h1{
     font-size: $tamano;
+    color: color(primary,base);
+    font-family: $font-primary;
   }
   h2{
     font-size: $tamano - 0.6rem;
+    color: color(primary,dark);
+    font-family: $font-primary;
   }
   h3{
     font-size: $tamano - 1.4rem;
+    color: color(primary,light);
+    font-family: $font-primary;
   }
   h4{
     font-size: $tamano - 1.8rem;
+    color: color(secondary,base);
+    font-family: $font-primary;
   }
   h5{
     font-size: $tamano - 2rem;
+    color: color(secondary,dark);
+    font-family: $font-primary;
   }
   h6{
     font-size: $tamano - 2.2rem;
+    color: color(secondary,light);
+    font-family: $font-primary;
   }
 }
 
