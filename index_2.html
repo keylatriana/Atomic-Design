@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <title>Atomic Design</title>
+</head>
+
+<body>
+    
+    <main class="container">
+        <h1>Atomic Design: Elementos Básicos</h1>
+        <div class="validation-test">
+
+            <div class="ml-tab">
+            <button class="at-tab-btn" onclick="openTab(event, 'buttons')">Botones</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'links')">Links</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'input-btn')">Input Button</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'nav-menu')">Menú de navegación</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'inputs')">Inputs</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'pos-inputs')">Posicionamiento de inputs</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'tables')">Tablas</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'headings')">Titulos y listas</button>
+            </div>
+
+            <!-- Sección de botones -->
+            <div id="buttons" class="ml-tab-content">
+                <h2>Botones </h2>
+                <!-- Solidos normal y redondeados-->
+                <h6>Solidos normal y redondeados</h6>
+                <div>
+                    <p>Por defecto se configuran los elementos:  <code>button, .at-btn, input[type='submit'], input[type='button']</code>,
+                        las clases <code>at-btn-sm</code> y <code>at-btn-lg</code> cambian el tamaño. La clase <code>at-btn-round</code> da un botón de bordes mas redondeados.
+                        Se configuran con los colores primarios (<code>at-btn-primary</code>) y secundarios (<code>at-btn-secondary</code>) respectivamente.
+                        <br>
+                        <br>
+                        Para configurar un color diferente se hace uso del mixin BUTTON
+                        <br>
+                        <code>
+                            .at-btn-color {<br>
+                                @include button( color('colección', 'color') );<br>
+                            }
+                        </code>
+                    </p>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-sm">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-primary">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-secondary">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-round">Por defecto</button>
+                    <button class="at-btn-sm at-btn-primary at-btn-round">Botón Primario</button>
+                    <button class="at-btn-sm at-btn-secondary at-btn-round">Botón Secundario</button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button>Botón normal</button>
+                    <button class="at-btn-primary">Botón normal</button>
+                    <button class="at-btn-secondary">Botón normal</button>
+                    <button class="at-btn-round">Por defecto</button>
+                    <button class="at-btn-primary at-btn-round">Botón Primario</button>
+                    <button class="at-btn-secondary at-btn-round">Botón Secundario</button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-lg">Botón grande</button>
+                    <button class="at-btn-lg at-btn-primary">Botón grande</button>
+                    <button class="at-btn-lg at-btn-secondary">Botón grande</button>
+                    <button class="at-btn-lg at-btn-round">Por defecto</button>
+                    <button class="at-btn-lg at-btn-primary at-btn-round">Botón Primario</button>
+                    <button class="at-btn-lg at-btn-secondary at-btn-round">Botón Secundario</button>
+                </div>
+                <hr>
+                <!-- Outline normal y redondeados-->
+                <h6>Outline normal y redondeados</h6>
+                <div>
+                    <p>Los botones de estilo Outline se obtienen con la clase <code>at-btn-outline</code>
+                        <br>
+                        <br>
+                        Para configurar un color diferente para botones Outline se hace uso del mixin BUTTON con los siguientes parametros
+                        <br>
+                        <code>
+                            .at-btn-outline-color {<br>
+                                @include button( transparent, color('coleccion', 'color'), color('coleccion', 'color' ) );<br>
+                                border: 0.1rem solid color('coleccion', 'color' );<br>
+                            }
+                        </code>
+                    </p>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-sm at-btn-outline">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-outline-primary">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-outline-secondary">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-outline at-btn-round">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-outline-primary at-btn-round">Botón pequeño</button>
+                    <button class="at-btn-sm at-btn-outline-secondary at-btn-round">Botón pequeño</button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-outline">Botón normal</button>
+                    <button class="at-btn-outline-primary">Botón normal</button>
+                    <button class="at-btn-outline-secondary">Botón normal</button>
+                    <button class="at-btn-outline at-btn-round">Botón normal</button>
+                    <button class="at-btn-outline-primary at-btn-round">Botón normal</button>
+                    <button class="at-btn-outline-secondary at-btn-round">Botón normal</button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-lg at-btn-outline">Botón grande</button>
+                    <button class="at-btn-lg at-btn-outline-primary">Botón grande</button>
+                    <button class="at-btn-lg at-btn-outline-secondary">Botón grande</button>
+                    <button class="at-btn-lg at-btn-outline at-btn-round">Botón grande</button>
+                    <button class="at-btn-lg at-btn-outline-primary at-btn-round">Botón grande</button>
+                    <button class="at-btn-lg at-btn-outline-secondary at-btn-round">Botón grande</button>
+                </div>
+                <hr>
+                <!-- Botones deshabilitados -->
+                <h6>Deshabilitados</h6>
+                <div>
+                    <p>Botones deshabilitados con la clase <code>disable</code>
+                    </p>
+                </div>
+                <div>
+                    <button class="disabled">Botón normal</button>
+                    <button class="at-btn-primary disabled">Botón normal</button>
+                    <button class="at-btn-secondary disabled">Botón normal</button>
+                    <button class="at-btn-outline disabled">Botón normal</button>
+                    <button class="at-btn-outline-primary disabled">Botón normal</button>
+                    <button class="at-btn-outline-secondary disabled">Botón normal</button>
+                </div>
+                <hr>
+                <!-- Botones con texto e imagenes -->
+                <h6>Texto e iconos</h6>
+                <div>
+                    <p>Al implementar iconos en los botones, se alinean con la clase <code>at-inline-icon</code>
+                    </p>
+                </div>
+                <div>
+                    <button class="at-btn-sm shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn-lg shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-sm at-btn-secondary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn-secondary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn-lg at-btn-secondary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-sm at-btn-outline-primary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn-outline-primary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    <button class="at-btn-lg at-btn-outline-primary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <button class="at-btn-sm"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón pequeño</button>
+                    <button class="at-btn"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón normal</button>
+                    <button class="at-btn-lg"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón grande</button>
+                </div>
+                <hr>
+                <!-- Botones input type (Formularios) -->
+                <h6>Input Type</h6>
+                <div>
+                    <input type="button" value="Input Type Button">
+                    <input type="submit" value="Input Type Submit">
+                </div>
+            </div>
+
+            <!-- Sección de links -->
+            <div id="links" class="ml-tab-content">
+            <h2>Links</h2>
+            <div style="margin-top: 3rem;">
+                <a href="#">Este es un link</a>
+                <a href="#" class="underline-link">Este es un link subrayado</a>
+            </div>
+            <div style="margin-top: 3rem;">
+                <a href="#">Este es un link con icono <i class="icon-chevron-right at-inline-icon" aria-hidden="true"></i></a>
+            </div>
+            <div style="margin-top: 3rem;">
+                <a href="#" class="at-btn">Este es un link</a>
+                <a href="#" class="at-btn at-btn-primary">Este es un link</a>
+                <a href="#" class="at-btn at-btn-secondary">Este es un link</a>
+                <a href="#" class="at-btn at-btn-outline">Este es un link</a>
+                <a href="#" class="at-btn at-btn-outline-primary">Este es un link</a>
+                <a href="#" class="at-btn at-btn-outline-secondary">Este es un link</a>
+            </div>
+            </div>
+
+            <!-- Sección de inputs con botón -->
+            <div id="input-btn" class="ml-tab-content">
+                <h2>Inputs de busqueda con botón</h2>
+                <h6>Inputs en bloque</h6>
+                <div class="group-row ml-input-btn-group">
+                    <label for="search">Busqueda</label>
+                    <input class="primary medium" type="search" id="search" placeholder="Término">
+                    <button class="at-btn-primary at-btn-input">Buscar</button>
+
+                    <label for="search">Busqueda</label>
+                    <input class="secondary medium" type="text" id="search" placeholder="Término">
+                    <button class="at-btn-secondary at-btn-input">Buscar</button>
+
+                </div>
+                <div class="group-row ml-input-btn-group-block">
+                    <label for="search">Busqueda</label>
+                    <input class="secondary medium" type="text" id="search" placeholder="Término">
+                    <button class="at-btn-secondary at-btn-input">Buscar</button>
+                </div>
+                <div class="group-row ml-input-btn-group-block">
+                    <label for="id">Busqueda</label>
+                    <input  class="" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
+                </div>
+                <hr>
+                <h6>Inputs en lista</h6>
+                <div class="group group-list">
+                    <label for="id">Busqueda</label>
+                    <input  type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                    <label for="id">Busqueda</label>
+                    <input  class="outlinenone medium" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                    <label for="id">Busqueda</label>
+                    <input  class="primary" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                    <label for="id">Busqueda</label>
+                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-outline-secondary at-btn-input">Buscar</button>
+
+                    <label for="id">Busqueda</label>
+                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-secondary at-btn-input"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
+
+                    <label for="id">Busqueda</label>
+                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                    <button class="at-btn-secondary at-btn-input-round"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
+                </div>
+            </div>
+
+            <!-- Sección menú de navegación -->
+            <div id="nav-menu" class="ml-tab-content">
+                <h2>Menu de navegación</h2>
+                <div style="margin-top: 3rem;">
+                    <h6>Pantalla grande (BreakPoint [lg])</h6>
+                    <nav>
+                        <ul class="ml-nav-list-sm ml-nav-list-lg">
+                            <li>
+                                <a href="#">Menu1</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu2</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu3</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu4</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <h6>Pantalla pequeña (default)</h6>
+                    <nav>
+                        <ul class="ml-nav-list-sm">
+                            <li>
+                                <a href="#">Menu1</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu2</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu3</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu4</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sección de Inputs -->
+            <div id="inputs" class="ml-tab-content">
+                <div class="validation-text__input">
+                    <h2> Input por Tamaño</h2>
+                    <div>
+                      <input class="small" type="text " id="name" placeholder="Escribe tu nombre">
+                      <input class="input-bottomless small" type="text" id="name" placeholder="Escribe tu nombre">
+                      <input class="input-rounded small" type="text" id="name" placeholder="Escribe tu nombre">
+                      <input class="outlinenone small" type="text" id="name" placeholder="Escribe tu nombre">
+                      <input class="primary small" type="text" id="name" placeholder="Escribe tu nombre">
+                      <input class="secondary small" type="text" id="name" placeholder="Escribe tu nombre">
+                    </div>
+                      <div>
+                        <input type="text " id="name" placeholder="Escribe tu nombre">
+                        <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-rounded" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="primary" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
+                      </div>
+                      <div>
+                        <input class="medium " type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-bottomless medium " type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-rounded medium " type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone medium " type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="primary medium" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="secondary medium" type="text" id="name" placeholder="Escribe tu nombre">
+                      </div>
+                      <div>
+                        <input class="big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-bottomless big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-rounded big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="primary big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="secondary big" type="text" id="name" placeholder="Escribe tu nombre">
+                      </div>
+                  </div>
+                  <div class="validation-text__radio">
+                    <h2> Radio Button</h2>
+                    <div>
+                      <label for="genero">Género</label>
+                      <input type="radio" name="genero" id="Femenino" checked="checked">
+                      <label for="Femenino">Femenino</label>
+                      <input type="radio" name="genero" id="Masculino">
+                      <label for="Masculino">Masculino</label>
+                      <input type="radio" name="genero" id="indistinto">
+                      <label for="indistinto">Prefiero no decirlo</label>
+                    </div>
+                    <div class="group">
+                      <label class="lab" for="gener">Género</label>
+                      <input type="radio" name="gener" id="mujer" checked="checked">
+                      <label class="radio-primary" for="mujer">Femenino</label>
+                      <input type="radio" name="gener" id="hombre">
+                      <label class="radio-primary" for="hombre">Masculino</label>
+                      <input type="radio" name="gener" id="preferencia">
+                      <label class="radio-primary" for="preferencia">Prefiero no decirlo</label>
+                    </div>
+                    <div class=" group-radio-primary ">
+                      <label for="gener5">Género</label>
+                      <input type="radio" name="gener5" id="mujeres" checked="checked">
+                      <label class="rd-primary" for="mujeres">Femenino</label>
+                      <input type="radio" name="gener5" id="hombres">
+                      <label class="rd-primary" for="hombres">Masculino</label>
+                      <input type="radio" name="gener5" id="preferencias">
+                      <label class="rd-primary" for="preferencias">Prefiero no decirlo</label>
+                    </div>
+                    <div class=" group-radio-secondary ">
+                      <label for="fut">¿Te gusta el fútbol?</label>
+                      <input type="radio" name="fut" id="yes" checked="checked">
+                      <label class="rd-secondary" for="yes">Si</label>
+                      <input type="radio" name="fut" id="no">
+                      <label class="rd-secondary" for="no">No</label>
+                      <input type="radio" name="fut" id="talvez">
+                      <label class="rd-secondary" for="talvez">Más o menos</label>
+                    </div>
+                    <hr>
+                    <div class="group radio-list">
+                      <label class="label-list" for="gener2">Género</label>
+                      <input type="radio" name="gener2" id="woman" checked="checked">
+                      <label class="radio-secondary" for="woman">Femenino</label>
+                      <input type="radio" name="gener2" id="men">
+                      <label class="radio-secondary" for="men">Masculino</label>
+                      <input type="radio" name="gener2" id="preferences">
+                      <label class="radio-secondary" for="preferences">Prefiero no decirlo</label>
+                    </div>
+                  </div>
+                  <div class="validation-text__check">
+                    <h2>ChexBox</h2>
+                    <div class="check-list">
+                      <label class="label-list">¿Cuál es tu género de película favorita?</label>
+                        <input type="checkbox" id="pelicula1" checked="checked"><label for="pelicula1">Romance</label>
+                        <input type="checkbox" id="pelicula2"><label  for="pelicula2"> Acción</label>
+                        <input type="checkbox" id="pelicula3"><label  for="pelicula3"> Ciencia Ficción</label> 
+                        <input type="checkbox" id="pelicula4"><label  for="pelicula4">Thrillers</label> 
+                        <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
+                        <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
+                    </div>
+                    <div class="group-check-color">
+                      <label class="label-list">¿Cuál es tu género de musica favorita?</label>
+                        <label class="check" for="musica1">
+                          <input type="checkbox" id="musica1" checked="checked"> Ballenato
+                          <span class="checkmark"></span>
+                      </label>
+                      <label class="check" for="musica2">
+                          <input type="checkbox" id="musica2" >Salsa
+                          <span class="checkmark"></span>
+                      </label>
+                      <label class="check" for="musica3">
+                          <input type="checkbox" id="musica3" > Bachata
+                          <span class="checkmark"></span>
+                      </label>
+                      <label class="check" for="musica4">
+                          <input type="checkbox" id="musica4">Otros
+                          <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="check-list group-check">
+                      <label class="label-list">¿Cuál es tu género de película favorita?</label>
+                        <input type="checkbox" id="movie1" checked="checked"> 
+                        <label class="check-secondary" for="movie1">Romance</label>
+                        <input type="checkbox" id="movie2">
+                        <label class=" check-secondary" for="movie2"> Acción</label>
+                        <input type="checkbox" id="movie3"  >
+                        <label class=" check-secondary" for="movie3"> Ciencia Ficción</label> 
+                        <input type="checkbox" id="movie4"> 
+                        <label class=" check-secondary" for="movie4">Thrillers</label> 
+                        <input type="checkbox" id="movie5"  >
+                        <label class=" check-secondary" for="movie5"> Terror</label> 
+                        <input type="checkbox" id="movie6" > 
+                        <label class=" check-secondary" for="movie6">Otros</label> 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Posicionamiento de Inputs -->
+            <div id="pos-inputs" class="ml-tab-content">
+                <h2>Posicionamientos de inputs</h2>
+                <h4>--------input vertical--------</h4>
+                <div class="group group-list">
+                <label class="lab" for="name">Nombre</label>
+                <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre" >
+                </div>
+                <div class="group group-list">
+                <label for="name">Cédula</label>
+                <input  type="text" id="name" placeholder="Escribe tu cédula">
+                </div>
+                <div class="group group-list">
+                <label for="id">Cédula</label>
+                <input  type="text" id="id" placeholder="Escribe tu cédula">
+                <button class="at-btn-primary">Buscar</button>
+                </div>
+                <h4>--------input horizontal--------</h4>
+                <div class="group-row">
+                    <label for="lastname">Apellido</label>
+                    <input class="input-rounded" type="text" id="lastname" placeholder="Escribe tu apellido">
+                </div>
+                <div class="group-row">
+                <label for="search">Busqueda</label>
+                <input type="text" id="search" placeholder="Término">
+                <button class="at-btn-primary">Buscar</button>
+                </div>
+                <div class="group-row">
+                <input type="text" id="search" placeholder="Busqueda">
+                <button class="at-btn-primary">Buscar</button>
+                </div>
+                <h4>--------Radio button--------</h4>
+                <div class="group">
+                <label class="label1" for="gener-1">Género</label>
+                <div>
+                    <input type="radio" name="gener-1" id="mujer-1" checked="checked">
+                    <label class="radio-secondary label-list" for="mujer-1">Femenino</label>
+                </div>
+                <div>
+                    <input type="radio" name="gener-1" id="hombre-1">
+                    <label class="radio-secondary label-list" for="hombre-1">Masculino</label>
+                </div>
+                <div>                  
+                    <input type="radio" name="gener-1" id="preferencia-1">
+                    <label class="radio-secondary label-list"  for="preferencia-1">Prefiero no decirlo</label>
+                </div>
+                </div>
+                <h4>--------checkbox--------</h4>
+                <div class="check-list group-check">
+                <label class="label-list">¿Cuál es tu color favorito?</label>
+                    <div> 
+                    <input type="checkbox" id="color1"> 
+                    <label class="check-primary" for="color1">Rojo</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" id="color2">
+                    <label class=" check-primary" for="color2"> Azul</label>
+                    </div>
+                    <div> 
+                    <input type="checkbox" id="color3"> 
+                    <label class="check-primary" for="color3">Amarillo</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" id="color4">
+                    <label class=" check-primary" for="color4"> Verde</label>
+                    </div>
+                    <div> 
+                    <input type="checkbox" id="color5"> 
+                    <label class="check-primary" for="color5">Rosado</label>
+                    </div>
+                    <div>
+                    <input type="checkbox" id="color6">
+                    <label class=" check-primary" for="color6">Otros</label>
+                    </div>
+                </div>
+                <div class="group-list">
+                <label for="msg">Mensaje</label>
+                <textarea class="input-rounded"  id="msg" name="user_message" placeholder="Escriba aquí su mensaje"></textarea>
+                </div>
+            </div>
+
+            <!-- Sección de tablas -->
+            <div id="tables" class="ml-tab-content">
+                <h2>Diseño de tablas Simple</h2>
+                <table class="table table-simple" summary="Los grupos de música punk más famosos del Reino Unido">
+                <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+                <thead>
+                    <tr>
+                    <th scope="col" >Grupo</th>
+                    <th scope="col">Año de formación</th>
+                    <th scope="col">Número de álbumes</th>
+                    <th scope="col" >Canción más conocida</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">Buzzcocks</th>
+                    <td  data-th="Año:">1976</td>
+                    <td data-th="Album:">9</td>
+                    <td data-th="Canción conocida:">Ever fallen in love</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">The Clash</th>
+                    <td data-th="Año:">1976</td>
+                    <td data-th="Album:">6</td>
+                    <td data-th="Canción conocida:">London Calling</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">The Stranglers</th>
+                    <td data-th="Año:">1974</td>
+                    <td data-th="Album:">17</td>
+                    <td data-th="Canción conocida:">No More Heroes</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">Buzzcocks</th>
+                    <td data-th="Año:">1976</td>
+                    <td data-th="Album:">9</td>
+                    <td data-th="Canción conocida:">Ever fallen in love</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">The Stranglers</th>
+                    <td data-th="Año:">1974</td>
+                    <td data-th="Album:">17</td>
+                    <td data-th="Canción conocida:">No More Heroes</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                    <th scope="row" colspan="2">Número total de álbumes</th>
+                    <td colspan="2">77</td>
+                    </tr>
+                </tfoot>
+                </table>
+                <div style="margin-top: 3rem;">
+                    <!--Estructura de una tabla de diseño de color negro , puede modificarse de color -->
+                    <h2>Diseño de Tabla Black</h2>
+                    <table class="table-black" summary="Los grupos de música punk más famosos del Reino Unido">
+                    <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
+                    <thead>
+                        <tr>
+                        <th scope="col" >Grupo</th>
+                        <th scope="col">Año de formación</th>
+                        <th scope="col">Número de álbumes</th>
+                        <th scope="col" >Canción más conocida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">Buzzcocks</th>
+                        <td  data-th="Año:">1976</td>
+                        <td data-th="Album:">9</td>
+                        <td data-th="Canción conocida:">Ever fallen in love</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">The Clash</th>
+                        <td data-th="Año:">1976</td>
+                        <td data-th="Album:">6</td>
+                        <td data-th="Canción conocida:">London Calling</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">The Stranglers</th>
+                        <td data-th="Año:">1974</td>
+                        <td data-th="Album:">17</td>
+                        <td data-th="Canción conocida:">No More Heroes</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">Buzzcocks</th>
+                        <td data-th="Año:">1976</td>
+                        <td data-th="Album:">9</td>
+                        <td data-th="Canción conocida:">Ever fallen in love</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">The Stranglers</th>
+                        <td data-th="Año:">1974</td>
+                        <td data-th="Album:">17</td>
+                        <td data-th="Canción conocida:">No More Heroes</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                        <th scope="row" colspan="2">Número total de álbumes</th>
+                        <td colspan="2">77</td>
+                        </tr>
+                    </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Sección de titulos y listas -->
+            <div id="headings" class="ml-tab-content">
+                <div style="text-align: center;">
+                    <h1>Esto es un H1</h1>
+                    <h2>Esto es un H2</h2>
+                    <h3>Esto es un H3</h3>
+                    <h4>Esto es un H4</h4>
+                    <h5>Esto es un H5</h5>
+                    <h6>Esto es un H6</h6>
+                  </div>  
+                  <br>
+                  <ul class="square">
+                      <li>Probando</li>
+                      <li>Probando</li>
+                      <li>Probando</li>
+                  </ul>
+                  <br>
+                  <ul class="circles">
+                  <li>Probando</li>
+                  <li>Probando</li>
+                  <li>Probando</li>
+                  </ul>
+                  <br>
+                  <ul class="inside">
+                      <li>Probando</li>
+                      <li>Probando</li>
+                      <li>Probando</li>
+                  </ul>
+                  <br>
+                  <ul class="outside">
+                      <li>Probando</li>
+                      <li>Probando</li>
+                      <li>Probando</li>
+                  </ul>
+                  <br>
+                  <ul class="image">
+                      <li>Probando</li>
+                      <li>Probando</li>
+                      <li>Probando</li>
+                  </ul>
+                  <br>
+                  <ol class="low-rom">
+                      <li>primero</li>
+                      <li>segundo</li>
+                      <li>tercero</li>
+                      <li>cuarto</li>
+                  </ol>
+                  <br>
+                  <ol class="up-rom">
+                      <li>primero</li>
+                      <li>segundo</li>
+                      <li>tercero</li>
+                      <li>cuarto</li>
+                  </ol>
+                  <br>
+                  <ol class="low-greek">
+                      <li>primero</li>
+                      <li>segundo</li>
+                      <li>tercero</li>
+                      <li>cuarto</li>
+                  </ol>
+            </div>
+        </div>
+  </main>  
+</body>
+
+</html>
