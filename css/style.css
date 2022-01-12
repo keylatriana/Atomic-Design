@@ -1032,7 +1032,7 @@ a.underline-link:hover {
 ul {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.4rem;
-  color: #f5d16e;
+  color: #0D2240;
 }
 /* line 22, ../scss/atoms/_list.scss */
 ul.square {
@@ -1059,7 +1059,7 @@ ul.image {
 ol {
   font-size: 1.4rem;
   font-family: "Josefin Sans", sans-serif;
-  color: #f5d16e;
+  color: #0D2240;
 }
 /* line 42, ../scss/atoms/_list.scss */
 ol.low-rom {
