@@ -1028,6 +1028,52 @@ a.underline-link:hover {
   text-decoration: none;
 }
 
+/* line 18, ../scss/atoms/_list.scss */
+ul {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.4rem;
+  color: #f5d16e;
+}
+/* line 22, ../scss/atoms/_list.scss */
+ul.square {
+  list-style: square;
+}
+/* line 25, ../scss/atoms/_list.scss */
+ul.circles {
+  list-style: circle;
+}
+/* line 28, ../scss/atoms/_list.scss */
+ul.inside {
+  list-style: inside;
+}
+/* line 31, ../scss/atoms/_list.scss */
+ul.outside {
+  list-style: outside;
+}
+/* line 34, ../scss/atoms/_list.scss */
+ul.image {
+  list-style-image: url();
+}
+
+/* line 38, ../scss/atoms/_list.scss */
+ol {
+  font-size: 1.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f5d16e;
+}
+/* line 42, ../scss/atoms/_list.scss */
+ol.low-rom {
+  list-style: lower-roman;
+}
+/* line 45, ../scss/atoms/_list.scss */
+ol.up-rom {
+  list-style: upper-roman;
+}
+/* line 48, ../scss/atoms/_list.scss */
+ol.low-greek {
+  list-style: lower-greek;
+}
+
 /* line 1, ../scss/atoms/_text.scss */
 p {
   font-size: 1.2rem;
