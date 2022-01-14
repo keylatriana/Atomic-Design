@@ -1031,42 +1031,50 @@ ul.bullets li:before {
   padding-right: 8px;
 }
 /* line 24, ../scss/atoms/_list.scss */
+ul.check {
+  list-style: none;
+  margin-left: 1rem;
+  padding: 0;
+}
+/* line 28, ../scss/atoms/_list.scss */
+ul.check li:before {
+  color: #FFC627;
+  content: "\2714";
+  padding-right: 8px;
+}
+/* line 35, ../scss/atoms/_list.scss */
 ul.square {
   list-style: square;
 }
-/* line 27, ../scss/atoms/_list.scss */
+/* line 38, ../scss/atoms/_list.scss */
 ul.circles {
   list-style: circle;
 }
-/* line 30, ../scss/atoms/_list.scss */
+/* line 41, ../scss/atoms/_list.scss */
 ul.inside {
   list-style: inside;
 }
-/* line 33, ../scss/atoms/_list.scss */
-ul.image {
-  list-style-image: url(../../images/bullet.png);
-}
 
-/* line 37, ../scss/atoms/_list.scss */
+/* line 45, ../scss/atoms/_list.scss */
 ol {
   color: #0D2240;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   list-style: decimal;
 }
-/* line 42, ../scss/atoms/_list.scss */
+/* line 50, ../scss/atoms/_list.scss */
 ol li {
   padding-bottom: 1rem;
 }
-/* line 45, ../scss/atoms/_list.scss */
+/* line 53, ../scss/atoms/_list.scss */
 ol.low-rom {
   list-style: lower-roman;
 }
-/* line 48, ../scss/atoms/_list.scss */
+/* line 56, ../scss/atoms/_list.scss */
 ol.up-rom {
   list-style: upper-roman;
 }
-/* line 51, ../scss/atoms/_list.scss */
+/* line 59, ../scss/atoms/_list.scss */
 ol.low-greek {
   list-style: lower-greek;
 }
