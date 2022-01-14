@@ -1,12 +1,12 @@
 input,select,textarea{
     border-radius: 5px;
     border: solid .2px color(grayscale,gray-3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
     color: color( secondary, base );   
     cursor:pointer;
     font-family: $font-primary;
     margin:0.5rem;
-    padding: .5rem;
+    padding: 0.5rem;
     outline-color:color(primary,base);
     &.input-bottomless {
         background-color: transparent;
@@ -15,6 +15,9 @@ input,select,textarea{
         border-radius:0;
         box-shadow: none;
     }
+    &.input-rounded{
+      border-radius:30px;
+  }
     &.primary{
       border: solid .2px color(primary,base);
       outline-color:color(secondary,base);
@@ -24,41 +27,48 @@ input,select,textarea{
       outline-color: color(primary,base);
     }
     &.outlinenone {
-      outline: none;
       background-color:color(grayscale,gray-2);
       border: 0;
+      outline: none;
     }
     // sizes
       &.small{
+        font-size:  ( $font-size - .50rem );
         padding:    ( $font-size - 1rem ) ( $font-size );
-       font-size:  ( $font-size - .50rem );
       }
       &.medium{
-        padding:    ( $font-size - .90rem ) ( $font-size );
         font-size:  ( $font-size - .35rem );
+        padding:    ( $font-size - .90rem ) ( $font-size );
       }
       &.big{
         font-size: map-get($sizes, small);
         padding: 10px 20px;
       }
 }
+input[type="text"]:disabled {
+  background: color(grayscale,white);
+  opacity: 0.5;
+}
+textarea {
+  vertical-align:middle;
+}
 // ==========================================================================
 // Estilo de Radio Button
 // ==========================================================================
 input[type="radio"]{ 
   appearance: none;
+  background-color:color(grayscale,white);
+  border: solid 1px color(primary,base);
   border-radius: 50%;
   box-shadow: none;
-  background-color:white;
-  border: solid 1px color(primary,base);
-  width: 15px;
-  height: 15px;
+  height: map-get($sizes, small);
   vertical-align:bottom;
+  width: map-get($sizes, small);
   &:checked{
-    width: 10px;
-    height: 10px;
     background-color:color(primary,base); 
-    border: white 3px double ;
+    border: color(grayscale,white) 3px double ;
+    height: map-get($sizes, tiny);
+    width: map-get($sizes, tiny);
   }
 }
 // ==========================================================================
@@ -66,22 +76,22 @@ input[type="radio"]{
 // ==========================================================================
 input[type="checkbox"]{
   appearance: none;
-  width: 17px;
-    height: 17px;
   background-color: transparent;
-  border-radius: 2px;
   border: solid 1px color(primary,base);
+  border-radius: 2px;
+  height: map-get($sizes,base);
   vertical-align:bottom;
+  width: map-get($sizes,base);
   &:checked{
     background-color:color(primary,base); 
   &:before{
-     content: "✔";
      color: color(grayscale,white);
-     font-size: 14.5px;
-     font-weight: 700;
+     content: "✔";
+     font-size: map-get($sizes,small);
+     font-weight:map-get($weights, semi_bold);
+     left: -3px;
      position: relative;
      top: -8px;
-     left: -3px;
    }
   }
 }
@@ -89,7 +99,7 @@ input[type="checkbox"]{
 // Input type submit
 // ==========================================================================
 input[type="submit"], input[type="button"]{
-  border: none;
+    border: none;
     border-radius: 0.3rem;
     font-family: $font-primary;
     font-size: $font-size;
@@ -126,32 +136,30 @@ input[type="submit"], input[type="button"]{
       }
   }
   .radio-secondary, .radio-primary{
-    display: inline-block;
+    border-radius: 5px;
     color: color(secondary,base);
     cursor: pointer;
-    position: relative;
+    display: inline-block;
     padding: 5px 15px 5px 30px;
-    border-radius: 5px;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
+    position: relative;
     transition: all .3s ease;
     user-select: none;
     &:hover {
-      background-color: rgb(206, 205, 205);
+      background-color:color(grayscale,gray-2);
     }
     &:before {        
-      border-radius: 50%;
       background: none;
+      border-radius: 50%;
       content: "";
       display: inline-block;
-      width: 17px;
-      height: 17px;
+      height:map-get($sizes,base);
+      left: 5px;
       position: absolute;
       top: 23%;
-      left: 5px;
+      width: map-get($sizes,base);
     }
     &:hover::before{
-      background-color: white;
+      background-color:color(grayscale,white);
     }
   }
   input[type="radio"]{ 
@@ -162,14 +170,14 @@ input[type="submit"], input[type="button"]{
     &:checked + .radio-primary{
       background-color: color(primary,base);
       border-radius: 2px;
-      color: #fff;
+      color:color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
     &:checked + .radio-secondary{
       background-color: color(secondary,light); 
       border-radius: 2px;
-      color: #fff;
+      color: color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
@@ -188,31 +196,29 @@ input[type="submit"], input[type="button"]{
       }
   }
   .check-secondary, .check-primary{
-    display: inline-block;
+    border-radius: 5px;
     color: color(secondary,base);
     cursor: pointer;
-    position: relative;
+    display: inline-block;
     padding: 5px 15px 5px 30px;
-    border-radius: 5px;
-    user-select: none;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
+    position: relative;
     transition: all .3s ease;
+    user-select: none;
     &:hover {
-      background-color: rgb(206, 205, 205);
+      background-color: color(grayscale,gray-2);
     }
     &:before {
+      background: none;
       content: "";
       display: inline-block;
-      width: 17px;
-      height: 17px;
+      height: map-get($sizes,base);
+      left: 5px;
       position: absolute;
       top: 23%;
-      left: 5px;
-      background: none;
+      width: map-get($sizes,base);
     }
     &:hover::before{
-      background-color: white;
+      background-color: color(grayscale,white);
     }
   }
   label:before{border-radius: 3px} 
@@ -224,13 +230,13 @@ input[type="submit"], input[type="button"]{
     }
     &:checked + .check-primary{
       background-color: color(primary,base);
-      color: #fff;
+      color: color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
     &:checked + .check-secondary{
       background-color:color(secondary,light);
-      color: #fff;
+      color: color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
