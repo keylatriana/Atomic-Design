@@ -211,12 +211,11 @@
   }
 }
 
-// RGB to RGBA
-//example -> background-color: hex-to-rgba($color-3, 0.68);
-@function hex-to-rgba($color: #FFF, $opacity: 0.5) {
-  @return rgba(red($color), green($color), blue($color), $opacity);
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }
-
 
 // ==========================================================================
 // Titulos : @include titles (color, font-family){}
