@@ -18,21 +18,28 @@
 .grid{
    @include grid(1rem, display);
    grid-template-columns: repeat(1, 1fr);
-   &.grid-item{
-      height: 25rem;
-      width: 25rem;
+   &.grid__item{
+      align-items: center;
+      display: flex;
+      justify-content: center;
    }
    @include mq-min(md){
       @include grid (1.5rem, display);   
       grid-template-columns: repeat(2, 1fr); 
-      height: 25rem;
-      width: 25rem;
+      &.grid__item{
+         align-items: center;
+         display: flex;
+         justify-content: center;
+      }
    }
    @include mq-min(xl){
       @include grid(2rem, display);
       grid-template-columns: repeat(3, 1fr);
-      width: 25rem;
-      height: 25rem;
+      &.grid__item{
+         align-items: center;
+         display: flex;
+         justify-content: center;
+      }
    }
 }
 
