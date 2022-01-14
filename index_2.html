@@ -664,6 +664,10 @@
 
             <!-- Sección de titulos y listas -->
             <div id="headings" class="ml-tab-content">
+            <p>
+                Para los headings se configura desde el mixin la fuente y el color de estos
+                y los tamaños se configuran desde el archivo headings.scss 
+            </p>
                 <div style="text-align: center;">
                     <h1>Esto es un H1</h1>
                     <h2>Esto es un H2</h2>
@@ -673,37 +677,51 @@
                     <h6>Esto es un H6</h6>
                   </div>  
                   <br>
-                  <h6>Lista tipo ul o no ordenada</h6>
+                  <p>
+                    Las listas tienen clases para diferentes tipos de viñetas, en el caso de 
+                    las listas ordenadas y diferente numeracion en el caso de las listas ordenadas.
+                  </p>
+                  <h6>Listas tipo ul o no ordenadas</h6>
+                  <p>Lista con estilos base</p>
                   <ul>
+                    <li>Probando</li>
+                    <li>Probando</li>
+                    <li>Probando</li>
+                  </ul>
+                  <br>
+                  <p>Lista a la cual le podemos cambiar el color y la forma de la viñeta (Para 
+                     eso usamos el codigo unicode). El codigo a reemplazar es el de la propiedad content.
+                     En este ejempo es: "\2665";</p>
+                  <ul class="bullets">
                       <li>Probando</li>
                       <li>Probando</li>
                       <li>Probando</li>
                   </ul>
                   <br>
+                  <p>Lista con viñetas cuadradas</p>
                   <ul class="square">
                       <li>Probando</li>
                       <li>Probando</li>
                       <li>Probando</li>
                   </ul>
                   <br>
+                  <p>Lista con viñetas circulares vacios</p>
                   <ul class="circles">
                   <li>Probando</li>
                   <li>Probando</li>
                   <li>Probando</li>
                   </ul>
                   <br>
+                  <p>Lista en la cual las viñetas estan dentro del elemento de la lista. 
+                     Como es parte del elemento de la lista, sera parte del texto y empujara
+                    el texto</p>
                   <ul class="inside">
                       <li>Probando</li>
                       <li>Probando</li>
                       <li>Probando</li>
                   </ul>
                   <br>
-                  <ul class="outside">
-                      <li>Probando</li>
-                      <li>Probando</li>
-                      <li>Probando</li>
-                  </ul>
-                  <br>
+                  <p>Lista con viñetas desde una imagen</p>
                   <ul class="image">
                       <li>Probando</li>
                       <li>Probando</li>
@@ -711,6 +729,7 @@
                   </ul>
                   <br>
                   <h6>Lista tipo ol u ordenada</h6>
+                  <p>Lista ordenada con numeracion hexadecimal</p>
                   <ol>
                     <li>primero</li>
                     <li>segundo</li>
@@ -718,6 +737,7 @@
                     <li>cuarto</li>
                   </ol>
                   <br>
+                  <p>Lista ordenada con numeracion romana en minuscula</p>
                   <ol class="low-rom">
                       <li>primero</li>
                       <li>segundo</li>
@@ -725,6 +745,7 @@
                       <li>cuarto</li>
                   </ol>
                   <br>
+                  <p>Lista ordenada con numeracion romana en mayuscula</p>
                   <ol class="up-rom">
                       <li>primero</li>
                       <li>segundo</li>
@@ -732,6 +753,7 @@
                       <li>cuarto</li>
                   </ol>
                   <br>
+                  <p>Lista con numeracion griega</p>
                   <ol class="low-greek">
                       <li>primero</li>
                       <li>segundo</li>
@@ -741,6 +763,11 @@
             </div>
             <!-- Sección grillas -->
             <div id="grilla" class="ml-tab-content">
+                <p>
+                    Para configurar la grilla de imagenes, desde el archivo grid.scss se modifican el espacio entre cada
+                    imagen, con el valor de gap y el numero de columnas en la propiedad 
+                    grid-template-columns: repeat (#de columnas, 1fr); 
+                </p>
                 <div class="grid">
                     <div class="grid__item" >
                         <img src="https://i.picsum.photos/id/220/300/300.jpg?hmac=ImzlQmvXraECs9x98iDhbi3WDtXFHRyH6rjFhT2_kiI" width="250" height="250" alt="Calle nocturna">
@@ -770,82 +797,7 @@
                         <img src="https://i.picsum.photos/id/648/300/300.jpg?hmac=xfgy9aIr4ZX0c_J0DNIlGKXLUMxAc201OJU2bj7ejpg" width="250" height="250" alt="Bosque">
                     </div>
                 </div>
-
-
-                <div class="d-flex fd-row ">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex jc-center">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex jc-space-between">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex jc-space-around">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex jc-flex-end">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="ai-center">
-                    <div><p>Hola</p></div>
-                    <div><p>Hola</p></div>
-                    <div><p>Hola</p></div>
-                </div>
-            </div>
         </div>
-
-
   </main>  
 </body>
 

@@ -1,7 +1,62 @@
-@include titles(3.6rem, color, font-family);
-@include mq-min(md){
-    @include titles(3.8rem, color, font-family); 
+h1{
+    @include titles(color, font-family);
+    font-size: 3.6rem;
+        @include mq-min(md){
+            font-size: 4rem;
+        }
+        @include mq-min(xl){
+            font-size: 4.8rem;
+        }
 }
-@include mq-min(xl){
-    @include titles(4.8rem, color, font-family);
+h2{
+    @include titles(color, font-family);
+    font-size: 3.2rem;
+        @include mq-min(md){
+            font-size: 3.6rem;
+        }
+        @include mq-min(xl){
+            font-size: 4.4rem;
+        }
 }
+h3{
+    @include titles(color, font-family);
+    font-size: 3rem;
+        @include mq-min(md){
+            font-size: 3.4rem;
+        }
+        @include mq-min(xl){
+            font-size: 4.2rem;
+        }
+}
+h4{
+    @include titles(color, font-family);
+    font-size: 2.8rem;
+        @include mq-min(md){
+            font-size: 3.2rem;
+        }
+        @include mq-min(xl){
+            font-size: 4rem;
+        }
+}
+h5{
+    @include titles(color, font-family);
+    font-size: 2.6rem;
+        @include mq-min(md){
+            font-size: 3rem;
+        }
+        @include mq-min(xl){
+            font-size: 3.8rem;
+        }
+}
+h6{
+    @include titles(color, font-family);
+    font-size: 2.4rem;
+        @include mq-min(md){
+            font-size: 2.8rem;
+        }
+        @include mq-min(xl){
+            font-size: 3.6rem;
+        }
+}
+
+
