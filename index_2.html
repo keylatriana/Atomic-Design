@@ -282,78 +282,108 @@
 
             <!-- Sección de Inputs -->
             <div id="inputs" class="ml-tab-content">
-                <div class="validation-text__input">
+                <div class="validation-text__input container">
                     <h2> Input por Tamaño</h2>
                     <div>
-                        <h6>-------Tamaño Small-------</h6>
-                      <input class="small" type="text " id="name" placeholder="Escribe tu nombre">
-                      <input class="input-bottomless small" type="text" id="name" placeholder="Escribe tu nombre">
-                      <input class="input-rounded small" type="text" id="name" placeholder="Escribe tu nombre">
-                      <input class="outlinenone small" type="text" id="name" placeholder="Escribe tu nombre">
-                      <input class="primary small" type="text" id="name" placeholder="Escribe tu nombre">
-                      <input class="secondary small" type="text" id="name" placeholder="Escribe tu nombre">
+                        <p>Las etiquetas <code>inputs</code> cuentan con un estilo base y son los que se presentan como primera opción, luego
+                            continuan las clases <code>input-bottomless</code> que muestra al input con un borde inferior,
+                            <code>input-rounded</code> que cuenta con bordes más redondeado y 
+                            <code>outlinenone</code> que no cuenta con bordes y tampoco outline. 
+                            <br>
+                            La clase <code>primary</code> permite que el input se presente con bordes del color primario (base) y un ouline del color secundario (base),
+                            por lo contrario, la clase <code>secondary</code> permite que el input se presente con bordes del color secundario (base) y un ouline del color primario (base).
+                        </p>
                     </div>
-                      <div>
-                        <h6>-------Tamaño regular-------</h6>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>-------Tamaño Small-------</h6>
+                        <p>La clase <code>small</code> permite que los inputs y el font-sizes sean pequeños.</p>
+                        <input class="small" type="text " id="name" placeholder="Escribe tu nombre">
+                        <input class="input-bottomless small" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-rounded small" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone small" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="primary small" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="secondary small" type="text" id="name" placeholder="Escribe tu nombre">
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>-------Tamaño  Normal-------</h6>
+                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
                         <input type="text " id="name" placeholder="Escribe tu nombre">
                         <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="input-rounded" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="primary" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
-                      </div>
-                      <div>
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>-------Tamaño Medium-------</h6>
+                        <p>La clase <code>medium</code> permite que los inputs y el font-sizes sean medianos.</p>
                         <input class="medium " type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="input-bottomless medium " type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="input-rounded medium " type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="outlinenone medium " type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="primary medium" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="secondary medium" type="text" id="name" placeholder="Escribe tu nombre">
-                      </div>
-                      <div>
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>-------Tamaño Big-------</h6>
+                        <p>La clase <code>big</code> permite que los inputs y el font-sizes sean grandes.</p>
                         <input class="big" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="input-bottomless big" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="input-rounded big" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="outlinenone big" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="primary big" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="secondary big" type="text" id="name" placeholder="Escribe tu nombre">
-                      </div>
-                  </div>
-                  <div class="validation-text__radio">
-                    <h2> Radio Button</h2>
-                    <div>
-                      <label for="genero">Género</label>
-                      <input type="radio" name="genero" id="Femenino" checked="checked">
-                      <label for="Femenino">Femenino</label>
-                      <input type="radio" name="genero" id="Masculino">
-                      <label for="Masculino">Masculino</label>
-                      <input type="radio" name="genero" id="indistinto">
-                      <label for="indistinto">Prefiero no decirlo</label>
                     </div>
-                    <div class="group">
-                      <label class="lab" for="gener">Género</label>
-                      <input type="radio" name="gener" id="mujer" checked="checked">
-                      <label class="radio-primary" for="mujer">Femenino</label>
-                      <input type="radio" name="gener" id="hombre">
-                      <label class="radio-primary" for="hombre">Masculino</label>
-                      <input type="radio" name="gener" id="preferencia">
-                      <label class="radio-primary" for="preferencia">Prefiero no decirlo</label>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>------- Input Disabled-------</h6>
+                        <p>Inputs deshabilitados con disabled</p>
+                        <input type="text" disabled id="name" placeholder="Escribe tu nombre">
+                        <input class="input-bottomless" disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="input-rounded" disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone"  disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="primary" disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="secondary" disabled type="text" id="name" placeholder="Escribe tu nombre">
                     </div>
-                    <div class="group ">
-                      <label class="label-list" for="gener2">Género</label>
-                      <input type="radio" name="gener2" id="woman" checked="checked">
-                      <label class="radio-secondary" for="woman">Femenino</label>
-                      <input type="radio" name="gener2" id="men">
-                      <label class="radio-secondary" for="men">Masculino</label>
-                      <input type="radio" name="gener2" id="preferences">
-                      <label class="radio-secondary" for="preferences">Prefiero no decirlo</label>
+                    <div class="validation-text__radio" style="margin-top: 3rem;">
+                        <h2> Radio Button</h2>
+                        <div style="padding: 2rem; margin: 1rem 0rem">
+                            <p>1-. Estilo base de los inputs tipo radio</p>
+                            <label for="genero">Género</label>
+                            <input type="radio" name="genero" id="Femenino" checked="checked">
+                            <label for="Femenino">Femenino</label>
+                            <input type="radio" name="genero" id="Masculino">
+                            <label for="Masculino">Masculino</label>
+                            <input type="radio" name="genero" id="indistinto">
+                            <label for="indistinto">Prefiero no decirlo</label>
+                        </div>
+                        <div class="group" style="padding: 2rem; margin: 1rem 0rem">
+                            <p> 2-. Para este nuevo estilo de radio button se utiliza la clase <code>radio-primary</code>, colocándolo en los labels
+                            para que al seleccionar se pinte del color primario (base) y tambien se debe colocar la clase <code>group</code> en el div que envuelve todos los inputs y label. </p>
+                            <label  for="gener">Género</label>
+                            <input type="radio" name="gener" id="mujer" checked="checked">
+                            <label class="radio-primary" for="mujer">Femenino</label>
+                            <input type="radio" name="gener" id="hombre">
+                            <label class="radio-primary" for="hombre">Masculino</label>
+                            <input type="radio" name="gener" id="preferencia">
+                            <label class="radio-primary" for="preferencia">Prefiero no decirlo</label>
+                        </div>
+                        <div class="group " style="padding: 2rem; margin: 1rem 0rem">
+                            <p> 3-. Se debe seguir el mismo procedimiento anterior pero colocando la clase <code>radio-secondary</code> en los labels
+                                para que al seleccionar se pinte del color secundario (light).</p>
+                            <label  for="gener2">Género</label>
+                            <input type="radio" name="gener2" id="woman" checked="checked">
+                            <label class="radio-secondary" for="woman">Femenino</label>
+                            <input type="radio" name="gener2" id="men">
+                            <label class="radio-secondary" for="men">Masculino</label>
+                            <input type="radio" name="gener2" id="preferences">
+                            <label class="radio-secondary" for="preferences">Prefiero no decirlo</label>
+                        </div>
                     </div>
-                  </div>
-                <div class="validation-text__check">
+                </div>
+                <div class="validation-text__check" style="margin-top: 3rem;" >
                     <h2>ChexBox</h2>
-                    <div class="check-list">
+                    <div class="check-list" style="padding: 2rem; margin: 1rem 0rem">
+                        <p>1-. Estilo base de los inputs tipo checkbox.</p>
                       <label class="label-list">¿Cuál es tu género de película favorita?</label>
                         <input type="checkbox" id="pelicula1" checked="checked"><label for="pelicula1">Romance</label>
                         <input type="checkbox" id="pelicula2"><label  for="pelicula2"> Acción</label>
@@ -362,8 +392,12 @@
                         <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
                         <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
                     </div>
-                    <div class="check-list group-check">
-                      <label class="label-list">¿Cuál es tu género de película favorita?</label>
+                    <div class="group-check" style="padding: 2rem; margin: 1rem 0rem">
+                        <p> 2-. Para este estilo de checkbox se utiliza la clase <code>check-secondary</code>, colocándolo en los labels
+                        para que al seleccionar se pinte del color secundario (light) y se debe colocar la clase <code>group-check</code> en el div que envuelve todos los inputs y label
+                        <br> Si deseas se selecione del color primario, solo debes cambiar la clase <code>check-secondary</code> por la clase <code>check-primary</code>.
+                     </p>
+                        <label >¿Cuál es tu género de película favorita?</label>
                         <input type="checkbox" id="movie1" checked="checked"> 
                         <label class="check-secondary" for="movie1">Romance</label>
                         <input type="checkbox" id="movie2">
@@ -378,18 +412,26 @@
                         <label class=" check-secondary" for="movie6">Otros</label> 
                     </div>
                 </div>
-                <div class="validation-text__submit">
+                <div class="validation-text__submit" style="margin-top: 3rem;">
                     <h2>Input Type Submit and Type Button</h2>
-                    <div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <p> Estilo base de la etiqueta input Type Submit and Type Button. </p>
                         <p>-----------Estilo Base-----------</p>  
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Type Submit">
+                        <input type="button" value="Type Button">
                     </div>
-                    <div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
                         <p>-----------Estilo Solido-----------</p> 
+                        <p>El primer input posee la clase <code>btn-primary</code> que se presenta del color primario (base) 
+                        y el segundo input posee la clase <code>btn-secondary</code> y se presenta del color secundario(base).
+                        </p>
                         <input class="btn-primary" type="button" value="Ver información"> 
                         <input class="btn-secondary" type="button" value="Ver información"> 
                     </div>
-                    <div>
+                    <p>Las clases <code>btn-outline-primary</code>  y <code>btn-outline-secondary</code> presenta bordes
+                        de color primario o secundario respectivamente.
+                        </p>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
                         <p>-----------Estilo Outline-----------</p>  
                         <input class="btn-outline-primary" type="submit" value="Send">
                         <input class="btn-outline-secondary" type="submit" value="Send">
@@ -399,90 +441,122 @@
             </div>
 
             <!-- Sección de Posicionamiento de Inputs -->
-            <div id="pos-inputs" class="ml-tab-content">
+            <div id="pos-inputs" class="ml-tab-content" >
                 <h2>Posicionamientos de inputs</h2>
-                <h4>--------input vertical--------</h4>
-                <div class="group group-list">
+                <h4 style="margin-top: 3rem;">--------input vertical--------</h4>
+                <p>Las clase <code>group-list</code> permite que extista un posicionamiento vertical entre el label y el input. </p>
+                <div class="group-list" style="margin-top: 3rem;">
                 <label class="lab" for="name">Nombre</label>
                 <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre" >
                 </div>
-                <div class="group group-list">
+                <div class="group-list" style="margin-top: 3rem;">
                 <label for="name">Cédula</label>
                 <input  type="text" id="name" placeholder="Escribe tu cédula">
                 </div>
-                <div class="group group-list">
+                <div class="group-list" style="margin-top: 3rem;">
                 <label for="id">Cédula</label>
                 <input  type="text" id="id" placeholder="Escribe tu cédula">
                 <button class="at-btn-primary">Buscar</button>
                 </div>
-                <h4>--------input horizontal--------</h4>
-                <div class="group-row">
+                <h4 style="margin-top: 3rem;">--------input horizontal--------</h4>
+                <p>Las clase <code>group-row</code> permite que extista un posicionamiento horizontal entre el label y el input. </p>
+                <div class="group-row" style="margin-top: 3rem;">
                     <label for="lastname">Apellido</label>
                     <input class="input-rounded" type="text" id="lastname" placeholder="Escribe tu apellido">
                 </div>
-                <div class="group-row">
+                <div class="group-row" style="margin-top: 3rem;">
                 <label for="search">Busqueda</label>
                 <input type="text" id="search" placeholder="Término">
-                <button class="at-btn-primary">Buscar</button>
+                <button class="at-btn-primary at-btn-sm ">Buscar</button>
                 </div>
-                <div class="group-row">
+                <div class="group-row" style="margin-top: 3rem;">
                 <input type="text" id="search" placeholder="Busqueda">
                 <button class="at-btn-primary">Buscar</button>
                 </div>
-                <h4>--------Radio button--------</h4>
-                <div class="group">
-                <label class="label1" for="gener-1">Género</label>
+                <h4 style="margin-top:5rem;">--------Radio button--------</h4>
+                <p>Las clase <code>radio-list</code> permite que extista un posicionamiento vertical entre los radios buttons. </p>
+                <div class="group radio-list">
+                <label class="label-list" for="gener-1">Género</label>
                 <div>
                     <input type="radio" name="gener-1" id="mujer-1" checked="checked">
-                    <label class="radio-secondary label-list" for="mujer-1">Femenino</label>
+                    <label class="radio-secondary" for="mujer-1">Femenino</label>
                 </div>
                 <div>
                     <input type="radio" name="gener-1" id="hombre-1">
-                    <label class="radio-secondary label-list" for="hombre-1">Masculino</label>
+                    <label class="radio-secondary" for="hombre-1">Masculino</label>
                 </div>
                 <div>                  
                     <input type="radio" name="gener-1" id="preferencia-1">
-                    <label class="radio-secondary label-list"  for="preferencia-1">Prefiero no decirlo</label>
+                    <label class="radio-secondary"  for="preferencia-1">Prefiero no decirlo</label>
                 </div>
                 </div>
-                <h4>--------checkbox--------</h4>
-                <div class="check-list group-check">
-                <label class="label-list">¿Cuál es tu color favorito?</label>
-                    <div> 
-                    <input type="checkbox" id="color1"> 
-                    <label class="check-primary" for="color1">Rojo</label>
+                <h4 style="margin-top: 5rem;">--------checkbox--------</h4>
+                <p>Las clase <code>check-list</code> permite que extista un posicionamiento vertical entre los checkboxs. </p>
+                <div class="check-list ">
+                    <label class="label-list">¿Cuál es tu color favorito?</label>
+                    <div>
+                        <input type="checkbox" id="color1">
+                        <label for="color1">Rojo</label>
                     </div>
                     <div>
-                    <input type="checkbox" id="color2">
-                    <label class=" check-primary" for="color2"> Azul</label>
-                    </div>
-                    <div> 
-                    <input type="checkbox" id="color3"> 
-                    <label class="check-primary" for="color3">Amarillo</label>
+                        <input type="checkbox" id="color2">
+                        <label for="color2"> Azul</label>
                     </div>
                     <div>
-                    <input type="checkbox" id="color4">
-                    <label class=" check-primary" for="color4"> Verde</label>
-                    </div>
-                    <div> 
-                    <input type="checkbox" id="color5"> 
-                    <label class="check-primary" for="color5">Rosado</label>
+                        <input type="checkbox" id="color3">
+                        <label for="color3">Amarillo</label>
                     </div>
                     <div>
-                    <input type="checkbox" id="color6">
-                    <label class=" check-primary" for="color6">Otros</label>
+                        <input type="checkbox" id="color4">
+                        <label for="color4"> Verde</label>
                     </div>
+                    <div>
+                        <input type="checkbox" id="color5">
+                        <label for="color5">Rosado</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="color6">
+                        <label for="color6">Otros</label>
+                    </div>
+                </div>
+                <h4 style="margin-top: 5rem;">--------Select y Textare vertical--------</h4>
+                <div class="group-list">
+                    <p>Las clase <code>group-list</code> permite que extista un posicionamiento vertical entre el label y el select o textarea.</p>
+                    <label for="">Select</label>
+                    <select class="primary" name="" id="">
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                    </select>
                 </div>
                 <div class="group-list">
-                <label for="msg">Mensaje</label>
-                <textarea class="input-rounded"  id="msg" name="user_message" placeholder="Escriba aquí su mensaje"></textarea>
+                    <label for="msg">Mensaje</label>
+                    <textarea id="msg" name="user_message" placeholder="Escriba aquí su mensaje"></textarea>
+                </div>
+                <h4 style="margin-top: 5rem;">--------Select y Textare horizontal--------</h4>
+                <p>Las clase <code>group-row</code> permite que extista un posicionamiento horizontal entre el label y el select o textarea. </p>
+                <div class="group-row">
+                    <label for="">Select</label>
+                    <select class="secondary" name="" id="">
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                    </select>
+                </div>
+                <div class="group-row">
+                    <label for="msg">Mensaje</label>
+                    <textarea class="primary" cols="30" rows="10" id="msg" name="user_message" placeholder="Escriba aquí su mensaje">
+                    </textarea>
                 </div>
             </div>
 
             <!-- Sección de tablas -->
             <div id="tables" class="ml-tab-content">
                 <h2>Diseño de tablas Simple</h2>
-                <table class="table table-simple" summary="Los grupos de música punk más famosos del Reino Unido">
+                <p>Se aplicó un estilo base de la etiqueta table, que pinta la cabecera de la tabla
+                 del color primario (base). Si se utiliza la clase <code>table-simple</code>
+                se aplicará un diseño diferente para el responsive. </p>
+                <table class="table-simple" summary="Los grupos de música punk más famosos del Reino Unido">
                 <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
                 <thead>
                     <tr>
@@ -534,6 +608,8 @@
                 <div style="margin-top: 3rem;">
                     <!--Estructura de una tabla de diseño de color negro , puede modificarse de color -->
                     <h2>Diseño de Tabla Black</h2>
+                    <p>Para otro diseño de tabla se puede utilizar la clase <code>table-black</code>, esta clase brinda 
+                    un estilo para desktop y otro estilo para responsive.</p>
                     <table class="table-black" summary="Los grupos de música punk más famosos del Reino Unido">
                     <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
                     <thead>

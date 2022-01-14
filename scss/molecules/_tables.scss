@@ -1,12 +1,12 @@
 //Diseño simple de tabla
 table {
-    border: 1px solid #000;
+    border: 1px solid color(grayscale,black);
     width: 100%;
     thead{ 
         background-color: color(primary,base);
       }
     th, td {
-        border: 1px solid #000;
+        border: 1px solid color(grayscale,black);
         border-collapse: collapse;
         caption-side: bottom;
         padding: 0.3em;
@@ -25,23 +25,17 @@ table {
     width: 100%;
     th, td {
         border: 0;
-        border-collapse: collapse;
-        caption-side: bottom;
-        padding: 0.3em;
-        text-align: left;
-        vertical-align: top;
     }
     caption {
+        background: color(grayscale,black);
         color: #fff;
-        padding: 0.3em;
-        background: #000;
     }
     th {
-        background: #eee;
+        background: color(grayscale,gray-4);
     }
     th, td{
         &:hover{
-            background-color: rgb(207, 207, 207);
+            background-color: color(grayscale,gray-3);
         }
     }
 }
@@ -75,9 +69,8 @@ table {
            }
             td{ 
             &:before {
-                color: gray;
+                color: color(grayscale,gray-4);
                 content:attr(data-th)"  ";
-                font-weight: 600;
                 text-align:left;
             }
         }      
@@ -85,23 +78,20 @@ table {
     }
     //Tabla responsive diseño dos
     .table-black {
-        
         thead {
             display: none;
         }
-        tr:nth-of-type(2n) {
-            background-color: inherit;
-        }
         td {
             display: flex;
+            font-size:map-get($sizes, small);
             text-align:left;
             width: 113%;
         }
         td:before {
-            color: gray;
+            color: color(grayscale,gray-4);
             content:attr(data-th)"  ";
             display: block;
-            font-weight: 600;
+            font-size: map-get($sizes, small);
             text-align:left;
         }
     }

@@ -624,12 +624,12 @@ h6 {
 input, select, textarea {
   border-radius: 5px;
   border: solid 0.2px #cccccc;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 2px 0 #999999;
   color: #0D2240;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   margin: 0.5rem;
-  padding: .5rem;
+  padding: 0.5rem;
   outline-color: #FFCA33;
 }
 /* line 11, ../scss/atoms/_inputs.scss */
@@ -641,82 +641,97 @@ input.input-bottomless, select.input-bottomless, textarea.input-bottomless {
   box-shadow: none;
 }
 /* line 18, ../scss/atoms/_inputs.scss */
+input.input-rounded, select.input-rounded, textarea.input-rounded {
+  border-radius: 30px;
+}
+/* line 21, ../scss/atoms/_inputs.scss */
 input.primary, select.primary, textarea.primary {
   border: solid 0.2px #FFCA33;
   outline-color: #0D2240;
 }
-/* line 22, ../scss/atoms/_inputs.scss */
+/* line 25, ../scss/atoms/_inputs.scss */
 input.secondary, select.secondary, textarea.secondary {
   border: solid 0.2px #0D2240;
   outline-color: #FFCA33;
 }
-/* line 26, ../scss/atoms/_inputs.scss */
+/* line 29, ../scss/atoms/_inputs.scss */
 input.outlinenone, select.outlinenone, textarea.outlinenone {
-  outline: none;
   background-color: #eeeeee;
   border: 0;
+  outline: none;
 }
-/* line 32, ../scss/atoms/_inputs.scss */
+/* line 35, ../scss/atoms/_inputs.scss */
 input.small, select.small, textarea.small {
-  padding: 0.6rem 1.6rem;
   font-size: 1.1rem;
+  padding: 0.6rem 1.6rem;
 }
-/* line 36, ../scss/atoms/_inputs.scss */
+/* line 39, ../scss/atoms/_inputs.scss */
 input.medium, select.medium, textarea.medium {
-  padding: 0.7rem 1.6rem;
   font-size: 1.25rem;
+  padding: 0.7rem 1.6rem;
 }
-/* line 40, ../scss/atoms/_inputs.scss */
+/* line 43, ../scss/atoms/_inputs.scss */
 input.big, select.big, textarea.big {
   font-size: 1.4rem;
   padding: 10px 20px;
 }
 
 /* line 48, ../scss/atoms/_inputs.scss */
-input[type="radio"] {
-  appearance: none;
-  border-radius: 50%;
-  box-shadow: none;
-  background-color: white;
-  border: solid 1px #FFCA33;
-  width: 15px;
-  height: 15px;
-  vertical-align: bottom;
-}
-/* line 57, ../scss/atoms/_inputs.scss */
-input[type="radio"]:checked {
-  width: 10px;
-  height: 10px;
-  background-color: #FFCA33;
-  border: white 3px double;
+input[type="text"]:disabled {
+  background: #ffffff;
+  opacity: 0.5;
 }
 
+/* line 52, ../scss/atoms/_inputs.scss */
+textarea {
+  vertical-align: middle;
+}
+
+/* line 58, ../scss/atoms/_inputs.scss */
+input[type="radio"] {
+  appearance: none;
+  background-color: #ffffff;
+  border: solid 1px #FFCA33;
+  border-radius: 50%;
+  box-shadow: none;
+  height: 1.4rem;
+  vertical-align: bottom;
+  width: 1.4rem;
+}
 /* line 67, ../scss/atoms/_inputs.scss */
+input[type="radio"]:checked {
+  background-color: #FFCA33;
+  border: #ffffff 3px double;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+/* line 77, ../scss/atoms/_inputs.scss */
 input[type="checkbox"] {
   appearance: none;
-  width: 17px;
-  height: 17px;
   background-color: transparent;
-  border-radius: 2px;
   border: solid 1px #FFCA33;
+  border-radius: 2px;
+  height: 1.6rem;
   vertical-align: bottom;
+  width: 1.6rem;
 }
-/* line 75, ../scss/atoms/_inputs.scss */
+/* line 85, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked {
   background-color: #FFCA33;
 }
-/* line 77, ../scss/atoms/_inputs.scss */
+/* line 87, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked:before {
-  content: "✔";
   color: #ffffff;
-  font-size: 14.5px;
-  font-weight: 700;
+  content: "✔";
+  font-size: 1.4rem;
+  font-weight: 600;
+  left: -3px;
   position: relative;
   top: -8px;
-  left: -3px;
 }
 
-/* line 91, ../scss/atoms/_inputs.scss */
+/* line 101, ../scss/atoms/_inputs.scss */
 input[type="submit"], input[type="button"] {
   border: none;
   border-radius: 0.3rem;
@@ -726,7 +741,7 @@ input[type="submit"], input[type="button"] {
   padding: 0.6rem 1.2rem;
   text-align: center;
 }
-/* line 99, ../scss/atoms/_inputs.scss */
+/* line 109, ../scss/atoms/_inputs.scss */
 input[type="submit"].btn-primary, input[type="button"].btn-primary {
   color: #ffffff;
   background: #FFCA33;
@@ -761,7 +776,7 @@ input[type="submit"].btn-primary.disabled:hover, input[type="submit"].btn-primar
 input[type="submit"].btn-primary.disabled:focus, input[type="submit"].btn-primary:disabled:focus, input[type="button"].btn-primary.disabled:focus, input[type="button"].btn-primary:disabled:focus {
   box-shadow: none;
 }
-/* line 102, ../scss/atoms/_inputs.scss */
+/* line 112, ../scss/atoms/_inputs.scss */
 input[type="submit"].btn-secondary, input[type="button"].btn-secondary {
   color: #ffffff;
   background: #0D2240;
@@ -796,7 +811,7 @@ input[type="submit"].btn-secondary.disabled:hover, input[type="submit"].btn-seco
 input[type="submit"].btn-secondary.disabled:focus, input[type="submit"].btn-secondary:disabled:focus, input[type="button"].btn-secondary.disabled:focus, input[type="button"].btn-secondary:disabled:focus {
   box-shadow: none;
 }
-/* line 105, ../scss/atoms/_inputs.scss */
+/* line 115, ../scss/atoms/_inputs.scss */
 input[type="submit"].btn-outline-primary, input[type="button"].btn-outline-primary {
   color: #FFCA33;
   background: #ffffff;
@@ -836,7 +851,7 @@ input[type="submit"].btn-outline-primary.disabled:hover, input[type="submit"].bt
 input[type="submit"].btn-outline-primary.disabled:focus, input[type="submit"].btn-outline-primary:disabled:focus, input[type="button"].btn-outline-primary.disabled:focus, input[type="button"].btn-outline-primary:disabled:focus {
   box-shadow: none;
 }
-/* line 110, ../scss/atoms/_inputs.scss */
+/* line 120, ../scss/atoms/_inputs.scss */
 input[type="submit"].btn-outline-secondary, input[type="button"].btn-outline-secondary {
   color: #0D2240;
   background: #ffffff;
@@ -877,135 +892,131 @@ input[type="submit"].btn-outline-secondary.disabled:focus, input[type="submit"].
   box-shadow: none;
 }
 
-/* line 119, ../scss/atoms/_inputs.scss */
+/* line 129, ../scss/atoms/_inputs.scss */
 .group .radio-secondary:before {
   border: 2px solid #0074FC;
 }
-/* line 124, ../scss/atoms/_inputs.scss */
+/* line 134, ../scss/atoms/_inputs.scss */
 .group .radio-primary:before {
   border: 2px solid #FFCA33;
 }
-/* line 128, ../scss/atoms/_inputs.scss */
+/* line 138, ../scss/atoms/_inputs.scss */
 .group .radio-secondary, .group .radio-primary {
-  display: inline-block;
+  border-radius: 5px;
   color: #0D2240;
   cursor: pointer;
-  position: relative;
+  display: inline-block;
   padding: 5px 15px 5px 30px;
-  border-radius: 5px;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
+  position: relative;
   transition: all .3s ease;
   user-select: none;
 }
-/* line 139, ../scss/atoms/_inputs.scss */
+/* line 147, ../scss/atoms/_inputs.scss */
 .group .radio-secondary:hover, .group .radio-primary:hover {
-  background-color: #cecdcd;
+  background-color: #eeeeee;
 }
-/* line 142, ../scss/atoms/_inputs.scss */
+/* line 150, ../scss/atoms/_inputs.scss */
 .group .radio-secondary:before, .group .radio-primary:before {
-  border-radius: 50%;
   background: none;
+  border-radius: 50%;
   content: "";
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  height: 1.6rem;
+  left: 5px;
   position: absolute;
   top: 23%;
-  left: 5px;
+  width: 1.6rem;
 }
-/* line 153, ../scss/atoms/_inputs.scss */
+/* line 161, ../scss/atoms/_inputs.scss */
 .group .radio-secondary:hover::before, .group .radio-primary:hover::before {
-  background-color: white;
+  background-color: #ffffff;
 }
-/* line 157, ../scss/atoms/_inputs.scss */
+/* line 165, ../scss/atoms/_inputs.scss */
 .group input[type="radio"] {
   display: none;
 }
-/* line 159, ../scss/atoms/_inputs.scss */
+/* line 167, ../scss/atoms/_inputs.scss */
 .group input[type="radio"]:checked + label:before {
   display: none;
 }
-/* line 162, ../scss/atoms/_inputs.scss */
+/* line 170, ../scss/atoms/_inputs.scss */
 .group input[type="radio"]:checked + .radio-primary {
   background-color: #FFCA33;
   border-radius: 2px;
-  color: #fff;
+  color: #ffffff;
   margin: 5px;
   padding: 5px 15px;
 }
-/* line 169, ../scss/atoms/_inputs.scss */
+/* line 177, ../scss/atoms/_inputs.scss */
 .group input[type="radio"]:checked + .radio-secondary {
   background-color: #0074FC;
   border-radius: 2px;
-  color: #fff;
+  color: #ffffff;
   margin: 5px;
   padding: 5px 15px;
 }
 
-/* line 181, ../scss/atoms/_inputs.scss */
+/* line 189, ../scss/atoms/_inputs.scss */
 .group-check .check-secondary:before {
   border: 2px solid #0074FC;
 }
-/* line 186, ../scss/atoms/_inputs.scss */
+/* line 194, ../scss/atoms/_inputs.scss */
 .group-check .check-primary:before {
   border: 2px solid #FFCA33;
 }
-/* line 190, ../scss/atoms/_inputs.scss */
+/* line 198, ../scss/atoms/_inputs.scss */
 .group-check .check-secondary, .group-check .check-primary {
-  display: inline-block;
+  border-radius: 5px;
   color: #0D2240;
   cursor: pointer;
-  position: relative;
+  display: inline-block;
   padding: 5px 15px 5px 30px;
-  border-radius: 5px;
-  user-select: none;
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
+  position: relative;
   transition: all .3s ease;
+  user-select: none;
 }
-/* line 201, ../scss/atoms/_inputs.scss */
+/* line 207, ../scss/atoms/_inputs.scss */
 .group-check .check-secondary:hover, .group-check .check-primary:hover {
-  background-color: #cecdcd;
+  background-color: #eeeeee;
 }
-/* line 204, ../scss/atoms/_inputs.scss */
+/* line 210, ../scss/atoms/_inputs.scss */
 .group-check .check-secondary:before, .group-check .check-primary:before {
+  background: none;
   content: "";
   display: inline-block;
-  width: 17px;
-  height: 17px;
+  height: 1.6rem;
+  left: 5px;
   position: absolute;
   top: 23%;
-  left: 5px;
-  background: none;
+  width: 1.6rem;
 }
-/* line 214, ../scss/atoms/_inputs.scss */
+/* line 220, ../scss/atoms/_inputs.scss */
 .group-check .check-secondary:hover::before, .group-check .check-primary:hover::before {
-  background-color: white;
+  background-color: #ffffff;
 }
-/* line 218, ../scss/atoms/_inputs.scss */
+/* line 224, ../scss/atoms/_inputs.scss */
 .group-check label:before {
   border-radius: 3px;
 }
-/* line 220, ../scss/atoms/_inputs.scss */
+/* line 226, ../scss/atoms/_inputs.scss */
 .group-check input[type="checkbox"] {
   display: none;
 }
-/* line 222, ../scss/atoms/_inputs.scss */
+/* line 228, ../scss/atoms/_inputs.scss */
 .group-check input[type="checkbox"]:checked + label:before {
   display: none;
 }
-/* line 225, ../scss/atoms/_inputs.scss */
+/* line 231, ../scss/atoms/_inputs.scss */
 .group-check input[type="checkbox"]:checked + .check-primary {
   background-color: #FFCA33;
-  color: #fff;
+  color: #ffffff;
   margin: 5px;
   padding: 5px 15px;
 }
-/* line 231, ../scss/atoms/_inputs.scss */
+/* line 237, ../scss/atoms/_inputs.scss */
 .group-check input[type="checkbox"]:checked + .check-secondary {
   background-color: #0074FC;
-  color: #fff;
+  color: #ffffff;
   margin: 5px;
   padding: 5px 15px;
 }
@@ -1699,38 +1710,26 @@ p {
     grid-column: span 12;
   }
 }
-/* line 2, ../scss/molecules/_input-checkbox.scss */
-.check-list .label-list {
+/* line 1, ../scss/molecules/_input-checkbox.scss */
+.check-list {
   display: block;
+}
+/* line 3, ../scss/molecules/_input-checkbox.scss */
+.check-list .label-list {
   padding-left: 5px;
   width: 100%;
-}
-/* line 7, ../scss/molecules/_input-checkbox.scss */
-.check-list .gro1 {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 /* line 1, ../scss/molecules/_input-radio.scss */
 .radio-list {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
 }
 /* line 4, ../scss/molecules/_input-radio.scss */
-.radio-list label {
-  display: block;
-}
-/* line 7, ../scss/molecules/_input-radio.scss */
 .radio-list .label-list {
   display: block;
   padding-left: 5px;
   width: 100%;
-}
-/* line 12, ../scss/molecules/_input-radio.scss */
-.radio-list input {
-  display: block;
-  box-sizing: border-box;
-  color: gray;
 }
 
 /* line 1, ../scss/molecules/_input-text.scss */
@@ -1746,16 +1745,15 @@ p {
 }
 /* line 9, ../scss/molecules/_input-text.scss */
 .group-list input {
-  display: block;
   box-sizing: border-box;
-  color: gray;
+  display: block;
 }
 
-/* line 15, ../scss/molecules/_input-text.scss */
+/* line 14, ../scss/molecules/_input-text.scss */
 .group-row {
   display: block;
 }
-/* line 17, ../scss/molecules/_input-text.scss */
+/* line 16, ../scss/molecules/_input-text.scss */
 .group-row label {
   padding-left: 5px;
 }
@@ -1806,7 +1804,7 @@ p {
 
 /* line 2, ../scss/molecules/_tables.scss */
 table {
-  border: 1px solid #000;
+  border: 1px solid #000000;
   width: 100%;
 }
 /* line 5, ../scss/molecules/_tables.scss */
@@ -1815,7 +1813,7 @@ table thead {
 }
 /* line 8, ../scss/molecules/_tables.scss */
 table th, table td {
-  border: 1px solid #000;
+  border: 1px solid #000000;
   border-collapse: collapse;
   caption-side: bottom;
   padding: 0.3em;
@@ -1837,88 +1835,78 @@ table caption {
 /* line 26, ../scss/molecules/_tables.scss */
 .table-black th, .table-black td {
   border: 0;
-  border-collapse: collapse;
-  caption-side: bottom;
-  padding: 0.3em;
-  text-align: left;
-  vertical-align: top;
 }
-/* line 34, ../scss/molecules/_tables.scss */
+/* line 29, ../scss/molecules/_tables.scss */
 .table-black caption {
+  background: #000000;
   color: #fff;
-  padding: 0.3em;
-  background: #000;
 }
-/* line 39, ../scss/molecules/_tables.scss */
+/* line 33, ../scss/molecules/_tables.scss */
 .table-black th {
-  background: #eee;
+  background: #999999;
 }
-/* line 43, ../scss/molecules/_tables.scss */
+/* line 37, ../scss/molecules/_tables.scss */
 .table-black th:hover, .table-black td:hover {
-  background-color: #cfcfcf;
+  background-color: #cccccc;
 }
 
 @media (max-width: 539px) {
-  /* line 51, ../scss/molecules/_tables.scss */
+  /* line 45, ../scss/molecules/_tables.scss */
   .table-simple {
     border: 0;
     display: block;
   }
-  /* line 54, ../scss/molecules/_tables.scss */
+  /* line 48, ../scss/molecules/_tables.scss */
   .table-simple > *, .table-simple tr, .table-simple td, .table-simple th {
     display: block;
   }
-  /* line 57, ../scss/molecules/_tables.scss */
+  /* line 51, ../scss/molecules/_tables.scss */
   .table-simple td, .table-simple th {
     width: 100%;
   }
-  /* line 60, ../scss/molecules/_tables.scss */
+  /* line 54, ../scss/molecules/_tables.scss */
   .table-simple caption {
     display: none;
     visibility: hidden;
   }
-  /* line 64, ../scss/molecules/_tables.scss */
+  /* line 58, ../scss/molecules/_tables.scss */
   .table-simple thead {
     display: none;
   }
-  /* line 68, ../scss/molecules/_tables.scss */
+  /* line 62, ../scss/molecules/_tables.scss */
   .table-simple tbody tr {
     height: auto;
     padding: 8px 0;
   }
-  /* line 72, ../scss/molecules/_tables.scss */
+  /* line 66, ../scss/molecules/_tables.scss */
   .table-simple tbody th {
     background-color: #FFCA33;
     text-align: center;
   }
-  /* line 77, ../scss/molecules/_tables.scss */
+  /* line 71, ../scss/molecules/_tables.scss */
   .table-simple tbody td:before {
-    color: gray;
+    color: #999999;
     content: attr(data-th) "  ";
-    font-weight: 600;
     text-align: left;
   }
 
-  /* line 89, ../scss/molecules/_tables.scss */
+  /* line 81, ../scss/molecules/_tables.scss */
   .table-black thead {
     display: none;
   }
-  /* line 92, ../scss/molecules/_tables.scss */
-  .table-black tr:nth-of-type(2n) {
-    background-color: inherit;
-  }
-  /* line 95, ../scss/molecules/_tables.scss */
+  /* line 84, ../scss/molecules/_tables.scss */
   .table-black td {
     display: flex;
+    font-size: 1.4rem;
     text-align: left;
     width: 113%;
   }
-  /* line 100, ../scss/molecules/_tables.scss */
+  /* line 90, ../scss/molecules/_tables.scss */
   .table-black td:before {
-    color: gray;
+    color: #999999;
     content: attr(data-th) "  ";
     display: block;
-    font-weight: 600;
+    font-size: 1.4rem;
     text-align: left;
   }
 }
@@ -1948,5 +1936,12 @@ table caption {
   }
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 719px) {
+  /* line 25, ../scss/molecules/_tab.scss */
+  .ml-tab {
+    display: block;
+    text-align: center;
   }
 }
