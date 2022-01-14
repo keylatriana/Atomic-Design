@@ -21,6 +21,17 @@ ul{
             
         }
     }
+    &.check{
+        list-style: none;
+        margin-left: 1rem;
+        padding: 0;
+        li:before{
+            color: color(primary,dark);
+            content: "\2714";
+            padding-right: 8px;
+            
+        }
+    }
     &.square{
         list-style: square;
     }
@@ -29,9 +40,6 @@ ul{
     }
     &.inside{
         list-style: inside;
-    }
-    &.image{
-        list-style-image: url(../../images/bullet.png);
     }
 }
 ol{ 

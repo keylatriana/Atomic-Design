@@ -1,17 +1,18 @@
 .ml-nav-list {
     display:flex;
     font-size: map-get($sizes, "thumb");
-    font-weight: map-get($weights, "semi_bold");    
+    font-weight: map-get($weights, "semi_bold"); 
+    list-style: none;   
 }
 // menu de navegacion vertical (pantalla pequeña)
-.ml-nav-list-sm {
+.ml-nav-list-column {
     @extend .ml-nav-list;
-    @include nav(column, margin-bottom, 4rem, margin-right);
+    @include nav(column);
 }
 
 @include mq-min(lg){
     // menu de navegacion horizontal (pantalla grande)
-    .ml-nav-list-lg {
-        @include nav(row, margin-right, 4rem, margin-bottom);
+    .ml-nav-list-row {
+        @include nav(row);
     }
 }

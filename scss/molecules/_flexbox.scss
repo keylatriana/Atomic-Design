@@ -6,47 +6,79 @@ $dflexs: flex, inline-flex, block, inline-block, grid, none;
    }
 }
 
+// Flex Flow Direction : applies to flex containers
+$directions: row, row-reverse, column, column-reverse;
+@each $direction in $directions {
+   .fd-#{$direction} {
+      flex-direction: $direction;
+   }
+}
+
 @include mq-min(sm) {
+   // Display pantalla pequeña
    $d-sm: flex, block, grid, none, inline-block;
    @each $d-sm in $d-sm {
       .d-sm-#{$d-sm} {
          display: $d-sm;
       }
    }
+   // Dirección de flex
+   $directions: row, row-reverse, column, column-reverse;
+   @each $direction in $directions {
+      .fd-sm-#{$direction} {
+         flex-direction: $direction;
+      }
+   }
 }
 
 @include mq-min(md) {
+   // Display pantalla mediana
    $d-md: flex, block, grid, none, inline-block;
    @each $d-md in $d-md {
       .d-md-#{$d-md} {
          display: $d-md;
       }
    }
+   // Dirección de flex
+   $directions: row, row-reverse, column, column-reverse;
+   @each $direction in $directions {
+      .fd-md-#{$direction} {
+         flex-direction: $direction;
+      }
+   }
 }
 
 @include mq-min(lg) {
+   // Display pantalla grande
    $d-lg: flex, block, grid, none, inline-block;
    @each $d-lg in $d-lg {
       .d-lg-#{$d-lg} {
          display: $d-lg;
       }
    }
+   // Dirección de flex
+   $directions: row, row-reverse, column, column-reverse;
+   @each $direction in $directions {
+      .fd-lg-#{$direction} {
+         flex-direction: $direction;
+      }
+   }
 }
 
 @include mq-min(xl) {
+   // Display pantalla extragrande
    $d-xl: flex, block, grid, none, inline-block;
    @each $d-xl in $d-xl {
       .d-xl-#{$d-xl} {
          display: $d-xl;
       }
    }
-}
-
-// Flex Flow Direction : applies to flex containers
-$directions: row, row-reverse, column, column-reverse;
-@each $dflex in $directions {
-   .fd-#{$dflex} {
-      display: $dflex;
+   // Dirección de flex
+   $directions: row, row-reverse, column, column-reverse;
+   @each $direction in $directions {
+      .fd-xl-#{$direction} {
+         flex-direction: $direction;
+      }
    }
 }
 
