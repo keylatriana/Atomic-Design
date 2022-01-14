@@ -442,134 +442,120 @@ button.shadow, .at-btn.shadow {
   border: none;
 }
 
-/* line 231, ../scss/config/_mixins.scss */
+/* line 1, ../scss/atoms/_headings.scss */
 h1 {
-  font-size: 3.6rem;
   color: #FFCA33;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 3.6rem;
 }
-
-/* line 236, ../scss/config/_mixins.scss */
-h2 {
-  font-size: 3rem;
-  color: #FFC627;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* line 241, ../scss/config/_mixins.scss */
-h3 {
-  font-size: 2.2rem;
-  color: #f5d16e;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* line 246, ../scss/config/_mixins.scss */
-h4 {
-  font-size: 1.8rem;
-  color: #0D2240;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* line 251, ../scss/config/_mixins.scss */
-h5 {
-  font-size: 1.6rem;
-  color: #532e00;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* line 256, ../scss/config/_mixins.scss */
-h6 {
-  font-size: 1.4rem;
-  color: #0074FC;
-  font-family: "Josefin Sans", sans-serif;
-}
-
 @media (min-width: 720px) {
-  /* line 231, ../scss/config/_mixins.scss */
+  /* line 1, ../scss/atoms/_headings.scss */
   h1 {
-    font-size: 3.8rem;
-    color: #FFCA33;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 236, ../scss/config/_mixins.scss */
-  h2 {
-    font-size: 3.2rem;
-    color: #FFC627;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 241, ../scss/config/_mixins.scss */
-  h3 {
-    font-size: 2.4rem;
-    color: #f5d16e;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 246, ../scss/config/_mixins.scss */
-  h4 {
-    font-size: 2rem;
-    color: #0D2240;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 251, ../scss/config/_mixins.scss */
-  h5 {
-    font-size: 1.8rem;
-    color: #532e00;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 256, ../scss/config/_mixins.scss */
-  h6 {
-    font-size: 1.6rem;
-    color: #0074FC;
-    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 231, ../scss/config/_mixins.scss */
+  /* line 1, ../scss/atoms/_headings.scss */
   h1 {
     font-size: 4.8rem;
-    color: #FFCA33;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 236, ../scss/config/_mixins.scss */
-  h2 {
-    font-size: 4.2rem;
-    color: #FFC627;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 241, ../scss/config/_mixins.scss */
-  h3 {
-    font-size: 3.4rem;
-    color: #f5d16e;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 246, ../scss/config/_mixins.scss */
-  h4 {
-    font-size: 3rem;
-    color: #0D2240;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 251, ../scss/config/_mixins.scss */
-  h5 {
-    font-size: 2.8rem;
-    color: #532e00;
-    font-family: "Josefin Sans", sans-serif;
-  }
-
-  /* line 256, ../scss/config/_mixins.scss */
-  h6 {
-    font-size: 2.6rem;
-    color: #0074FC;
-    font-family: "Josefin Sans", sans-serif;
   }
 }
+
+/* line 11, ../scss/atoms/_headings.scss */
+h2 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.2rem;
+}
+@media (min-width: 720px) {
+  /* line 11, ../scss/atoms/_headings.scss */
+  h2 {
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 11, ../scss/atoms/_headings.scss */
+  h2 {
+    font-size: 4.4rem;
+  }
+}
+
+/* line 21, ../scss/atoms/_headings.scss */
+h3 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+}
+@media (min-width: 720px) {
+  /* line 21, ../scss/atoms/_headings.scss */
+  h3 {
+    font-size: 3.4rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 21, ../scss/atoms/_headings.scss */
+  h3 {
+    font-size: 4.2rem;
+  }
+}
+
+/* line 31, ../scss/atoms/_headings.scss */
+h4 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.8rem;
+}
+@media (min-width: 720px) {
+  /* line 31, ../scss/atoms/_headings.scss */
+  h4 {
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 31, ../scss/atoms/_headings.scss */
+  h4 {
+    font-size: 4rem;
+  }
+}
+
+/* line 41, ../scss/atoms/_headings.scss */
+h5 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.6rem;
+}
+@media (min-width: 720px) {
+  /* line 41, ../scss/atoms/_headings.scss */
+  h5 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 41, ../scss/atoms/_headings.scss */
+  h5 {
+    font-size: 3.8rem;
+  }
+}
+
+/* line 51, ../scss/atoms/_headings.scss */
+h6 {
+  color: #FFCA33;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.4rem;
+}
+@media (min-width: 720px) {
+  /* line 51, ../scss/atoms/_headings.scss */
+  h6 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1140px) {
+  /* line 51, ../scss/atoms/_headings.scss */
+  h6 {
+    font-size: 3.6rem;
+  }
+}
+
 /* line 1, ../scss/atoms/_icons.scss */
 .icon-twitter:before {
   content: "\e901";
@@ -1010,50 +996,66 @@ input[type="submit"].btn-outline-secondary.disabled:focus, input[type="submit"].
   padding: 5px 15px;
 }
 
-/* line 18, ../scss/atoms/_list.scss */
+/* line 5, ../scss/atoms/_list.scss */
 ul {
+  color: #0D2240;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.4rem;
-  color: #f5d16e;
+  font-size: 1.6rem;
   list-style: disc;
 }
-/* line 23, ../scss/atoms/_list.scss */
+/* line 10, ../scss/atoms/_list.scss */
+ul li {
+  padding-bottom: 1rem;
+}
+/* line 13, ../scss/atoms/_list.scss */
+ul.bullets {
+  list-style: none;
+  margin-left: 1rem;
+  padding: 0;
+}
+/* line 17, ../scss/atoms/_list.scss */
+ul.bullets li:before {
+  color: #FF0000;
+  content: "\2665";
+  padding-right: 8px;
+}
+/* line 24, ../scss/atoms/_list.scss */
 ul.square {
   list-style: square;
 }
-/* line 26, ../scss/atoms/_list.scss */
+/* line 27, ../scss/atoms/_list.scss */
 ul.circles {
   list-style: circle;
 }
-/* line 29, ../scss/atoms/_list.scss */
+/* line 30, ../scss/atoms/_list.scss */
 ul.inside {
   list-style: inside;
 }
-/* line 32, ../scss/atoms/_list.scss */
-ul.outside {
-  list-style: outside;
-}
-/* line 35, ../scss/atoms/_list.scss */
+/* line 33, ../scss/atoms/_list.scss */
 ul.image {
-  list-style-image: url();
+  list-style-image: url(../../images/bullet.png);
 }
 
-/* line 39, ../scss/atoms/_list.scss */
+/* line 37, ../scss/atoms/_list.scss */
 ol {
-  font-size: 1.4rem;
+  color: #0D2240;
   font-family: "Josefin Sans", sans-serif;
-  color: #f5d16e;
+  font-size: 1.6rem;
   list-style: decimal;
 }
-/* line 44, ../scss/atoms/_list.scss */
+/* line 42, ../scss/atoms/_list.scss */
+ol li {
+  padding-bottom: 1rem;
+}
+/* line 45, ../scss/atoms/_list.scss */
 ol.low-rom {
   list-style: lower-roman;
 }
-/* line 47, ../scss/atoms/_list.scss */
+/* line 48, ../scss/atoms/_list.scss */
 ol.up-rom {
   list-style: upper-roman;
 }
-/* line 50, ../scss/atoms/_list.scss */
+/* line 51, ../scss/atoms/_list.scss */
 ol.low-greek {
   list-style: lower-greek;
 }
@@ -1074,52 +1076,6 @@ a.underline-link {
 /* line 13, ../scss/atoms/_links.scss */
 a.underline-link:hover {
   text-decoration: none;
-}
-
-/* line 18, ../scss/atoms/_list.scss */
-ul {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.4rem;
-  color: #0D2240;
-}
-/* line 22, ../scss/atoms/_list.scss */
-ul.square {
-  list-style: square;
-}
-/* line 25, ../scss/atoms/_list.scss */
-ul.circles {
-  list-style: circle;
-}
-/* line 28, ../scss/atoms/_list.scss */
-ul.inside {
-  list-style: inside;
-}
-/* line 31, ../scss/atoms/_list.scss */
-ul.outside {
-  list-style: outside;
-}
-/* line 34, ../scss/atoms/_list.scss */
-ul.image {
-  list-style-image: url();
-}
-
-/* line 38, ../scss/atoms/_list.scss */
-ol {
-  font-size: 1.4rem;
-  font-family: "Josefin Sans", sans-serif;
-  color: #0D2240;
-}
-/* line 42, ../scss/atoms/_list.scss */
-ol.low-rom {
-  list-style: lower-roman;
-}
-/* line 45, ../scss/atoms/_list.scss */
-ol.up-rom {
-  list-style: upper-roman;
-}
-/* line 48, ../scss/atoms/_list.scss */
-ol.low-greek {
-  list-style: lower-greek;
 }
 
 /* line 1, ../scss/atoms/_text.scss */
@@ -1428,323 +1384,38 @@ p {
   }
 }
 
-/* line 19, ../scss/molecules/_grid.scss */
+/* line 18, ../scss/molecules/_grid.scss */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 4rem;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
 }
-@media (max-width: 539px) {
-  /* line 19, ../scss/molecules/_grid.scss */
-  .grid {
-    grid-gap: 0;
-  }
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-1 {
-  grid-column: span 1;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-2 {
-  grid-column: span 2;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-3 {
-  grid-column: span 3;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-4 {
-  grid-column: span 4;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-5 {
-  grid-column: span 5;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-6 {
-  grid-column: span 6;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-7 {
-  grid-column: span 7;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-8 {
-  grid-column: span 8;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-9 {
-  grid-column: span 9;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-10 {
-  grid-column: span 10;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-11 {
-  grid-column: span 11;
-}
-
-/* line 29, ../scss/molecules/_grid.scss */
-.grid-12 {
-  grid-column: span 12;
-}
-
-@media (min-width: 540px) {
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-1 {
-    grid-column: span 1;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-2 {
-    grid-column: span 2;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-3 {
-    grid-column: span 3;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-4 {
-    grid-column: span 4;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-5 {
-    grid-column: span 5;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-6 {
-    grid-column: span 6;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-7 {
-    grid-column: span 7;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-8 {
-    grid-column: span 8;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-9 {
-    grid-column: span 9;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-10 {
-    grid-column: span 10;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-11 {
-    grid-column: span 11;
-  }
-
-  /* line 36, ../scss/molecules/_grid.scss */
-  .grid-sm-12 {
-    grid-column: span 12;
-  }
+/* line 21, ../scss/molecules/_grid.scss */
+.grid.grid-item {
+  height: 25rem;
+  width: 25rem;
 }
 @media (min-width: 720px) {
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-1 {
-    grid-column: span 1;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-2 {
-    grid-column: span 2;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-3 {
-    grid-column: span 3;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-4 {
-    grid-column: span 4;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-5 {
-    grid-column: span 5;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-6 {
-    grid-column: span 6;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-7 {
-    grid-column: span 7;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-8 {
-    grid-column: span 8;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-9 {
-    grid-column: span 9;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-10 {
-    grid-column: span 10;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-11 {
-    grid-column: span 11;
-  }
-
-  /* line 44, ../scss/molecules/_grid.scss */
-  .grid-md-12 {
-    grid-column: span 12;
-  }
-}
-@media (min-width: 960px) {
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-1 {
-    grid-column: span 1;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-2 {
-    grid-column: span 2;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-3 {
-    grid-column: span 3;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-4 {
-    grid-column: span 4;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-5 {
-    grid-column: span 5;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-6 {
-    grid-column: span 6;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-7 {
-    grid-column: span 7;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-8 {
-    grid-column: span 8;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-9 {
-    grid-column: span 9;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-10 {
-    grid-column: span 10;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-11 {
-    grid-column: span 11;
-  }
-
-  /* line 52, ../scss/molecules/_grid.scss */
-  .grid-lg-12 {
-    grid-column: span 12;
+  /* line 18, ../scss/molecules/_grid.scss */
+  .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    height: 25rem;
+    width: 25rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-1 {
-    grid-column: span 1;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-2 {
-    grid-column: span 2;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-3 {
-    grid-column: span 3;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-4 {
-    grid-column: span 4;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-5 {
-    grid-column: span 5;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-6 {
-    grid-column: span 6;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-7 {
-    grid-column: span 7;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-8 {
-    grid-column: span 8;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-9 {
-    grid-column: span 9;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-10 {
-    grid-column: span 10;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-11 {
-    grid-column: span 11;
-  }
-
-  /* line 60, ../scss/molecules/_grid.scss */
-  .grid-xl-12 {
-    grid-column: span 12;
+  /* line 18, ../scss/molecules/_grid.scss */
+  .grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    width: 25rem;
+    height: 25rem;
   }
 }
+
 /* line 2, ../scss/molecules/_input-checkbox.scss */
 .check-list .label-list {
   display: block;

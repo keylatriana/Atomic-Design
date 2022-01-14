@@ -1,29 +1,26 @@
-// ==========================================================================
-// VIÑETAS DE COLOR 
-// ==========================================================================
-//ul {
-//    list-style: none; /* Quitamos los marcadores */
-//    padding: 0;
-//    margin-left: 10px; /* Separamos la lista de la izquierda */
-//    }
-
-//  li::before { /* Añadimos contenido antes de cada elemento de la lista */
-//    content: "\2022"; /* Insertamos el marcador */
-//    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
-//    color: red; /* Coloreamos la viñeta */  
-//    }
-
-
+//https://unicode-table.com/es/
+//
+//El link contiene los codigos unicode para distintos simbolos de viñeta
 
 ul{
+    color:color(secondary,base);
     font-family: $font-primary;
-    font-size: map-get($sizes , "small" );
-<<<<<<< HEAD
-    color: color(primary,light);
+    font-size: map-get($sizes , "base" );
     list-style: disc;
-=======
-    color: color(secondary,base);
->>>>>>> 64382e551c18908f67d6e60a057bc3f399fcced2
+    li{
+        padding-bottom: 1rem;
+    }
+    &.bullets{
+        list-style: none;
+        margin-left: 1rem;
+        padding: 0;
+        li:before{
+            color: color(complementary, five);
+            content: "\2665";
+            padding-right: 8px;
+            
+        }
+    }
     &.square{
         list-style: square;
     }
@@ -33,22 +30,18 @@ ul{
     &.inside{
         list-style: inside;
     }
-    &.outside{
-        list-style: outside;
-    }
     &.image{
-        list-style-image: url();
+        list-style-image: url(../../images/bullet.png);
     }
 }
-ol{
-    font-size: map-get($sizes , "small" );
-    font-family: $font-primary;
-<<<<<<< HEAD
-    color: color(primary,light);
-    list-style:decimal;
-=======
+ol{ 
     color: color(secondary,base);
->>>>>>> 64382e551c18908f67d6e60a057bc3f399fcced2
+    font-family: $font-primary;
+    font-size: map-get($sizes , "base" );
+    list-style:decimal;
+    li{
+        padding-bottom: 1rem;
+    }
     &.low-rom{
         list-style: lower-roman;
     }
