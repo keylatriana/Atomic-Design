@@ -19,10 +19,10 @@
             <div class="ml-tab">
             <button class="at-tab-btn" onclick="openTab(event, 'buttons')">Botones</button>
             <button class="at-tab-btn" onclick="openTab(event, 'links')">Links</button>
-            <button class="at-tab-btn" onclick="openTab(event, 'input-btn')">Input Button</button>
             <button class="at-tab-btn" onclick="openTab(event, 'nav-menu')">Menú de navegación</button>
             <button class="at-tab-btn" onclick="openTab(event, 'inputs')">Inputs</button>
             <button class="at-tab-btn" onclick="openTab(event, 'pos-inputs')">Posicionamiento de inputs</button>
+            <button class="at-tab-btn" onclick="openTab(event, 'input-btn')">Input Button</button>
             <button class="at-tab-btn" onclick="openTab(event, 'tables')">Tablas</button>
             <button class="at-tab-btn" onclick="openTab(event, 'headings')">Titulos y listas</button>
             <button class="at-tab-btn" onclick="openTab(event, 'grilla')">Grilla y Flexbox</button>
@@ -31,219 +31,213 @@
             <!-- Sección de botones -->
             <div id="buttons" class="ml-tab-content">
                 <h2>Botones </h2>
-                <!-- Solidos normal y redondeados-->
-                <h6>Solidos normal y redondeados</h6>
-                <div>
-                    <p>Por defecto se configuran los elementos:  <code>button, .at-btn</code>,
-                        las clases <code>at-btn-sm</code> y <code>at-btn-lg</code> cambian el tamaño. La clase <code>at-btn-round</code> da un botón de bordes mas redondeados.
-                        Se configuran con los colores primarios (<code>at-btn-primary</code>) y secundarios (<code>at-btn-secondary</code>) respectivamente.
-                        <br>
-                        <br>
-                        Para configurar un color diferente se hace uso del mixin BUTTON
-                        <br>
-                        <code>
-                            .at-btn-color {<br>
-                                @include button( color('colección', 'color') );<br>
-                            }
-                        </code>
-                    </p>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-sm">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-primary">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-secondary">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-round">Por defecto</button>
-                    <button class="at-btn-sm at-btn-primary at-btn-round">Botón Primario</button>
-                    <button class="at-btn-sm at-btn-secondary at-btn-round">Botón Secundario</button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button>Botón normal</button>
-                    <button class="at-btn-primary">Botón normal</button>
-                    <button class="at-btn-secondary">Botón normal</button>
-                    <button class="at-btn-round">Por defecto</button>
-                    <button class="at-btn-primary at-btn-round">Botón Primario</button>
-                    <button class="at-btn-secondary at-btn-round">Botón Secundario</button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-lg">Botón grande</button>
-                    <button class="at-btn-lg at-btn-primary">Botón grande</button>
-                    <button class="at-btn-lg at-btn-secondary">Botón grande</button>
-                    <button class="at-btn-lg at-btn-round">Por defecto</button>
-                    <button class="at-btn-lg at-btn-primary at-btn-round">Botón Primario</button>
-                    <button class="at-btn-lg at-btn-secondary at-btn-round">Botón Secundario</button>
-                </div>
-                <hr>
-                <!-- Outline normal y redondeados-->
-                <h6>Outline normal y redondeados</h6>
-                <div>
-                    <p>Los botones de estilo Outline se obtienen con la clase <code>at-btn-outline</code>
-                        <br>
-                        <br>
-                        Para configurar un color diferente para botones Outline se hace uso del mixin BUTTON con los siguientes parametros
-                        <br>
-                        <code>
-                            .at-btn-outline-color {<br>
-                                @include button( transparent, color('coleccion', 'color'), color('coleccion', 'color' ) );<br>
-                                border: 0.1rem solid color('coleccion', 'color' );<br>
-                            }
-                        </code>
-                    </p>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-sm at-btn-outline">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-outline-primary">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-outline-secondary">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-outline at-btn-round">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-outline-primary at-btn-round">Botón pequeño</button>
-                    <button class="at-btn-sm at-btn-outline-secondary at-btn-round">Botón pequeño</button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-outline">Botón normal</button>
-                    <button class="at-btn-outline-primary">Botón normal</button>
-                    <button class="at-btn-outline-secondary">Botón normal</button>
-                    <button class="at-btn-outline at-btn-round">Botón normal</button>
-                    <button class="at-btn-outline-primary at-btn-round">Botón normal</button>
-                    <button class="at-btn-outline-secondary at-btn-round">Botón normal</button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-lg at-btn-outline">Botón grande</button>
-                    <button class="at-btn-lg at-btn-outline-primary">Botón grande</button>
-                    <button class="at-btn-lg at-btn-outline-secondary">Botón grande</button>
-                    <button class="at-btn-lg at-btn-outline at-btn-round">Botón grande</button>
-                    <button class="at-btn-lg at-btn-outline-primary at-btn-round">Botón grande</button>
-                    <button class="at-btn-lg at-btn-outline-secondary at-btn-round">Botón grande</button>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <!-- Solidos normal y redondeados-->
+                    <h6>Solidos normal y redondeados</h6>
+                    <div>
+                        <p>Por defecto se configuran los elementos:  <code>button, .at-btn</code>,
+                            las clases <code>at-btn-sm</code> y <code>at-btn-lg</code> cambian el tamaño. La clase <code>at-btn-round</code> da un botón de bordes mas redondeados.
+                            Se configuran con los colores primarios (<code>at-btn-primary</code>) y secundarios (<code>at-btn-secondary</code>) respectivamente.
+                            <br>
+                            <br>
+                            Para configurar un color diferente se hace uso del mixin BUTTON
+                            <br>
+                            <code>
+                                .at-btn-color {<br>
+                                    @include button( color('colección', 'color') );<br>
+                                }
+                            </code>
+                        </p>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-sm">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-primary">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-secondary">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-round">Por defecto</button>
+                        <button class="at-btn-sm at-btn-primary at-btn-round">Botón Primario</button>
+                        <button class="at-btn-sm at-btn-secondary at-btn-round">Botón Secundario</button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button>Botón normal</button>
+                        <button class="at-btn-primary">Botón normal</button>
+                        <button class="at-btn-secondary">Botón normal</button>
+                        <button class="at-btn-round">Por defecto</button>
+                        <button class="at-btn-primary at-btn-round">Botón Primario</button>
+                        <button class="at-btn-secondary at-btn-round">Botón Secundario</button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-lg">Botón grande</button>
+                        <button class="at-btn-lg at-btn-primary">Botón grande</button>
+                        <button class="at-btn-lg at-btn-secondary">Botón grande</button>
+                        <button class="at-btn-lg at-btn-round">Por defecto</button>
+                        <button class="at-btn-lg at-btn-primary at-btn-round">Botón Primario</button>
+                        <button class="at-btn-lg at-btn-secondary at-btn-round">Botón Secundario</button>
+                    </div>
                 </div>
                 <hr>
-                <!-- Botones deshabilitados -->
-                <h6>Deshabilitados</h6>
-                <div>
-                    <p>Botones deshabilitados con la clase <code>disable</code>
-                    </p>
-                </div>
-                <div>
-                    <button class="disabled">Botón normal</button>
-                    <button class="at-btn-primary disabled">Botón normal</button>
-                    <button class="at-btn-secondary disabled">Botón normal</button>
-                    <button class="at-btn-outline disabled">Botón normal</button>
-                    <button class="at-btn-outline-primary disabled">Botón normal</button>
-                    <button class="at-btn-outline-secondary disabled">Botón normal</button>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <!-- Outline normal y redondeados-->
+                    <h6>Outline normal y redondeados</h6>
+                    <div>
+                        <p>Los botones de estilo Outline se obtienen con la clase <code>at-btn-outline</code>
+                            <br>
+                            <br>
+                            Para configurar un color diferente para botones Outline se hace uso del mixin BUTTON con los siguientes parametros
+                            <br>
+                            <code>
+                                .at-btn-outline-color {<br>
+                                    @include button( transparent, color('coleccion', 'color'), color('coleccion', 'color' ) );<br>
+                                    border: 0.1rem solid color('coleccion', 'color' );<br>
+                                }
+                            </code>
+                        </p>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-sm at-btn-outline">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-outline-primary">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-outline-secondary">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-outline at-btn-round">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-outline-primary at-btn-round">Botón pequeño</button>
+                        <button class="at-btn-sm at-btn-outline-secondary at-btn-round">Botón pequeño</button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-outline">Botón normal</button>
+                        <button class="at-btn-outline-primary">Botón normal</button>
+                        <button class="at-btn-outline-secondary">Botón normal</button>
+                        <button class="at-btn-outline at-btn-round">Botón normal</button>
+                        <button class="at-btn-outline-primary at-btn-round">Botón normal</button>
+                        <button class="at-btn-outline-secondary at-btn-round">Botón normal</button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-lg at-btn-outline">Botón grande</button>
+                        <button class="at-btn-lg at-btn-outline-primary">Botón grande</button>
+                        <button class="at-btn-lg at-btn-outline-secondary">Botón grande</button>
+                        <button class="at-btn-lg at-btn-outline at-btn-round">Botón grande</button>
+                        <button class="at-btn-lg at-btn-outline-primary at-btn-round">Botón grande</button>
+                        <button class="at-btn-lg at-btn-outline-secondary at-btn-round">Botón grande</button>
+                    </div>
                 </div>
                 <hr>
-                <!-- Botones con texto e imagenes -->
-                <h6>Texto e iconos</h6>
-                <div>
-                    <p>Al implementar iconos en los botones, se alinean con la clase <code>at-inline-icon</code>
-                    </p>
-                </div>
-                <div>
-                    <button class="at-btn-sm shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn-lg shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-sm at-btn-secondary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn-secondary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn-lg at-btn-secondary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-sm at-btn-outline-primary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn-outline-primary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                    <button class="at-btn-lg at-btn-outline-primary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
-                </div>
-                <div style="margin-top: 3rem;">
-                    <button class="at-btn-sm"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón pequeño</button>
-                    <button class="at-btn"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón normal</button>
-                    <button class="at-btn-lg"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón grande</button>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <!-- Botones deshabilitados -->
+                    <h6>Deshabilitados</h6>
+                    <div>
+                        <p>Botones deshabilitados con la clase <code>disable</code>
+                        </p>
+                    </div>
+                    <div>
+                        <button class="disabled">Botón normal</button>
+                        <button class="at-btn-primary disabled">Botón normal</button>
+                        <button class="at-btn-secondary disabled">Botón normal</button>
+                        <button class="at-btn-outline disabled">Botón normal</button>
+                        <button class="at-btn-outline-primary disabled">Botón normal</button>
+                        <button class="at-btn-outline-secondary disabled">Botón normal</button>
+                    </div>
                 </div>
                 <hr>
-                <!-- Botones input type (Formularios) -->
-                <h6>Input Type</h6>
-                <div>
-                    <input type="button" value="Input Type Button">
-                    <input type="submit" value="Input Type Submit">
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <!-- Botones con texto e imagenes -->
+                    <h6>Texto e iconos</h6>
+                    <div>
+                        <p>Al implementar iconos en los botones, se alinean con la clase <code>at-inline-icon</code>
+                        </p>
+                    </div>
+                    <div>
+                        <button class="at-btn-sm shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn-lg shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-sm at-btn-secondary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn-secondary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn-lg at-btn-secondary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-sm at-btn-outline-primary shadow">Botón pequeño <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn-outline-primary shadow">Botón normal <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                        <button class="at-btn-lg at-btn-outline-primary shadow">Botón grande <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></button>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <button class="at-btn-sm"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón pequeño</button>
+                        <button class="at-btn"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón normal</button>
+                        <button class="at-btn-lg"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i> Botón grande</button>
+                    </div>
+                </div>
+                <hr>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <!-- Botones input type (Formularios) -->
+                    <h6>Input Type</h6>
+                    <div>
+                        <input type="button" value="Input Type Button">
+                        <input type="submit" value="Input Type Submit">
+                    </div>
                 </div>
             </div>
 
             <!-- Sección de links -->
             <div id="links" class="ml-tab-content">
-            <h2>Links</h2>
-            <div style="margin-top: 3rem;">
-                <a href="#">Este es un link</a>
-                <a href="#" class="underline-link">Este es un link subrayado</a>
-            </div>
-            <div style="margin-top: 3rem;">
-                <a href="#">Este es un link con icono <i class="icon-chevron-right at-inline-icon" aria-hidden="true"></i></a>
-            </div>
-            <div style="margin-top: 3rem;">
-                <a href="#" class="at-btn">Este es un link</a>
-                <a href="#" class="at-btn at-btn-primary">Este es un link</a>
-                <a href="#" class="at-btn at-btn-secondary">Este es un link</a>
-                <a href="#" class="at-btn at-btn-outline">Este es un link</a>
-                <a href="#" class="at-btn at-btn-outline-primary">Este es un link</a>
-                <a href="#" class="at-btn at-btn-outline-secondary">Este es un link</a>
-            </div>
-            </div>
-
-            <!-- Sección de inputs con botón -->
-            <div id="input-btn" class="ml-tab-content">
-                <h2>Inputs de busqueda con botón</h2>
-                <h6>Inputs en bloque</h6>
-                <div class="group-row ml-input-btn-group">
-                    <label for="search">Busqueda</label>
-                    <input class="primary medium" type="search" id="search" placeholder="Término">
-                    <button class="at-btn-primary at-btn-input">Buscar</button>
-
-                    <label for="search">Busqueda</label>
-                    <input class="secondary medium" type="text" id="search" placeholder="Término">
-                    <button class="at-btn-secondary at-btn-input">Buscar</button>
-
-                </div>
-                <div class="group-row ml-input-btn-group-block">
-                    <label for="search">Busqueda</label>
-                    <input class="secondary medium" type="text" id="search" placeholder="Término">
-                    <button class="at-btn-secondary at-btn-input">Buscar</button>
-                </div>
-                <div class="group-row ml-input-btn-group-block">
-                    <label for="id">Busqueda</label>
-                    <input  class="" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
+                <h2>Links</h2>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Estilos</h6>
+                    <div>
+                        <p>La etiqueta <code>a</code> viene definida por defecto sin ningún tipo de decoración.</p>
+                        <p>Usando la clase <code>underline-link</code> se puede aplicar el clásico subrayado a las etiquetas de link.</p>
+                        <br>
+                    </div>
+                    <div>
+                        <a href="#">Este es un link básico</a> 
+                    </div>
+                    <a href="#" class="underline-link">Este es un link subrayado</a>
                 </div>
                 <hr>
-                <h6>Inputs en lista</h6>
-                <div class="group group-list">
-                    <label for="id">Busqueda</label>
-                    <input  type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
-
-                    <label for="id">Busqueda</label>
-                    <input  class="outlinenone medium" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
-
-                    <label for="id">Busqueda</label>
-                    <input  class="primary" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-primary at-btn-input-round">Buscar</button>
-
-                    <label for="id">Busqueda</label>
-                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-outline-secondary at-btn-input">Buscar</button>
-
-                    <label for="id">Busqueda</label>
-                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-secondary at-btn-input"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
-
-                    <label for="id">Busqueda</label>
-                    <input  class="secondary" type="search" id="buscar" placeholder="Término">
-                    <button class="at-btn-secondary at-btn-input-round"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Con icono</h6>
+                    <div>
+                        <p>Al igual que en las clases de button, al icono se le asigna la clase <code>at-inline-icon</code> para alinearlo.</p>
+                        <br>
+                    </div>
+                    <a href="#">Este es un link con icono <i class="icon-chevron-right at-inline-icon" aria-hidden="true"></i></a>
+                </div>
+                <hr>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Como botones</h6>
+                    <div>
+                        <p>Se le pueden dar estilos de botón a los link usando las clases de estos elementos, señalados en el archivo <code>_buttons.scss</code>.</p>
+                        <p>Tal como: <code>at-btn, at-btn-primary, at-btn-secondary, at-btn-outline, at-btn-round</code></p>
+                        <br>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <a href="#" class="at-btn">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-primary">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-secondary">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline-primary">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline-secondary">Este es un link <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></a>
+                    </div>
+                    <div style="margin-top: 3rem;">
+                        <a href="#" class="at-btn at-btn-round">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-primary at-btn-round">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-secondary at-btn-round">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline at-btn-round">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline-primary at-btn-round">Este es un link</a>
+                        <a href="#" class="at-btn at-btn-outline-secondary at-btn-round">Este es un link <i class="icon-twitter at-inline-icon" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
 
             <!-- Sección menú de navegación -->
             <div id="nav-menu" class="ml-tab-content">
                 <h2>Menu de navegación</h2>
-                <div style="margin-top: 3rem;">
+                <div style="padding: 2rem; margin: 1rem 0rem">
                     <h6>Pantalla grande (BreakPoint [lg])</h6>
+                    <div>
+                        <p>
+                            Dependiendo de la orientación del menú se utilizan las clases  <code>ml-nav-list-column </code> o <code>ml-nav-list-row </code>.
+                        </p>
+                        <br>
+                    </div>
                     <nav>
-                        <ul class="ml-nav-list-sm ml-nav-list-lg">
+                        <ul class="ml-nav-list-row ml-nav-list-column" style="width: 40rem;">
                             <li>
                                 <a href="#">Menu1</a>
                             </li>
@@ -259,10 +253,11 @@
                         </ul>
                     </nav>
                 </div>
-                <div style="margin-top: 3rem;">
+                <hr>
+                <div style="padding: 2rem; margin: 1rem 0rem">
                     <h6>Pantalla pequeña (default)</h6>
                     <nav>
-                        <ul class="ml-nav-list-sm">
+                        <ul class="ml-nav-list-column" style="height: 20rem; width: 40rem;">
                             <li>
                                 <a href="#">Menu1</a>
                             </li>
@@ -274,6 +269,23 @@
                             </li>
                             <li>
                                 <a href="#">Menu4</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <hr>
+                    <nav>
+                        <ul class="ml-nav-list-column" style="height: 20rem; width: 40rem;">
+                            <li>
+                                <a href="#"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-facebook at-inline-icon" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-instagram at-inline-icon" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="icon-apple at-inline-icon" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </nav>
@@ -476,6 +488,71 @@
                 <div class="group-list">
                 <label for="msg">Mensaje</label>
                 <textarea class="input-rounded"  id="msg" name="user_message" placeholder="Escriba aquí su mensaje"></textarea>
+                </div>
+            </div>
+
+            <!-- Sección de inputs con botón -->
+            <div id="input-btn" class="ml-tab-content">
+                <h2>Inputs de busqueda con botón</h2>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Inputs en bloque</h6>
+                    <div>
+                        <p>Se implementan dos clases: <code>ml-input-btn-group</code> se ubica en el contenedor donde iran el input y el botón, adicionalmente el botón debe tener la clase <code>at-btn-input</code> o <code>at-btn-input-round</code> para asignarle las propiedades correspondientes.</p>
+                    </div>
+                    <br>
+                    <div class="group-row ml-input-btn-group">
+                        <label for="search">Busqueda</label>
+                        <input class="primary medium" type="search" id="search" placeholder="Término">
+                        <button class="at-btn-primary at-btn-input">Buscar</button>
+    
+                        <label for="search">Busqueda</label>
+                        <input class="secondary medium" type="search" id="search" placeholder="Término">
+                        <button class="at-btn-secondary at-btn-input">Buscar</button>
+    
+                    </div>
+                    <div class="group-row ml-input-btn-group-block">
+                        <label for="search">Busqueda</label>
+                        <input class="secondary medium" type="search" id="search" placeholder="Término">
+                        <button class="at-btn-secondary at-btn-input">Buscar</button>
+                    </div>
+                    <div class="group-row ml-input-btn-group-block">
+                        <label for="id">Busqueda</label>
+                        <input  class="" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-primary at-btn-input-round">Buscar</button>
+                    </div>
+                </div>
+                <hr>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Inputs en lista</h6>
+                    <div>
+                        <p>El contenedor es seteado con la clase <code>group group-list</code> para agregar los inputs en modo lista, igualmente las clases <code>at-btn-input</code> o <code>at-btn-input-round</code> son utilizadas en el botón. </p>
+                    </div>
+                    <br>
+                    <div class="group group-list">
+                        <label for="id">Busqueda</label>
+                        <input  type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                        <label for="id">Busqueda</label>
+                        <input  class="outlinenone medium" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                        <label for="id">Busqueda</label>
+                        <input  class="primary" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-primary at-btn-input-round">Buscar</button>
+
+                        <label for="id">Busqueda</label>
+                        <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-outline-secondary at-btn-input">Buscar</button>
+
+                        <label for="id">Busqueda</label>
+                        <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-secondary at-btn-input"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
+
+                        <label for="id">Busqueda</label>
+                        <input  class="secondary" type="search" id="buscar" placeholder="Término">
+                        <button class="at-btn-secondary at-btn-input-round"><i class="icon-search at-inline-icon" aria-hidden="true"></i></button>
+                    </div>
                 </div>
             </div>
 
@@ -694,83 +771,195 @@
                         <img src="https://i.picsum.photos/id/648/300/300.jpg?hmac=xfgy9aIr4ZX0c_J0DNIlGKXLUMxAc201OJU2bj7ejpg" width="250" height="250" alt="Bosque">
                     </div>
                 </div>
-
-
-                <div class="d-flex fd-row ">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                <hr>
+                <h2>FlexBox</h2>
+                <!-- Flex Directions -->
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Flex Direction</h6>
+                    <div>
+                        <p>Se asigna la clase <code>d-flex</code> para implementar contenedores flex.</p>
+                        <p>Flex ofrece dos maneras para la presentación del contenido <code>row</code> y <code>column</code>. Por defecto el contenido es mostrado con el estilo <code>row</code> sin embargo esto puede ser modificado.</p>
+                        <p>Para presentar el contenido como columnas se tiene la clase <code>fd-column</code>. De la misma manera <code>fd-column-reverse</code> presentará el contenido en columnas solo que invertirá su orden</p>
                     </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                </div>
-                <br>
-                <div class="d-flex jc-center">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                    <br>
+                    <div class="container d-flex fd-column ">
+                        <div>
+                            <p style="font-weight: bold;">Primer texto:</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam, ex accusamus nesciunt? Adipisci amet delectus debitis.</p>
+                        </div>
+                        <div>
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam, ex accusamus nesciunt? Adipisci amet delectus debitis.</p>
+                        </div>
                     </div>
                 </div>
-                <br>
-                <div class="d-flex jc-space-between">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
-                    </div>
+                <hr>
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Flex Direction Responsive</h6>
+                <div>
+                    <p>Las clases de direccion se han configurado en los diferentes breakpoints basicos.</p>
+                    <p>Así se podran implementar dependiendo de las necesidades</p>
+                    <p>Breakpoint sm: <code>fd-sm-row</code>, <code>fd-sm-row-reverse</code>, <code>fd-sm-column</code>, <code>fd-sm-column-reverse</code></p>
+                    <p>Breakpoint md: <code>fd-md-row</code>, <code>fd-md-row-reverse</code>, <code>fd-md-column</code>, <code>fd-md-column-reverse</code></p>
+                    <p>Breakpoint lg: <code>fd-lg-row</code>, <code>fd-lg-row-reverse</code>, <code>fd-lg-column</code>, <code>fd-lg-column-reverse</code></p>
+                    <p>Breakpoint xl: <code>fd-xl-row</code>, <code>fd-xl-row-reverse</code>, <code>fd-xl-column</code>, <code>fd-xl-column-reverse</code></p>
+                    <br>
+                    <p>En este ejemplo ajusta la dirección en el breakpoint lg (960px), además se cambia el orden de presentación</p>
                 </div>
                 <br>
-                <div class="d-flex jc-space-around">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                <div class="d-flex fd-column fd-lg-row-reverse ">
+                    <div class="container">
+                        <p style="font-weight: bold;">Primer texto:</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam, ex accusamus nesciunt? Adipisci amet delectus debitis.</p>
                     </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                    <div class="container">
+                        <p style="font-weight: bold;">Segundo texto:</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam, ex accusamus nesciunt? Adipisci amet delectus debitis.</p>
                     </div>
                 </div>
-                <br>
-                <div class="d-flex jc-flex-end">
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                </div>
+                <hr>
+                <!-- Justificación de contenido -->
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Justificación de contenido</h6>
+                    <div>
+                        <p>Define la distribución del contenido en el eje horizontal</p>
+                        <p>Para que estas propiedades se puedan percibir, el contenido deben tener la propiedad de ancho definida</p>
+                        <br>
+                        <p>Ejemplo de la clase <code>jc-center</code></p>
                     </div>
-                    <div class="fd-column">
-                        <p>Hola </p>
-                        <p>probando</p>
-                        <p>flex direction</p>
+                    <br>
+                    <!-- Flex center -->
+                    <div class="d-flex jc-center">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Ejemplo de la clase <code>jc-flex-start</code></p>
+                    <!-- Flex start -->
+                    <div class="d-flex jc-flex-start">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Ejemplo de la clase <code>jc-flex-end</code></p>
+                    <!-- Flex end -->
+                    <div class="d-flex jc-flex-end">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Ejemplo de la clase <code>jc-space-between</code></p>
+                    <!-- Flex space between -->
+                    <div class="d-flex jc-space-between">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Ejemplo de la clase <code>jc-space-around</code></p>
+                    <!-- Flex space around -->
+                    <div class="d-flex jc-space-around">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <p>Ejemplo de la clase <code>jc-space-evenly</code></p>
+                    <!-- Flex space evenly -->
+                    <div class="d-flex jc-space-evenly">
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
                     </div>
                 </div>
-                <br>
-                <div class="ai-center">
-                    <div><p>Hola</p></div>
-                    <div><p>Hola</p></div>
-                    <div><p>Hola</p></div>
+                <hr>
+                <!-- Alineación vertical de contenido -->
+                <div style="padding: 2rem; margin: 1rem 0rem">
+                    <h6>Alineación Vertical</h6>
+                    <div>
+                        <p>Las siguientes clases ajustan la posición del contenido en el eje vetical, ya sea arriba del contenedor, al final, en el centro o de estilo justificado cubriendo todo el alto del mismo.</p>
+                        <br>
+                        <p>Cada contenedor tiene la altura definida de 50rem, en este primer ejemplo se muestra la clase <code>ai-flex-end</code> </p>
+                    </div>
+                    <div class="d-flex jc-space-between ai-flex-end" style="height: 50rem">
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <p>Alineación vertical central: <code>ai-center</code> </p>
+                    <div class="d-flex jc-space-between ai-center" style="height: 50rem">
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <p>LLena el contenedor verticalmente por completo: <code>ai-stretch</code> </p>
+                    <div class="d-flex jc-space-between ai-stretch" style="height: 50rem">
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Primer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Segundo texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                        <div style="max-width: 20rem; padding: 1rem; background-color: #FFCA33">
+                            <p style="font-weight: bold;">Tercer texto:</p><p>Numquam modi hic excepturi culpa natus dolorem alias labore incidunt similique nisi quisquam architecto totam.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-  </main>  
+    </main>  
 </body>
 
 </html>

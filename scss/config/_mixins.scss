@@ -62,20 +62,9 @@
 // ==========================================================================
 // Mixins para la orientación de la barra de navegación: @include nav( ... );
 // ==========================================================================
-@mixin nav($direction, $marginClassName, $marginClassStyle, $marginUnset) {
+@mixin nav($direction) {
   flex-direction: $direction;
-
-  @if $marginClassName == 'margin-bottom' {
-    li:not(:last-child) {
-      #{$marginClassName}: $marginClassStyle;
-      #{$marginUnset}: unset;
-    }
-  } @else {
-    li:not(:last-child) {
-      #{$marginClassName}: $marginClassStyle;
-      #{$marginUnset}: unset;
-    }
-  }
+  justify-content: space-between;
 }
 
 // ==========================================================================
@@ -113,8 +102,8 @@
       text-decoration: none;
     }
     &:focus {
+      background: darken($bg, 7%);
       outline: 0;
-      // box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
       text-decoration: none;
     }
     &:active {
