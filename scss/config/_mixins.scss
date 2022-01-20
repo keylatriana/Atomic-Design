@@ -84,7 +84,7 @@
     }
     &:focus {
       background: darken($border, 7%);
-      box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
+      box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
       color: #ffffff;
       outline: 0;
       text-decoration: none;
@@ -211,7 +211,7 @@
 // ==========================================================================
 
 @mixin titles($color, $font-family){
-    color: color(primary,base);
+    color: color(primary,500);
     font-family: $font-primary;
 }
 

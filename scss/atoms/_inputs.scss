@@ -2,16 +2,16 @@ input,select,textarea{
     border-radius: 5px;
     border: solid .2px color(grayscale,gray-3);
     box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
-    color: color( secondary, base );   
+    color: color(secondary,500);   
     cursor:pointer;
     font-family: $font-primary;
     margin:0.5rem;
     padding: 0.5rem;
-    outline-color:color(primary,base);
+    outline-color:color(primary,500);
     &.input-bottomless {
         background-color: transparent;
         border-color: transparent;
-        border-bottom: color(secondary,base) solid 2px;
+        border-bottom: color(secondary,500) solid 2px;
         border-radius:0;
         box-shadow: none;
     }
@@ -19,12 +19,12 @@ input,select,textarea{
       border-radius:30px;
   }
     &.primary{
-      border: solid .2px color(primary,base);
-      outline-color:color(secondary,base);
+      border: solid .2px color(primary,500);
+      outline-color:color(secondary,500);
     }
     &.secondary{
-      border: solid .2px color(secondary,base);
-      outline-color: color(primary,base);
+      border: solid .2px color(secondary,500);
+      outline-color: color(primary,500);
     }
     &.outlinenone {
       background-color:color(grayscale,gray-2);
@@ -58,14 +58,14 @@ textarea {
 input[type="radio"]{ 
   appearance: none;
   background-color:color(grayscale,white);
-  border: solid 1px color(primary,base);
+  border: solid 1px color(primary,500);
   border-radius: 50%;
   box-shadow: none;
   height: map-get($sizes, small);
   vertical-align:bottom;
   width: map-get($sizes, small);
   &:checked{
-    background-color:color(primary,base); 
+    background-color:color(primary,500); 
     border: color(grayscale,white) 3px double ;
     height: map-get($sizes, tiny);
     width: map-get($sizes, tiny);
@@ -77,13 +77,13 @@ input[type="radio"]{
 input[type="checkbox"]{
   appearance: none;
   background-color: transparent;
-  border: solid 1px color(primary,base);
+  border: solid 1px color(primary,500);
   border-radius: 2px;
   height: map-get($sizes,base);
   vertical-align:bottom;
   width: map-get($sizes,base);
   &:checked{
-    background-color:color(primary,base); 
+    background-color:color(primary,500); 
   &:before{
      color: color(grayscale,white);
      content: "✔";
@@ -101,25 +101,26 @@ input[type="checkbox"]{
 input[type="submit"], input[type="button"]{
     border: none;
     border-radius: 0.3rem;
+    color: color(secondary,900);
     font-family: $font-primary;
     font-size: $font-size;
     margin: 0.5rem 0;
     padding: 0.6rem 1.2rem;
     text-align: center;
     &.btn-primary {
-      @include button( color(primary, base) );
+      @include button( color(primary, 500) );
     }
     &.btn-secondary {
-      @include button( color(secondary, base) );
+      @include button( color(secondary, 700) );
     }
     &.btn-outline-primary{
-      @include button( transparent, color(primary, base), color(primary, base) );
-      border: 0.1rem solid color(primary, base);
+      @include button( transparent, color(primary, 700), color(primary, 700) );
+      border: 0.1rem solid color(primary, 700);
     }
     // botón con borde secundario
     &.btn-outline-secondary {
-        @include button( transparent, color(secondary, base), color(secondary, base) );
-        border: 0.1rem solid color(secondary, base);
+        @include button( transparent, color(secondary, 500), color(secondary, 500) );
+        border: 0.1rem solid color(secondary, 500);
     }
   }
 
@@ -127,17 +128,17 @@ input[type="submit"], input[type="button"]{
 .group {
   .radio-secondary{
     &:before{
-    border: 2px solid color(secondary,light);
+    border: 2px solid color(secondary,300);
     }
   } 
   .radio-primary{
     &:before{
-      border: 2px solid color(primary,base);
+      border: 2px solid color(primary,500);
       }
   }
   .radio-secondary, .radio-primary{
     border-radius: 5px;
-    color: color(secondary,base);
+    color: color(grayscale,black);
     cursor: pointer;
     display: inline-block;
     padding: 5px 15px 5px 30px;
@@ -168,14 +169,14 @@ input[type="submit"], input[type="button"]{
       display: none;
     }
     &:checked + .radio-primary{
-      background-color: color(primary,base);
+      background-color: color(primary,500);
       border-radius: 2px;
       color:color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
     &:checked + .radio-secondary{
-      background-color: color(secondary,light); 
+      background-color: color(secondary,300); 
       border-radius: 2px;
       color: color(grayscale,white);
       margin: 5px;
@@ -187,17 +188,17 @@ input[type="submit"], input[type="button"]{
 .group-check {
   .check-secondary{
     &:before{
-    border: 2px solid color(secondary,light);
+    border: 2px solid color(secondary,300);
     }
   } 
   .check-primary{
     &:before{
-      border: 2px solid color(primary,base);
+      border: 2px solid color(primary,500);
       }
   }
   .check-secondary, .check-primary{
     border-radius: 5px;
-    color: color(secondary,base);
+    color: color(secondary,500);
     cursor: pointer;
     display: inline-block;
     padding: 5px 15px 5px 30px;
@@ -229,13 +230,13 @@ input[type="submit"], input[type="button"]{
       display: none;
     }
     &:checked + .check-primary{
-      background-color: color(primary,base);
+      background-color: color(primary,500);
       color: color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;
     }
     &:checked + .check-secondary{
-      background-color:color(secondary,light);
+      background-color:color(secondary,300);
       color: color(grayscale,white);
       margin: 5px;
       padding: 5px 15px;

@@ -34,11 +34,11 @@ button, .at-btn{
 
 // botón con color sólido primario
 .at-btn-primary {
-    @include button( color(primary, base) );
+    @include button( color(primary,500) );
 }
 // botón con color solido secundario
 .at-btn-secondary {
-    @include button( color(secondary, base) );
+    @include button( color(secondary, 500) );
 }
 // botón con color solido (personalizado)
 // .at-btn-color {
@@ -52,13 +52,13 @@ button, .at-btn{
 }
 // botón con borde primario
 .at-btn-outline-primary {
-    @include button( transparent, color(primary, base), color(primary, base) );
-    border: 0.1rem solid color(primary, base);
+    @include button( transparent, color(primary, 500), color(primary, 500) );
+    border: 0.1rem solid color(primary, 500);
 }
 // botón con borde secundario
 .at-btn-outline-secondary {
-    @include button( transparent, color(secondary, base), color(secondary, base) );
-    border: 0.1rem solid color(secondary, base);
+    @include button( transparent, color(secondary, 500), color(secondary, 500) );
+    border: 0.1rem solid color(secondary, 500);
 }
 
 // boton de input inline normal
