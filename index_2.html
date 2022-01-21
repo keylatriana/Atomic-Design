@@ -185,8 +185,8 @@
                     <div>
                         <p>Las etiquetas <code>inputs</code> cuentan con un estilo base y son los que se presentan como primera opción.
                             <br>
-                            La clase <code>secondary</code> permite que el input se presente con bordes del color secundario (base) y un ouline del color primario (base) 
-                            y <code>outlinenone</code> que no cuenta con bordes y tampoco outline. 
+                            La clase <code>secondary</code> permite que el input se presente con bordes del color secundario  
+                            y <code>complementary</code> permite que el input se presente con bordes del color complementary. 
                         </p>
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
@@ -217,29 +217,44 @@
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>-------Estilos de Textarea-------</h6>
-                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
+                        <p> Este es el estilo base del textarea.</p>
                         <label for="">textarea</label>
                         <textarea  name="" id="" placeholder="Escriba su comentario"></textarea>
-                        <textarea  class="error" name="" id="" placeholder="Error"></textarea>
-                        <textarea class="success" name="" id="" placeholder="Success"></textarea>
-                        <textarea  class="warning" name="" id="" placeholder="warning"></textarea>
+                        <textarea  class="secondary" name="" id="" placeholder="Estilo secondary"></textarea>
+                        <textarea class="complementary" name="" id="" placeholder="Estilo complementary"></textarea>
+                        <textarea  class="error" name="" id="" placeholder="Clase Error"></textarea>
+                        <textarea class="success" name="" id="" placeholder="Clase Success"></textarea>
+                        <textarea  class="warning" name="" id="" placeholder="Clase warning"></textarea>
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>-------Estilos de Select-------</h6>
-                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
+                        <p> Este es el estilo base de la etiqueta select.</p>
                         <label for="">Select</label>
                         <select name="" id="">
                             <option value="">select</option>
                             <option value="">select</option>
                         </select>
+                        <p> Este es el estilo secondary de la etiqueta select.</p>
+                        <select class="secondary" name="" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        <p> Estilo complementary de la etiqueta select.</p>
+                        <select name="complementary" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        <p> Para esta variación se utiliza la clase <code>error</code></p>
                         <select class="error" name="" id="">
                             <option value="">select</option>
                             <option value="">select</option>
                         </select>
+                        <p> Para esta variación se utiliza la clase <code>success</code></p>
                         <select class="success" name="" id="">
                             <option value="">select</option>
                             <option value="">select</option>
                         </select>
+                        <p> Para esta variación se utiliza la clase <code> warning</code></p>
                         <select class="warning" name="" id="">
                             <option value="">select</option>
                             <option value="">select</option>
@@ -276,6 +291,26 @@
                             <label for="Masculino">Masculino</label>
                             <input type="radio" name="genero" id="indistinto">
                             <label for="indistinto">Prefiero no decirlo</label>
+                        </div>
+                        <div style="padding: 2rem; margin: 1rem 0rem">
+                            <p>2-. Estilo secondary de los inputs tipo radio</p>
+                            <label for="gen">Género</label>
+                            <input class="secondary" type="radio" name="gen" id="Femenino1" checked="checked">
+                            <label for="Femenino1">Femenino</label>
+                            <input class="secondary" type="radio" name="gen" id="Masculino1">
+                            <label for="Masculino1">Masculino</label>
+                            <input class="secondary" type="radio" name="gen" id="indistinto1">
+                            <label for="indistinto1">Prefiero no decirlo</label>
+                        </div>
+                        <div style="padding: 2rem; margin: 1rem 0rem">
+                            <p>3-. Estilo complementary de los inputs tipo radio</p>
+                            <label for="gen1">Género</label>
+                            <input class="complementary" type="radio" name="gen1" id="Femenino2" checked="checked">
+                            <label for="Femenino2">Femenino</label>
+                            <input class="complementary" type="radio" name="gen1" id="Masculino2">
+                            <label for="Masculino2">Masculino</label>
+                            <input class="complementary" type="radio" name="gen1" id="indistinto2">
+                            <label for="indistinto2">Prefiero no decirlo</label>
                         </div>
                         <div style="padding: 2rem; margin: 1rem 0rem" >
                             <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
@@ -321,6 +356,26 @@
                         <input type="checkbox" id="pelicula4"><label  for="pelicula4">Thrillers</label> 
                         <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
                         <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
+                    </div>
+                    <div  style="padding: 2rem; margin: 1rem 0rem">
+                        <p>2-. Estilo secondary de los inputs tipo checkbox.</p>
+                      <label >¿Cuál es tu género de película favorita?</label>
+                        <input class="secondary" type="checkbox" id="peli1" checked="checked"><label for="peli1">Romance</label>
+                        <input  class="secondary" type="checkbox" id="peli2"><label  for="peli2"> Acción</label>
+                        <input class="secondary"  type="checkbox" id="peli3"><label  for="peli3"> Ciencia Ficción</label> 
+                        <input  class="secondary" type="checkbox" id="peli4"><label  for="peli4">Thrillers</label> 
+                        <input  class="secondary" type="checkbox" id="peli5"><label  for="peli5"> Terror</label> 
+                        <input class="secondary"  type="checkbox" id="peli6"><label  for="peli6">Otros</label> 
+                    </div>
+                    <div  style="padding: 2rem; margin: 1rem 0rem">
+                        <p>3-. Estilo complementary de los inputs tipo checkbox.</p>
+                      <label >¿Cuál es tu género de película favorita?</label>
+                        <input class="complementary" type="checkbox" id="pelic1" checked="checked"><label for="pelic1">Romance</label>
+                        <input class="complementary" type="checkbox" id="pelic2"><label  for="pelic2"> Acción</label>
+                        <input class="complementary" type="checkbox" id="pelic3"><label  for="pelic3"> Ciencia Ficción</label> 
+                        <input class="complementary" type="checkbox" id="pelic4"><label  for="pelic4">Thrillers</label> 
+                        <input class="complementary" type="checkbox" id="pelic5"><label  for="pelic5"> Terror</label> 
+                        <input class="complementary" type="checkbox" id="pelic6"><label  for="pelic6">Otros</label> 
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>

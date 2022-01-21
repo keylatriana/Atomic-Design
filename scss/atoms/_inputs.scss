@@ -34,6 +34,24 @@ input[type="radio"]{
     height: map-get($sizes, tiny);
     width: map-get($sizes, tiny);
   }
+  &.secondary{
+    border: solid 1px color(secondary,500);
+    &:checked{
+      background-color:color(secondary,500); 
+      border: color(grayscale,white) 3px double ;
+      height: map-get($sizes, tiny);
+      width: map-get($sizes, tiny);
+    }
+  }
+  &.complementary{
+    border: solid 1px color(complementary,500);
+    &:checked{
+      background-color:color(complementary,500); 
+      border: color(grayscale,white) 3px double ;
+      height: map-get($sizes, tiny);
+      width: map-get($sizes, tiny);
+    }
+  }
   &.error{
     border: solid 1px color(alert,error);
     &:checked{
@@ -84,6 +102,18 @@ input[type="checkbox"]{
      position: relative;
      top: -8px;
    }
+  }
+  &.secondary{
+    border: solid 1px color(secondary,500); 
+    &:checked{
+      background-color:color(secondary,500); 
+    }
+  }
+  &.complementary{
+    border: solid 1px color(complementary,500); 
+    &:checked{
+      background-color:color(complementary,500); 
+    }
   }
   &.error{
     border: solid 1px color(alert,error); 

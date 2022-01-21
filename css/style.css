@@ -903,32 +903,54 @@ input[type="radio"]:checked {
   width: 1.2rem;
 }
 /* line 37, ../scss/atoms/_inputs.scss */
+input[type="radio"].secondary {
+  border: solid 1px #03a9f4;
+}
+/* line 39, ../scss/atoms/_inputs.scss */
+input[type="radio"].secondary:checked {
+  background-color: #03a9f4;
+  border: #ffffff 3px double;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+/* line 46, ../scss/atoms/_inputs.scss */
+input[type="radio"].complementary {
+  border: solid 1px #673ab7;
+}
+/* line 48, ../scss/atoms/_inputs.scss */
+input[type="radio"].complementary:checked {
+  background-color: #673ab7;
+  border: #ffffff 3px double;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+/* line 55, ../scss/atoms/_inputs.scss */
 input[type="radio"].error {
   border: solid 1px #EE0004;
 }
-/* line 39, ../scss/atoms/_inputs.scss */
+/* line 57, ../scss/atoms/_inputs.scss */
 input[type="radio"].error:checked {
   background-color: #EE0004;
   border: #ffffff 3px double;
   height: 1.2rem;
   width: 1.2rem;
 }
-/* line 46, ../scss/atoms/_inputs.scss */
+/* line 64, ../scss/atoms/_inputs.scss */
 input[type="radio"].success {
   border: solid 1px #28A745;
 }
-/* line 48, ../scss/atoms/_inputs.scss */
+/* line 66, ../scss/atoms/_inputs.scss */
 input[type="radio"].success:checked {
   background-color: #28A745;
   border: #ffffff 3px double;
   height: 1.2rem;
   width: 1.2rem;
 }
-/* line 55, ../scss/atoms/_inputs.scss */
+/* line 73, ../scss/atoms/_inputs.scss */
 input[type="radio"].warning {
   border: solid 1px #FFC100;
 }
-/* line 57, ../scss/atoms/_inputs.scss */
+/* line 75, ../scss/atoms/_inputs.scss */
 input[type="radio"].warning:checked {
   background-color: #FFC100;
   border: #ffffff 3px double;
@@ -936,7 +958,7 @@ input[type="radio"].warning:checked {
   width: 1.2rem;
 }
 
-/* line 68, ../scss/atoms/_inputs.scss */
+/* line 86, ../scss/atoms/_inputs.scss */
 input[type="checkbox"] {
   appearance: none;
   background-color: transparent;
@@ -946,11 +968,11 @@ input[type="checkbox"] {
   vertical-align: bottom;
   width: 1.6rem;
 }
-/* line 76, ../scss/atoms/_inputs.scss */
+/* line 94, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked {
   background-color: #ffeb3b;
 }
-/* line 78, ../scss/atoms/_inputs.scss */
+/* line 96, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked:before {
   color: #ffffff;
   content: "✔";
@@ -960,37 +982,53 @@ input[type="checkbox"]:checked:before {
   position: relative;
   top: -8px;
 }
-/* line 88, ../scss/atoms/_inputs.scss */
+/* line 106, ../scss/atoms/_inputs.scss */
+input[type="checkbox"].secondary {
+  border: solid 1px #03a9f4;
+}
+/* line 108, ../scss/atoms/_inputs.scss */
+input[type="checkbox"].secondary:checked {
+  background-color: #03a9f4;
+}
+/* line 112, ../scss/atoms/_inputs.scss */
+input[type="checkbox"].complementary {
+  border: solid 1px #673ab7;
+}
+/* line 114, ../scss/atoms/_inputs.scss */
+input[type="checkbox"].complementary:checked {
+  background-color: #673ab7;
+}
+/* line 118, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].error {
   border: solid 1px #EE0004;
 }
-/* line 90, ../scss/atoms/_inputs.scss */
+/* line 120, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].error:checked {
   background-color: #EE0004;
 }
-/* line 94, ../scss/atoms/_inputs.scss */
+/* line 124, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].success {
   border: solid 1px #28A745;
 }
-/* line 96, ../scss/atoms/_inputs.scss */
+/* line 126, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].success:checked {
   background-color: #28A745;
 }
-/* line 100, ../scss/atoms/_inputs.scss */
+/* line 130, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].warning {
   border: solid 1px #FFC100;
 }
-/* line 102, ../scss/atoms/_inputs.scss */
+/* line 132, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].warning:checked {
   background-color: #FFC100;
 }
 
-/* line 107, ../scss/atoms/_inputs.scss */
+/* line 137, ../scss/atoms/_inputs.scss */
 textarea {
   vertical-align: middle;
 }
 
-/* line 113, ../scss/atoms/_inputs.scss */
+/* line 143, ../scss/atoms/_inputs.scss */
 input[type="submit"], input[type="button"] {
   border: none;
   border-radius: 0.3rem;
@@ -1000,7 +1038,7 @@ input[type="submit"], input[type="button"] {
   padding: 0.6rem 1.2rem;
   text-align: center;
 }
-/* line 121, ../scss/atoms/_inputs.scss */
+/* line 151, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn, input[type="button"].input-btn {
   border: solid 0.2px #ffeb3b;
   border-radius: 5px;
@@ -1041,7 +1079,7 @@ input[type="submit"].input-btn:disabled:hover, input[type="button"].input-btn:di
 input[type="submit"].input-btn:disabled:focus, input[type="button"].input-btn:disabled:focus {
   box-shadow: none;
 }
-/* line 124, ../scss/atoms/_inputs.scss */
+/* line 154, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn__secondary, input[type="button"].input-btn__secondary {
   border: solid 0.2px #0288d1;
   border-radius: 5px;
@@ -1082,7 +1120,7 @@ input[type="submit"].input-btn__secondary:disabled:hover, input[type="button"].i
 input[type="submit"].input-btn__secondary:disabled:focus, input[type="button"].input-btn__secondary:disabled:focus {
   box-shadow: none;
 }
-/* line 127, ../scss/atoms/_inputs.scss */
+/* line 157, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn__tertiary, input[type="button"].input-btn__tertiary {
   border: solid 0.2px #512da8;
   border-radius: 5px;
@@ -1124,13 +1162,13 @@ input[type="submit"].input-btn__tertiary:disabled:focus, input[type="button"].in
   box-shadow: none;
 }
 
-/* line 132, ../scss/atoms/_inputs.scss */
+/* line 162, ../scss/atoms/_inputs.scss */
 .file-select, .file-error, .file-success, .file-warning {
   display: inline-block;
   margin: 0.5rem;
   position: relative;
 }
-/* line 136, ../scss/atoms/_inputs.scss */
+/* line 166, ../scss/atoms/_inputs.scss */
 .file-select::before, .file-error::before, .file-success::before, .file-warning::before {
   align-items: center;
   bottom: 0;
@@ -1145,28 +1183,28 @@ input[type="submit"].input-btn__tertiary:disabled:focus, input[type="button"].in
   right: 0;
   top: 0;
 }
-/* line 150, ../scss/atoms/_inputs.scss */
+/* line 180, ../scss/atoms/_inputs.scss */
 .file-select input[type="file"], .file-error input[type="file"], .file-success input[type="file"], .file-warning input[type="file"] {
   display: inline-block;
   opacity: 0;
 }
 
-/* line 156, ../scss/atoms/_inputs.scss */
+/* line 186, ../scss/atoms/_inputs.scss */
 .file-select:before {
   background-color: #fbc02d;
 }
 
-/* line 160, ../scss/atoms/_inputs.scss */
+/* line 190, ../scss/atoms/_inputs.scss */
 .file-error:before {
   background-color: #EE0004;
 }
 
-/* line 165, ../scss/atoms/_inputs.scss */
+/* line 195, ../scss/atoms/_inputs.scss */
 .file-success:before {
   background-color: #28A745;
 }
 
-/* line 170, ../scss/atoms/_inputs.scss */
+/* line 200, ../scss/atoms/_inputs.scss */
 .file-warning::before {
   background-color: #FFC100;
 }
