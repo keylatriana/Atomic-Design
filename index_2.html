@@ -191,17 +191,79 @@
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>-------Estilos de Input-------</h6>
-                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
+                        <p> Este es el estilo base de la etiqueta input.</p>
                         <input type="text " id="name" placeholder="Escribe tu nombre">
                         <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="complementary" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="error" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="success" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="warning" type="text" id="name" placeholder="Escribe tu nombre">
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>------- Input Disabled-------</h6>
                         <p>Inputs deshabilitados con disabled</p>
                         <input type="text" disabled id="name" placeholder="Escribe tu nombre">
                         <input class="secondary" disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone"  disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="complementary"  disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <textarea  class="warning" name="" id="" placeholder="warning" disabled></textarea>
+                        <select name="" id="" disabled>
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        
+                        <div class="file-select disabled" >
+                            <input type="file" disabled>
+                        </div>
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>-------Estilos de Textarea-------</h6>
+                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
+                        <label for="">textarea</label>
+                        <textarea  name="" id="" placeholder="Escriba su comentario"></textarea>
+                        <textarea  class="error" name="" id="" placeholder="Error"></textarea>
+                        <textarea class="success" name="" id="" placeholder="Success"></textarea>
+                        <textarea  class="warning" name="" id="" placeholder="warning"></textarea>
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>-------Estilos de Select-------</h6>
+                        <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
+                        <label for="">Select</label>
+                        <select name="" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        <select class="error" name="" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        <select class="success" name="" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                        <select class="warning" name="" id="">
+                            <option value="">select</option>
+                            <option value="">select</option>
+                        </select>
+                    </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <h6>-------Estilos de Input tipo File-------</h6>
+                        <p> Este  es el estilo base de la etiqueta input, en el div que envuelve el
+                             input de debe poner la clase <code>file-select</code></p>
+                        <div class="file-select" >
+                            <input type="file">
+                        </div>
+                        <p> Para esta variación se utiliza la clase <code> file-error</code></p>
+                        <div class="file-error" >
+                            <input class="" type="file" >
+                        </div>
+                        <p> Para esta variación se utiliza la clase <code> file-success</code></p>
+                        <div class="file-success"  >
+                            <input type="file" >
+                        </div>
+                        <p> Para esta variación se utiliza la clase <code> file-warning</code></p>
+                        <div class="file-warning" >
+                            <input type="file">
+                        </div>
                     </div>
                     <div class="validation-text__radio" style="margin-top: 3rem;">
                         <h2> Radio Button</h2>
@@ -215,13 +277,44 @@
                             <input type="radio" name="genero" id="indistinto">
                             <label for="indistinto">Prefiero no decirlo</label>
                         </div>
+                        <div style="padding: 2rem; margin: 1rem 0rem" >
+                            <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
+                            <label for="gener">Género</label>
+                            <input class="error"type="radio" name="gener" id="mujer" checked="checked">
+                            <label for="mujer">Femenino</label>
+                            <input class="error" type="radio" name="gener" id="hombre">
+                            <label  for="hombre">Masculino</label>
+                            <input class="error" type="radio" name="gener" id="preferencia">
+                            <label  for="preferencia">Prefiero no decirlo</label>
+                          </div>
+                          <div style="padding: 2rem; margin: 1rem 0rem" >
+                            <p>Para esta variación se necesita poner la clase <code>success</code> en los input</p>
+                            <label for="gener5">Género</label>
+                            <input class="success" type="radio" name="gener5" id="mujeres" checked="checked">
+                            <label  for="mujeres">Femenino</label>
+                            <input class="success" type="radio" name="gener5" id="hombres">
+                            <label  for="hombres">Masculino</label>
+                            <input class="success" type="radio" name="gener5" id="preferencias">
+                            <label  for="preferencias">Prefiero no decirlo</label>
+                          </div>
+                          <div style="padding: 2rem; margin: 1rem 0rem">
+                            <p>Para esta variación se necesita poner la clase <code>warning</code> en los input</p>
+                            <label for="fut">¿Te gusta el fútbol?</label>
+                            <input class="warning" type="radio" name="fut" id="yes" checked="checked">
+                            <label  for="yes">Si</label>
+                            <input class="warning" type="radio" name="fut" id="no">
+                            <label for="no">No</label>
+                            <input class="warning" type="radio" name="fut" id="talvez">
+                            <label for="talvez">Más o menos</label>
+                          </div>
+              
                     </div>
                 </div>
                 <div class="validation-text__check" style="margin-top: 3rem;" >
                     <h2>ChexBox</h2>
-                    <div class="check-list" style="padding: 2rem; margin: 1rem 0rem">
+                    <div  style="padding: 2rem; margin: 1rem 0rem">
                         <p>1-. Estilo base de los inputs tipo checkbox.</p>
-                      <label class="label-list">¿Cuál es tu género de película favorita?</label>
+                      <label >¿Cuál es tu género de película favorita?</label>
                         <input type="checkbox" id="pelicula1" checked="checked"><label for="pelicula1">Romance</label>
                         <input type="checkbox" id="pelicula2"><label  for="pelicula2"> Acción</label>
                         <input type="checkbox" id="pelicula3"><label  for="pelicula3"> Ciencia Ficción</label> 
@@ -229,6 +322,51 @@
                         <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
                         <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
                     </div>
+                    <div style="padding: 2rem; margin: 1rem 0rem">
+                        <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
+                        <label >¿Cuál es tu género de musica favorita?</label>
+                          <label  for="musica1">
+                            <input class="error" type="checkbox" id="musica1" checked="checked"> Ballenato
+                        </label>
+                        <label for="musica2">
+                            <input class="error" type="checkbox" id="musica2" >Salsa
+                        </label>
+                        <label  for="musica3">
+                            <input  class="error"type="checkbox" id="musica3" > Bachata
+                        </label>
+                        <label  for="musica4">
+                            <input  class="error" type="checkbox" id="musica4">Otros
+                        </label>
+                      </div>   
+                      <div style="padding: 2rem; margin: 1rem 0rem">
+                        <p>Para esta variación se necesita poner la clase <code>success</code> en los input</p>
+                        <label >¿Cuál es tu género de película favorita?</label>
+                          <input  class="success" type="checkbox" id="movi1" checked="checked"> 
+                          <label  for="movi1">Romance</label>
+                          <input  class="success" type="checkbox" id="movi4"> 
+                          <label  for="movi4">Thrillers</label> 
+                          <input  class="success" type="checkbox" id="movi5"  >
+                          <label  for="movi5"> Terror</label> 
+                          <input  class="success" type="checkbox" id="movi6" > 
+                          <label  for="movi6">Otros</label> 
+                      </div>                      
+                      <div style="padding: 2rem; margin: 1rem 0rem">
+                        <p>Para esta variación se necesita poner la clase <code>warning</code> en los input</p>
+                        <label >¿Cuál es tu género de película favorita?</label>
+                          <input  class="warning" type="checkbox" id="movie1" checked="checked"> 
+                          <label  for="movie1">Romance</label>
+                          <input class="warning" type="checkbox" id="movie2">
+                          <label  for="movie2"> Acción</label>
+                          <input class="warning" type="checkbox" id="movie3"  >
+                          <label  for="movie3"> Ciencia Ficción</label> 
+                          <input class="warning" type="checkbox" id="movie4"> 
+                          <label  for="movie4">Thrillers</label> 
+                          <input class="warning"type="checkbox" id="movie5"  >
+                          <label  for="movie5"> Terror</label> 
+                          <input class="warning" type="checkbox" id="movie6" > 
+                          <label  for="movie6">Otros</label> 
+                      </div>
+          
                 </div>
                 <div class="validation-text__submit" style="margin-top: 3rem;">
                     <h2>Input Type Submit and Type Button</h2>
@@ -240,22 +378,14 @@
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <p>-----------Estilo Solido-----------</p> 
-                        <p>El primer input posee la clase <code>btn-primary</code> que se presenta del color primario (base) 
-                        y el segundo input posee la clase <code>btn-secondary</code> y se presenta del color secundario(base).
+                        <p>El primer input posee la clase <code>input-btn</code> que se presenta del color primario (base) 
+                        , el segundo input posee la clase <code>input-btn__secondary</code> y se presenta del color secundario(base)
+                        el segundo input posee la clase <code>input-btn__tertiary</code> y se presenta del color secundario(base)..
                         </p>
-                        <input class="btn-primary" type="button" value="Ver información"> 
-                        <input class="btn-secondary" type="button" value="Ver información"> 
+                        <input class="input-btn" type="button" value="Ver información"> 
+                        <input class="input-btn__secondary" type="button" value="Ver información"> 
+                        <input class="input-btn__tertiary" type="button" value="Ver información"> 
                     </div>
-                    
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>-----------Estilo Outline-----------</p>
-                        <p>Las clases <code>btn-outline-primary</code>  y <code>btn-outline-secondary</code> presenta bordes
-                            de color primario o secundario respectivamente.
-                            </p>  
-                        <input class="btn-outline-primary" type="submit" value="Send">
-                        <input class="btn-outline-secondary" type="submit" value="Send">
-                    </div>
-                    
                 </div>     
             </div>
             <!-- Sección de tablas -->

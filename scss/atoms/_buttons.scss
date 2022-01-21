@@ -10,9 +10,8 @@ button, .at-btn{
     @include button( color(complementary, 700) );
 }
 .at-btn__ghost {     
-    @include button (transparent);
-    background-repeat:no-repeat;
-    border: 1rem solid color (grayscale,white);
+    @include button ( transparent, color(grayscale,white),transparent);
+    border: 0.1rem solid color(secondary, 500);
     cursor:pointer;
     overflow: hidden;     
 }

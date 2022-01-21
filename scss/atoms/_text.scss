@@ -1,15 +1,15 @@
 p{
-    @include text(1.2rem,1.4);
+    @include text(1.2rem,map-get($lineheight ,lh-base));
     text-align: justify
     }
     @include mq-min(md){
         p{   
-            @include text(1.4rem,1.6); 
+            @include text(1.4rem,map-get($lineheight , lh-half)); 
         }
     }
     @include mq-min(lg){
         p{
-            @include text(2rem,2);
+            @include text(2rem,map-get($lineheight , lh-medium));
         }
     }
     

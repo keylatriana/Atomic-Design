@@ -1,12 +1,19 @@
 input,select,textarea{
-    @include input( transparent, color(grayscale,black),color(primary,500));
+    @include input( transparent, color(grayscale,black),color(primary,900));
     &.secondary{
       @include input( transparent, color(grayscale,black),color(secondary,900));
-      outline-color: color(primary,500);
     }
-    &.outlinenone {
-      @include input(color(grayscale,gray-1), color(grayscale,black),transparent);
-      outline: none;
+    &.complementary {
+      @include input(transparent, color(grayscale,black),color(complementary,700));
+    }
+    &.error{
+      @include input( transparent, color(grayscale,black),color(alert,error));
+    }
+    &.success{
+      @include input( transparent, color(grayscale,black),color(alert,success));
+    }
+    &.warning{
+      @include input( transparent, color(grayscale,black),color(alert,warning));
     }
 }
 // ==========================================================================
@@ -15,17 +22,44 @@ input,select,textarea{
 input[type="radio"]{ 
   appearance: none;
   background-color:color(grayscale,white);
-  border: solid 1px color(primary,500);
+  border: solid 1px color(primary,700);
   border-radius: 50%;
   box-shadow: none;
   height: map-get($sizes, small);
   vertical-align:bottom;
   width: map-get($sizes, small);
   &:checked{
-    background-color:color(primary,500); 
+    background-color:color(primary,700); 
     border: color(grayscale,white) 3px double ;
     height: map-get($sizes, tiny);
     width: map-get($sizes, tiny);
+  }
+  &.error{
+    border: solid 1px color(alert,error);
+    &:checked{
+      background-color:color(alert,error); 
+      border: color(grayscale,white) 3px double ;
+      height: map-get($sizes, tiny);
+      width: map-get($sizes, tiny);
+    }
+  }
+  &.success{
+    border: solid 1px color(alert,success);
+    &:checked{
+      background-color:color(alert,success); 
+      border: color(grayscale,white) 3px double ;
+      height: map-get($sizes, tiny);
+      width: map-get($sizes, tiny);
+    }
+  }
+  &.warning{
+    border: solid 1px color(alert,warning);
+    &:checked{
+      background-color:color(alert,warning); 
+      border: color(grayscale,white) 3px double ;
+      height: map-get($sizes, tiny);
+      width: map-get($sizes, tiny);
+    }
   }
 }
 // ==========================================================================
@@ -51,6 +85,27 @@ input[type="checkbox"]{
      top: -8px;
    }
   }
+  &.error{
+    border: solid 1px color(alert,error); 
+    &:checked{
+      background-color:color(alert,error); 
+    }
+  }
+  &.success{
+    border: solid 1px color(alert,success); 
+    &:checked{
+      background-color:color(alert,success); 
+    }
+  }
+  &.warning{
+    border: solid 1px color(alert,warning); 
+    &:checked{
+      background-color:color(alert,warning); 
+    }
+  }
+}
+textarea{
+  vertical-align:middle;
 }
 // ==========================================================================
 // Input type submit
@@ -63,19 +118,56 @@ input[type="submit"], input[type="button"]{
     font-size: $font-size;
     padding: 0.6rem 1.2rem;
     text-align: center;
-    &.btn-primary {
+    &.input-btn{
       @include input( color(primary, 500),color(grayscale,white) ,color(primary, 500));
     }
-    &.btn-secondary {
+    &.input-btn__secondary{
       @include input( color(secondary, 700),color(grayscale,white) ,color(secondary, 700) );
     }
-    &.btn-outline-primary{
-      @include button(transparent, color(primary, 700), color(primary, 700) );
-      border: 0.1rem solid color(primary, 700);
-    }
-    // botón con borde secundario
-    &.btn-outline-secondary {
-        @include button( transparent, color(secondary, 500), color(secondary, 500) );
-        border: 0.1rem solid color(secondary, 500);
+    &.input-btn__tertiary{
+      @include input( color(complementary, 700),color(grayscale,white) ,color(complementary, 700) );
     }
   }
+  // input type file
+  .file-select, .file-error, .file-success, .file-warning {
+    display: inline-block;
+    margin: 0.5rem;
+    position: relative;
+   &::before{
+    align-items: center;
+    bottom: 0;
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
+    color: white;
+    content: 'Seleccionar Archivo'; 
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;   
+  }
+   input[type="file"] {
+      display: inline-block; 
+      opacity: 0;
+   }
+}
+.file-select{
+  &:before{
+  background-color: color(primary,700);}
+}
+.file-error{
+  &:before{
+    background-color:color(alert,error);
+  }
+}
+.file-success{
+  &:before{
+    background-color:color(alert,success);
+  }
+}
+.file-warning{
+  &::before{
+    background-color:color(alert,warning);
+  }
+}
