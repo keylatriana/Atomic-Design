@@ -1,57 +1,23 @@
 //propiedades básicas de botón
 button, .at-btn{
-    border: none;
-    border-radius: 0.3rem;
-    cursor:pointer;
-    font-family: $font-primary;
-    font-size: $font-size;
-    margin: 0.5rem 0;
-    padding: 0.6rem 1.2rem;
-    text-align: center;
-    @include button( color(grayscale, gray-3), color(grayscale, black)  );
-    
-    // sombra
-    &.shadow {
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
-    }
-}
-
-// botón pequeño
-.at-btn-sm {
-    font-size: map-get($sizes, "small");
-    padding: 0.5rem 0.8rem;
-}
-// botón grande
-.at-btn-lg {
-    font-size: map-get($sizes, "thumb");
-    padding: 0.8rem 1.6rem;
-}
-
-// botón redondeado
-.at-btn-round {
-    border-radius: 5rem;
-}
-
-// botón con color sólido primario
-.at-btn-primary {
     @include button( color(primary,500) );
 }
-// botón con color solido secundario
-.at-btn-secondary {
+// botón secundario
+.at-btn__secondary {
     @include button( color(secondary, 500) );
 }
-// botón con color solido (personalizado)
-// .at-btn-color {
-//     @include button( color(<colección>, <color>) );
-// }
-
+.at-btn__tertiary {
+    @include button( color(complementary, 700) );
+}
+.at-btn__ghost {     
+    @include button (transparent);
+    background-repeat:no-repeat;
+    border: 1rem solid color (primary,500);
+    cursor:pointer;
+    overflow: hidden;     
+}
 // botón con borde normal
 .at-btn-outline {
-    @include button( transparent, color(grayscale, black), color(grayscale, gray-3 ) );
-    border: 0.1rem solid color(grayscale, gray-3 ) ;
-}
-// botón con borde primario
-.at-btn-outline-primary {
     @include button( transparent, color(primary, 500), color(primary, 500) );
     border: 0.1rem solid color(primary, 500);
 }
@@ -60,19 +26,6 @@ button, .at-btn{
     @include button( transparent, color(secondary, 500), color(secondary, 500) );
     border: 0.1rem solid color(secondary, 500);
 }
-
-// boton de input inline normal
-.at-btn-input {
-    border-radius: 0 0.3rem 0.3rem 0;
-    margin-left: -1rem;
-}
-
-// boton de input inline redondeado
-.at-btn-input-round {
-    @extend .at-btn-input;
-    border-radius: 0 5rem 5rem 0;
-}
-
 // boton de tabs (básico)
 .at-tab-btn {
     background-color: inherit;

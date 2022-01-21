@@ -71,8 +71,15 @@
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border: transparent) {
-  color: $color;
-
+    border: none;
+    border-radius: 0.3rem;
+    color: $color;  
+    cursor:pointer;
+    font-family: $font-primary;
+    font-size: $font-size;
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
   // propiedades para botón outline
   @if $bg == transparent{
     background: #ffffff;
@@ -123,6 +130,25 @@
     &:focus {
       box-shadow: none;
     }
+  }
+}
+
+// ==========================================================================
+// Mixins para links @include text(1.2rem,1.6) 
+// ==========================================================================
+@mixin link ($color){
+  color: $color;
+  display: inline-block;
+  outline: 0;
+  text-decoration: none;
+  transition: color .1s ease-out;
+  vertical-align: middle;
+
+  &:hover{
+    color: color(secondary,900);
+  }
+  &:focus{
+    outline: dotted;
   }
 }
 
