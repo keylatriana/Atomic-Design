@@ -293,66 +293,27 @@
             <!-- Sección de Inputs -->
             <div id="inputs" class="ml-tab-content">
                 <div class="validation-text__input container">
-                    <h2> Input por Tamaño</h2>
+                    <h2> Input </h2>
                     <div>
-                        <p>Las etiquetas <code>inputs</code> cuentan con un estilo base y son los que se presentan como primera opción, luego
-                            continuan las clases <code>input-bottomless</code> que muestra al input con un borde inferior,
-                            <code>input-rounded</code> que cuenta con bordes más redondeado y 
-                            <code>outlinenone</code> que no cuenta con bordes y tampoco outline. 
+                        <p>Las etiquetas <code>inputs</code> cuentan con un estilo base y son los que se presentan como primera opción.
                             <br>
-                            La clase <code>primary</code> permite que el input se presente con bordes del color primario (base) y un ouline del color secundario (base),
-                            por lo contrario, la clase <code>secondary</code> permite que el input se presente con bordes del color secundario (base) y un ouline del color primario (base).
+                            La clase <code>secondary</code> permite que el input se presente con bordes del color secundario (base) y un ouline del color primario (base) 
+                            y <code>outlinenone</code> que no cuenta con bordes y tampoco outline. 
                         </p>
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Tamaño Small-------</h6>
-                        <p>La clase <code>small</code> permite que los inputs y el font-sizes sean pequeños.</p>
-                        <input class="small" type="text " id="name" placeholder="Escribe tu nombre">
-                        <input class="input-bottomless small" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-rounded small" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone small" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="primary small" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="secondary small" type="text" id="name" placeholder="Escribe tu nombre">
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Tamaño  Normal-------</h6>
+                        <h6>-------Estilos de Input-------</h6>
                         <p> Este tamaño se encuentra dentro del estilo base de la etiqueta input.</p>
                         <input type="text " id="name" placeholder="Escribe tu nombre">
-                        <input class="input-bottomless" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-rounded" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="primary" type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Tamaño Medium-------</h6>
-                        <p>La clase <code>medium</code> permite que los inputs y el font-sizes sean medianos.</p>
-                        <input class="medium " type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-bottomless medium " type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-rounded medium " type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone medium " type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="primary medium" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="secondary medium" type="text" id="name" placeholder="Escribe tu nombre">
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Tamaño Big-------</h6>
-                        <p>La clase <code>big</code> permite que los inputs y el font-sizes sean grandes.</p>
-                        <input class="big" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-bottomless big" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-rounded big" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone big" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="primary big" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="secondary big" type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone" type="text" id="name" placeholder="Escribe tu nombre">
                     </div>
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <h6>------- Input Disabled-------</h6>
                         <p>Inputs deshabilitados con disabled</p>
                         <input type="text" disabled id="name" placeholder="Escribe tu nombre">
-                        <input class="input-bottomless" disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="input-rounded" disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="outlinenone"  disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="primary" disabled type="text" id="name" placeholder="Escribe tu nombre">
                         <input class="secondary" disabled type="text" id="name" placeholder="Escribe tu nombre">
+                        <input class="outlinenone"  disabled type="text" id="name" placeholder="Escribe tu nombre">
                     </div>
                     <div class="validation-text__radio" style="margin-top: 3rem;">
                         <h2> Radio Button</h2>
@@ -365,28 +326,6 @@
                             <label for="Masculino">Masculino</label>
                             <input type="radio" name="genero" id="indistinto">
                             <label for="indistinto">Prefiero no decirlo</label>
-                        </div>
-                        <div class="group" style="padding: 2rem; margin: 1rem 0rem">
-                            <p> 2-. Para este nuevo estilo de radio button se utiliza la clase <code>radio-primary</code>, colocándolo en los labels
-                            para que al seleccionar se pinte del color primario (base) y tambien se debe colocar la clase <code>group</code> en el div que envuelve todos los inputs y label. </p>
-                            <label  for="gener">Género</label>
-                            <input type="radio" name="gener" id="mujer" checked="checked">
-                            <label class="radio-primary" for="mujer">Femenino</label>
-                            <input type="radio" name="gener" id="hombre">
-                            <label class="radio-primary" for="hombre">Masculino</label>
-                            <input type="radio" name="gener" id="preferencia">
-                            <label class="radio-primary" for="preferencia">Prefiero no decirlo</label>
-                        </div>
-                        <div class="group " style="padding: 2rem; margin: 1rem 0rem">
-                            <p> 3-. Se debe seguir el mismo procedimiento anterior pero colocando la clase <code>radio-secondary</code> en los labels
-                                para que al seleccionar se pinte del color secundario (light).</p>
-                            <label  for="gener2">Género</label>
-                            <input type="radio" name="gener2" id="woman" checked="checked">
-                            <label class="radio-secondary" for="woman">Femenino</label>
-                            <input type="radio" name="gener2" id="men">
-                            <label class="radio-secondary" for="men">Masculino</label>
-                            <input type="radio" name="gener2" id="preferences">
-                            <label class="radio-secondary" for="preferences">Prefiero no decirlo</label>
                         </div>
                     </div>
                 </div>
@@ -401,25 +340,6 @@
                         <input type="checkbox" id="pelicula4"><label  for="pelicula4">Thrillers</label> 
                         <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
                         <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
-                    </div>
-                    <div class="group-check" style="padding: 2rem; margin: 1rem 0rem">
-                        <p> 2-. Para este estilo de checkbox se utiliza la clase <code>check-secondary</code>, colocándolo en los labels
-                        para que al seleccionar se pinte del color secundario (light) y se debe colocar la clase <code>group-check</code> en el div que envuelve todos los inputs y label
-                        <br> Si deseas se selecione del color primario, solo debes cambiar la clase <code>check-secondary</code> por la clase <code>check-primary</code>.
-                     </p>
-                        <label >¿Cuál es tu género de película favorita?</label>
-                        <input type="checkbox" id="movie1" checked="checked"> 
-                        <label class="check-secondary" for="movie1">Romance</label>
-                        <input type="checkbox" id="movie2">
-                        <label class=" check-secondary" for="movie2"> Acción</label>
-                        <input type="checkbox" id="movie3"  >
-                        <label class=" check-secondary" for="movie3"> Ciencia Ficción</label> 
-                        <input type="checkbox" id="movie4"> 
-                        <label class=" check-secondary" for="movie4">Thrillers</label> 
-                        <input type="checkbox" id="movie5"  >
-                        <label class=" check-secondary" for="movie5"> Terror</label> 
-                        <input type="checkbox" id="movie6" > 
-                        <label class=" check-secondary" for="movie6">Otros</label> 
                     </div>
                 </div>
                 <div class="validation-text__submit" style="margin-top: 3rem;">

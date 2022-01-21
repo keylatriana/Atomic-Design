@@ -125,6 +125,58 @@
     }
   }
 }
+@mixin input($bg, $color, $border) {
+  border: solid .2px $border;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
+  color: $color;
+  cursor:pointer;
+  font-family: $font-primary;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  // propiedades para input outline
+  @if $bg == transparent{
+    background: transparent;
+    &:hover {
+      background: $bg;
+    }
+    &:focus {
+      background: darken($bg, 7%);
+      box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
+      outline: 0;
+    }
+    &:active {
+      background: darken($bg, 10%);
+    }
+    
+  // propiedades para input con background
+  } @else{
+    background: $bg;
+    &:hover {
+      background: darken($bg, 7%);
+      transition: background 0.2s ease;
+    }
+    &:focus {
+      background: darken($bg, 7%);
+      outline: 0;
+    }
+    &:active {
+      background: darken($bg, 10%);
+    }
+  }
+  &:disabled {
+    opacity: 0.55;
+    color: $color;
+    box-shadow: none;
+    cursor: auto;
+    &:hover {
+      background: $bg;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
 
 // ==========================================================================
 // Mixins para el texto @include text(1.2rem,1.6) 
