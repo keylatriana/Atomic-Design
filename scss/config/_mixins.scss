@@ -71,11 +71,18 @@
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border: transparent) {
-  color: $color;
-
+    border: none;
+    border-radius: 0.3rem;
+    color: $color;  
+    cursor:pointer;
+    font-family: $font-primary;
+    font-size: $font-size;
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
   // propiedades para botón outline
   @if $bg == transparent{
-    background: #ffffff;
+    background: transparent;
     &:hover {
       background: $border;
       color: #ffffff;
@@ -84,7 +91,7 @@
     }
     &:focus {
       background: darken($border, 7%);
-      box-shadow: 0 0 0 0.15rem rgba(color(primary, base), 0.25);
+      box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
       color: #ffffff;
       outline: 0;
       text-decoration: none;
@@ -123,6 +130,77 @@
     &:focus {
       box-shadow: none;
     }
+  }
+}
+@mixin input($bg, $color, $border) {
+  border: solid .2px $border;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
+  color: $color;
+  cursor:pointer;
+  font-family: $font-primary;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  // propiedades para input outline
+  @if $bg == transparent{
+    background: transparent;
+    &:hover {
+      background: $bg;
+    }
+    &:focus {
+      background: darken($bg, 7%);
+      box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
+      outline: 0;
+    }
+    &:active {
+      background: darken($bg, 10%);
+    }
+    
+  // propiedades para input con background
+  } @else{
+    background: $bg;
+    &:hover {
+      background: darken($bg, 7%);
+      transition: background 0.2s ease;
+    }
+    &:focus {
+      background: darken($bg, 7%);
+      outline: 0;
+    }
+    &:active {
+      background: darken($bg, 10%);
+    }
+  }
+  &:disabled {
+    opacity: 0.55;
+    color: $color;
+    box-shadow: none;
+    cursor: auto;
+    &:hover {
+      background: $bg;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// ==========================================================================
+// Mixins para links @include text(1.2rem,1.6) 
+// ==========================================================================
+@mixin link ($color){
+  color: $color;
+  display: inline-block;
+  outline: 0;
+  text-decoration: none;
+  transition: color .1s ease-out;
+  vertical-align: middle;
+
+  &:hover{
+    color: color(secondary,900);
+  }
+  &:focus{
+    outline: dotted;
   }
 }
 
@@ -211,7 +289,7 @@
 // ==========================================================================
 
 @mixin titles($color, $font-family){
-    color: color(primary,base);
+    color: color(primary,500);
     font-family: $font-primary;
 }
 

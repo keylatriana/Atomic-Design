@@ -3,9 +3,9 @@
 //El link contiene los codigos unicode para distintos simbolos de viñeta
 
 ul{
-    color:color(secondary,base);
+    color:color(secondary,900);
     font-family: $font-primary;
-    font-size: map-get($sizes , "base" );
+    font-size: map-get($sizes,base);
     list-style: disc;
     li{
         padding-bottom: 1rem;
@@ -15,7 +15,7 @@ ul{
         margin-left: 1rem;
         padding: 0;
         li:before{
-            color: color(complementary, five);
+            color: color(complementary, 300);
             content: "\2665";
             padding-right: 8px;
             
@@ -26,7 +26,7 @@ ul{
         margin-left: 1rem;
         padding: 0;
         li:before{
-            color: color(primary,dark);
+            color: color(primary,600);
             content: "\2714";
             padding-right: 8px;
             
@@ -43,9 +43,9 @@ ul{
     }
 }
 ol{ 
-    color: color(secondary,base);
+    color: color(secondary,900);
     font-family: $font-primary;
-    font-size: map-get($sizes , "base" );
+    font-size: map-get($sizes ,base );
     list-style:decimal;
     li{
         padding-bottom: 1rem;
