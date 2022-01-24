@@ -160,23 +160,23 @@ button, .at-btn {
   margin: 0.5rem 0;
   padding: 0.6rem 1.2rem;
   text-align: center;
-  background: #ffeb3b;
+  background: #26A0C4;
 }
 /* line 106, ../scss/config/_mixins.scss */
 button:hover, .at-btn:hover {
-  background: #ffe717;
+  background: #2088a6;
   transition: background 0.2s ease;
   text-decoration: none;
 }
 /* line 111, ../scss/config/_mixins.scss */
 button:focus, .at-btn:focus {
-  background: #ffe717;
+  background: #2088a6;
   outline: 0;
   text-decoration: none;
 }
 /* line 116, ../scss/config/_mixins.scss */
 button:active, .at-btn:active {
-  background: #ffe608;
+  background: #1e7d99;
 }
 /* line 121, ../scss/config/_mixins.scss */
 button.disabled, button:disabled, .at-btn.disabled, .at-btn:disabled {
@@ -187,7 +187,7 @@ button.disabled, button:disabled, .at-btn.disabled, .at-btn:disabled {
 }
 /* line 127, ../scss/config/_mixins.scss */
 button.disabled:hover, button:disabled:hover, .at-btn.disabled:hover, .at-btn:disabled:hover {
-  background: #ffeb3b;
+  background: #26A0C4;
 }
 /* line 130, ../scss/config/_mixins.scss */
 button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:disabled:focus {
@@ -205,23 +205,23 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
   margin: 0.5rem 0;
   padding: 0.6rem 1.2rem;
   text-align: center;
-  background: #03a9f4;
+  background: #4db6ac;
 }
 /* line 106, ../scss/config/_mixins.scss */
 .at-btn__secondary:hover {
-  background: #0391d1;
+  background: #419e95;
   transition: background 0.2s ease;
   text-decoration: none;
 }
 /* line 111, ../scss/config/_mixins.scss */
 .at-btn__secondary:focus {
-  background: #0391d1;
+  background: #419e95;
   outline: 0;
   text-decoration: none;
 }
 /* line 116, ../scss/config/_mixins.scss */
 .at-btn__secondary:active {
-  background: #0286c2;
+  background: #3c948b;
 }
 /* line 121, ../scss/config/_mixins.scss */
 .at-btn__secondary.disabled, .at-btn__secondary:disabled {
@@ -232,7 +232,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 }
 /* line 127, ../scss/config/_mixins.scss */
 .at-btn__secondary.disabled:hover, .at-btn__secondary:disabled:hover {
-  background: #03a9f4;
+  background: #4db6ac;
 }
 /* line 130, ../scss/config/_mixins.scss */
 .at-btn__secondary.disabled:focus, .at-btn__secondary:disabled:focus {
@@ -250,23 +250,23 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
   margin: 0.5rem 0;
   padding: 0.6rem 1.2rem;
   text-align: center;
-  background: #512da8;
+  background: #b64e6b;
 }
 /* line 106, ../scss/config/_mixins.scss */
 .at-btn__tertiary:hover {
-  background: #43258c;
+  background: #9f415c;
   transition: background 0.2s ease;
   text-decoration: none;
 }
 /* line 111, ../scss/config/_mixins.scss */
 .at-btn__tertiary:focus {
-  background: #43258c;
+  background: #9f415c;
   outline: 0;
   text-decoration: none;
 }
 /* line 116, ../scss/config/_mixins.scss */
 .at-btn__tertiary:active {
-  background: #3e2280;
+  background: #943d55;
 }
 /* line 121, ../scss/config/_mixins.scss */
 .at-btn__tertiary.disabled, .at-btn__tertiary:disabled {
@@ -277,7 +277,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 }
 /* line 127, ../scss/config/_mixins.scss */
 .at-btn__tertiary.disabled:hover, .at-btn__tertiary:disabled:hover {
-  background: #512da8;
+  background: #b64e6b;
 }
 /* line 130, ../scss/config/_mixins.scss */
 .at-btn__tertiary.disabled:focus, .at-btn__tertiary:disabled:focus {
@@ -296,7 +296,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
   padding: 0.6rem 1.2rem;
   text-align: center;
   background: transparent;
-  border: 0.1rem solid #03a9f4;
+  border: 0.1rem solid #4db6ac;
   cursor: pointer;
   overflow: hidden;
 }
@@ -310,7 +310,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 /* line 92, ../scss/config/_mixins.scss */
 .at-btn__ghost:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -339,7 +339,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 .at-btn-outline {
   border: none;
   border-radius: 0.3rem;
-  color: #ffeb3b;
+  color: #26A0C4;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
@@ -347,31 +347,31 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
   padding: 0.6rem 1.2rem;
   text-align: center;
   background: transparent;
-  border: 0.1rem solid #ffeb3b;
+  border: 0.1rem solid #26A0C4;
 }
 /* line 86, ../scss/config/_mixins.scss */
 .at-btn-outline:hover {
-  background: #ffeb3b;
+  background: #26A0C4;
   color: #ffffff;
   transition: background 0.2s ease;
   text-decoration: none;
 }
 /* line 92, ../scss/config/_mixins.scss */
 .at-btn-outline:focus {
-  background: #ffe717;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  background: #2088a6;
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   color: #ffffff;
   outline: 0;
   text-decoration: none;
 }
 /* line 99, ../scss/config/_mixins.scss */
 .at-btn-outline:active {
-  background: #ffe608;
+  background: #1e7d99;
 }
 /* line 121, ../scss/config/_mixins.scss */
 .at-btn-outline.disabled, .at-btn-outline:disabled {
   opacity: 0.55;
-  color: #ffeb3b;
+  color: #26A0C4;
   box-shadow: none;
   cursor: auto;
 }
@@ -388,7 +388,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 .at-btn-outline-secondary {
   border: none;
   border-radius: 0.3rem;
-  color: #03a9f4;
+  color: #4db6ac;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
@@ -396,31 +396,31 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
   padding: 0.6rem 1.2rem;
   text-align: center;
   background: transparent;
-  border: 0.1rem solid #03a9f4;
+  border: 0.1rem solid #4db6ac;
 }
 /* line 86, ../scss/config/_mixins.scss */
 .at-btn-outline-secondary:hover {
-  background: #03a9f4;
+  background: #4db6ac;
   color: #ffffff;
   transition: background 0.2s ease;
   text-decoration: none;
 }
 /* line 92, ../scss/config/_mixins.scss */
 .at-btn-outline-secondary:focus {
-  background: #0391d1;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  background: #419e95;
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   color: #ffffff;
   outline: 0;
   text-decoration: none;
 }
 /* line 99, ../scss/config/_mixins.scss */
 .at-btn-outline-secondary:active {
-  background: #0286c2;
+  background: #3c948b;
 }
 /* line 121, ../scss/config/_mixins.scss */
 .at-btn-outline-secondary.disabled, .at-btn-outline-secondary:disabled {
   opacity: 0.55;
-  color: #03a9f4;
+  color: #4db6ac;
   box-shadow: none;
   cursor: auto;
 }
@@ -457,7 +457,7 @@ button.disabled:focus, button:disabled:focus, .at-btn.disabled:focus, .at-btn:di
 
 /* line 1, ../scss/atoms/_headings.scss */
 h1 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 3.6rem;
   line-height: 6.4rem;
@@ -479,7 +479,7 @@ h1 {
 
 /* line 14, ../scss/atoms/_headings.scss */
 h2 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 3.2rem;
   line-height: 6.4rem;
@@ -501,7 +501,7 @@ h2 {
 
 /* line 27, ../scss/atoms/_headings.scss */
 h3 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   line-height: 6.4rem;
@@ -523,7 +523,7 @@ h3 {
 
 /* line 40, ../scss/atoms/_headings.scss */
 h4 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.8rem;
   line-height: 6.4rem;
@@ -545,7 +545,7 @@ h4 {
 
 /* line 53, ../scss/atoms/_headings.scss */
 h5 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.6rem;
   line-height: 6.4rem;
@@ -567,7 +567,7 @@ h5 {
 
 /* line 66, ../scss/atoms/_headings.scss */
 h6 {
-  color: #ffeb3b;
+  color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.4rem;
   line-height: 6.4rem;
@@ -639,7 +639,7 @@ h6 {
 
 /* line 1, ../scss/atoms/_inputs.scss */
 input, select, textarea {
-  border: solid 0.2px #f57f17;
+  border: solid 0.2px #0F3E4D;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #000000;
@@ -656,7 +656,7 @@ input:hover, select:hover, textarea:hover {
 /* line 150, ../scss/config/_mixins.scss */
 input:focus, select:focus, textarea:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -680,7 +680,7 @@ input:disabled:focus, select:disabled:focus, textarea:disabled:focus {
 }
 /* line 3, ../scss/atoms/_inputs.scss */
 input.secondary, select.secondary, textarea.secondary {
-  border: solid 0.2px #06275c;
+  border: solid 0.2px #0B4D38;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #000000;
@@ -697,7 +697,7 @@ input.secondary:hover, select.secondary:hover, textarea.secondary:hover {
 /* line 150, ../scss/config/_mixins.scss */
 input.secondary:focus, select.secondary:focus, textarea.secondary:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -721,7 +721,7 @@ input.secondary:disabled:focus, select.secondary:disabled:focus, textarea.second
 }
 /* line 6, ../scss/atoms/_inputs.scss */
 input.complementary, select.complementary, textarea.complementary {
-  border: solid 0.2px #512da8;
+  border: solid 0.2px #b64e6b;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #000000;
@@ -738,7 +738,7 @@ input.complementary:hover, select.complementary:hover, textarea.complementary:ho
 /* line 150, ../scss/config/_mixins.scss */
 input.complementary:focus, select.complementary:focus, textarea.complementary:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -779,7 +779,7 @@ input.error:hover, select.error:hover, textarea.error:hover {
 /* line 150, ../scss/config/_mixins.scss */
 input.error:focus, select.error:focus, textarea.error:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -820,7 +820,7 @@ input.success:hover, select.success:hover, textarea.success:hover {
 /* line 150, ../scss/config/_mixins.scss */
 input.success:focus, select.success:focus, textarea.success:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -861,7 +861,7 @@ input.warning:hover, select.warning:hover, textarea.warning:hover {
 /* line 150, ../scss/config/_mixins.scss */
 input.warning:focus, select.warning:focus, textarea.warning:focus {
   background: transparent;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 59, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(38, 160, 196, 0.25);
   outline: 0;
 }
 /* line 155, ../scss/config/_mixins.scss */
@@ -888,7 +888,7 @@ input.warning:disabled:focus, select.warning:disabled:focus, textarea.warning:di
 input[type="radio"] {
   appearance: none;
   background-color: #ffffff;
-  border: solid 1px #fbc02d;
+  border: solid 1px #0d47a1;
   border-radius: 50%;
   box-shadow: none;
   height: 1.4rem;
@@ -897,29 +897,29 @@ input[type="radio"] {
 }
 /* line 31, ../scss/atoms/_inputs.scss */
 input[type="radio"]:checked {
-  background-color: #fbc02d;
+  background-color: #0d47a1;
   border: #ffffff 3px double;
   height: 1.2rem;
   width: 1.2rem;
 }
 /* line 37, ../scss/atoms/_inputs.scss */
 input[type="radio"].secondary {
-  border: solid 1px #03a9f4;
+  border: solid 1px #4db6ac;
 }
 /* line 39, ../scss/atoms/_inputs.scss */
 input[type="radio"].secondary:checked {
-  background-color: #03a9f4;
+  background-color: #4db6ac;
   border: #ffffff 3px double;
   height: 1.2rem;
   width: 1.2rem;
 }
 /* line 46, ../scss/atoms/_inputs.scss */
 input[type="radio"].complementary {
-  border: solid 1px #673ab7;
+  border: solid 1px #D46887;
 }
 /* line 48, ../scss/atoms/_inputs.scss */
 input[type="radio"].complementary:checked {
-  background-color: #673ab7;
+  background-color: #D46887;
   border: #ffffff 3px double;
   height: 1.2rem;
   width: 1.2rem;
@@ -962,7 +962,7 @@ input[type="radio"].warning:checked {
 input[type="checkbox"] {
   appearance: none;
   background-color: transparent;
-  border: solid 1px #ffeb3b;
+  border: solid 1px #26A0C4;
   border-radius: 2px;
   height: 1.6rem;
   vertical-align: bottom;
@@ -970,7 +970,7 @@ input[type="checkbox"] {
 }
 /* line 94, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked {
-  background-color: #ffeb3b;
+  background-color: #26A0C4;
 }
 /* line 96, ../scss/atoms/_inputs.scss */
 input[type="checkbox"]:checked:before {
@@ -984,19 +984,19 @@ input[type="checkbox"]:checked:before {
 }
 /* line 106, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].secondary {
-  border: solid 1px #03a9f4;
+  border: solid 1px #4db6ac;
 }
 /* line 108, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].secondary:checked {
-  background-color: #03a9f4;
+  background-color: #4db6ac;
 }
 /* line 112, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].complementary {
-  border: solid 1px #673ab7;
+  border: solid 1px #D46887;
 }
 /* line 114, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].complementary:checked {
-  background-color: #673ab7;
+  background-color: #D46887;
 }
 /* line 118, ../scss/atoms/_inputs.scss */
 input[type="checkbox"].error {
@@ -1032,7 +1032,7 @@ textarea {
 input[type="submit"], input[type="button"] {
   border: none;
   border-radius: 0.3rem;
-  color: #06275c;
+  color: #0B4D38;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   padding: 0.6rem 1.2rem;
@@ -1040,7 +1040,7 @@ input[type="submit"], input[type="button"] {
 }
 /* line 151, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn, input[type="button"].input-btn {
-  border: solid 0.2px #ffeb3b;
+  border: solid 0.2px #26A0C4;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #ffffff;
@@ -1048,21 +1048,21 @@ input[type="submit"].input-btn, input[type="button"].input-btn {
   font-family: "Josefin Sans", sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
-  background: #ffeb3b;
+  background: #26A0C4;
 }
 /* line 162, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:hover, input[type="button"].input-btn:hover {
-  background: #ffe717;
+  background: #2088a6;
   transition: background 0.2s ease;
 }
 /* line 166, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:focus, input[type="button"].input-btn:focus {
-  background: #ffe717;
+  background: #2088a6;
   outline: 0;
 }
 /* line 170, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:active, input[type="button"].input-btn:active {
-  background: #ffe608;
+  background: #1e7d99;
 }
 /* line 174, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:disabled, input[type="button"].input-btn:disabled {
@@ -1073,7 +1073,7 @@ input[type="submit"].input-btn:disabled, input[type="button"].input-btn:disabled
 }
 /* line 179, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:disabled:hover, input[type="button"].input-btn:disabled:hover {
-  background: #ffeb3b;
+  background: #26A0C4;
 }
 /* line 182, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn:disabled:focus, input[type="button"].input-btn:disabled:focus {
@@ -1081,7 +1081,7 @@ input[type="submit"].input-btn:disabled:focus, input[type="button"].input-btn:di
 }
 /* line 154, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn__secondary, input[type="button"].input-btn__secondary {
-  border: solid 0.2px #0288d1;
+  border: solid 0.2px #00897b;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #ffffff;
@@ -1089,21 +1089,21 @@ input[type="submit"].input-btn__secondary, input[type="button"].input-btn__secon
   font-family: "Josefin Sans", sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
-  background: #0288d1;
+  background: #00897b;
 }
 /* line 162, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:hover, input[type="button"].input-btn__secondary:hover {
-  background: #0271ae;
+  background: #00655b;
   transition: background 0.2s ease;
 }
 /* line 166, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:focus, input[type="button"].input-btn__secondary:focus {
-  background: #0271ae;
+  background: #00655b;
   outline: 0;
 }
 /* line 170, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:active, input[type="button"].input-btn__secondary:active {
-  background: #02679e;
+  background: #00564d;
 }
 /* line 174, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:disabled, input[type="button"].input-btn__secondary:disabled {
@@ -1114,7 +1114,7 @@ input[type="submit"].input-btn__secondary:disabled, input[type="button"].input-b
 }
 /* line 179, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:disabled:hover, input[type="button"].input-btn__secondary:disabled:hover {
-  background: #0288d1;
+  background: #00897b;
 }
 /* line 182, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__secondary:disabled:focus, input[type="button"].input-btn__secondary:disabled:focus {
@@ -1122,7 +1122,7 @@ input[type="submit"].input-btn__secondary:disabled:focus, input[type="button"].i
 }
 /* line 157, ../scss/atoms/_inputs.scss */
 input[type="submit"].input-btn__tertiary, input[type="button"].input-btn__tertiary {
-  border: solid 0.2px #512da8;
+  border: solid 0.2px #b64e6b;
   border-radius: 5px;
   box-shadow: 0 2px 2px 0 #757575;
   color: #ffffff;
@@ -1130,21 +1130,21 @@ input[type="submit"].input-btn__tertiary, input[type="button"].input-btn__tertia
   font-family: "Josefin Sans", sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
-  background: #512da8;
+  background: #b64e6b;
 }
 /* line 162, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:hover, input[type="button"].input-btn__tertiary:hover {
-  background: #43258c;
+  background: #9f415c;
   transition: background 0.2s ease;
 }
 /* line 166, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:focus, input[type="button"].input-btn__tertiary:focus {
-  background: #43258c;
+  background: #9f415c;
   outline: 0;
 }
 /* line 170, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:active, input[type="button"].input-btn__tertiary:active {
-  background: #3e2280;
+  background: #943d55;
 }
 /* line 174, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:disabled, input[type="button"].input-btn__tertiary:disabled {
@@ -1155,7 +1155,7 @@ input[type="submit"].input-btn__tertiary:disabled, input[type="button"].input-bt
 }
 /* line 179, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:disabled:hover, input[type="button"].input-btn__tertiary:disabled:hover {
-  background: #512da8;
+  background: #b64e6b;
 }
 /* line 182, ../scss/config/_mixins.scss */
 input[type="submit"].input-btn__tertiary:disabled:focus, input[type="button"].input-btn__tertiary:disabled:focus {
@@ -1191,7 +1191,7 @@ input[type="submit"].input-btn__tertiary:disabled:focus, input[type="button"].in
 
 /* line 186, ../scss/atoms/_inputs.scss */
 .file-select:before {
-  background-color: #fbc02d;
+  background-color: #0d47a1;
 }
 
 /* line 190, ../scss/atoms/_inputs.scss */
@@ -1211,7 +1211,7 @@ input[type="submit"].input-btn__tertiary:disabled:focus, input[type="button"].in
 
 /* line 5, ../scss/atoms/_list.scss */
 ul {
-  color: #06275c;
+  color: #0B4D38;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   list-style: disc;
@@ -1228,7 +1228,7 @@ ul.bullets {
 }
 /* line 17, ../scss/atoms/_list.scss */
 ul.bullets li:before {
-  color: #9575cd;
+  color: #E39DB1;
   content: "\2665";
   padding-right: 8px;
 }
@@ -1240,7 +1240,7 @@ ul.check {
 }
 /* line 28, ../scss/atoms/_list.scss */
 ul.check li:before {
-  color: #fdd835;
+  color: #1565c0;
   content: "\2714";
   padding-right: 8px;
 }
@@ -1259,7 +1259,7 @@ ul.inside {
 
 /* line 45, ../scss/atoms/_list.scss */
 ol {
-  color: #06275c;
+  color: #0B4D38;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   list-style: decimal;
@@ -1283,7 +1283,7 @@ ol.low-greek {
 
 /* line 1, ../scss/atoms/_links.scss */
 .at-link {
-  color: #fbc02d;
+  color: #0d47a1;
   display: inline-block;
   outline: 0;
   text-decoration: none;
@@ -1292,7 +1292,7 @@ ol.low-greek {
 }
 /* line 199, ../scss/config/_mixins.scss */
 .at-link:hover {
-  color: #06275c;
+  color: #0B4D38;
 }
 /* line 202, ../scss/config/_mixins.scss */
 .at-link:focus {
@@ -1301,7 +1301,7 @@ ol.low-greek {
 
 /* line 4, ../scss/atoms/_links.scss */
 .at-link__secondary {
-  color: #29b6f6;
+  color: #1DD198;
   display: inline-block;
   outline: 0;
   text-decoration: none;
@@ -1310,7 +1310,7 @@ ol.low-greek {
 }
 /* line 199, ../scss/config/_mixins.scss */
 .at-link__secondary:hover {
-  color: #06275c;
+  color: #0B4D38;
 }
 /* line 202, ../scss/config/_mixins.scss */
 .at-link__secondary:focus {
@@ -1318,12 +1318,12 @@ ol.low-greek {
 }
 /* line 6, ../scss/atoms/_links.scss */
 .at-link__secondary:hover {
-  color: #9575cd;
+  color: #E39DB1;
 }
 
 /* line 12, ../scss/atoms/_links.scss */
 .at-link__underline {
-  color: #fbc02d;
+  color: #0d47a1;
   display: inline-block;
   outline: 0;
   text-decoration: none;
@@ -1334,7 +1334,7 @@ ol.low-greek {
 }
 /* line 199, ../scss/config/_mixins.scss */
 .at-link__underline:hover {
-  color: #06275c;
+  color: #0B4D38;
 }
 /* line 202, ../scss/config/_mixins.scss */
 .at-link__underline:focus {
@@ -1343,12 +1343,12 @@ ol.low-greek {
 /* line 16, ../scss/atoms/_links.scss */
 .at-link__underline:hover {
   text-decoration: none;
-  color: #4527a0;
+  color: #a7425e;
 }
 
 /* line 21, ../scss/atoms/_links.scss */
 .at-link-underline__secondary {
-  color: #01579b;
+  color: #00695c;
   display: inline-block;
   outline: 0;
   text-decoration: none;
@@ -1359,7 +1359,7 @@ ol.low-greek {
 }
 /* line 199, ../scss/config/_mixins.scss */
 .at-link-underline__secondary:hover {
-  color: #06275c;
+  color: #0B4D38;
 }
 /* line 202, ../scss/config/_mixins.scss */
 .at-link-underline__secondary:focus {
@@ -1368,7 +1368,7 @@ ol.low-greek {
 /* line 25, ../scss/atoms/_links.scss */
 .at-link-underline__secondary:hover {
   text-decoration: none;
-  color: #b39ddb;
+  color: #f8afd7;
 }
 
 /* line 1, ../scss/atoms/_text.scss */
@@ -1826,7 +1826,7 @@ table {
 }
 /* line 5, ../scss/molecules/_tables.scss */
 table thead {
-  background-color: #ffeb3b;
+  background-color: #26A0C4;
 }
 /* line 8, ../scss/molecules/_tables.scss */
 table th, table td {
@@ -1897,7 +1897,7 @@ table caption {
   }
   /* line 66, ../scss/molecules/_tables.scss */
   .table-simple tbody th {
-    background-color: #ffeb3b;
+    background-color: #26A0C4;
     text-align: center;
   }
   /* line 71, ../scss/molecules/_tables.scss */
