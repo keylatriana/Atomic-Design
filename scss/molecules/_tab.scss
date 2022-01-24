@@ -2,8 +2,17 @@
 .ml-tab {
     background-color: color(grayscale, gray-2);
     border: 0.1rem solid color(grayscale, gray-3);
-    display: flex;
+
+    &-container {
+        display: flex;
+        overflow-x: scroll;
+        // justify-content: space-between;
+    }
+
+    ::-webkit-scrollbar {display: none;}
 }
+
+
 
 .ml-tab-content {
     border: 0.1rem solid #ccc;
@@ -21,9 +30,9 @@ from {opacity: 0;}
 to {opacity: 1;}
 
 }
-@include mq-max (md){
-    .ml-tab {
-        display: block;
-        text-align: center;
-    } 
+@include mq-max (lg){
+    // .ml-tab {
+    //     display: block;
+    //     text-align: center;
+    // } 
 }
