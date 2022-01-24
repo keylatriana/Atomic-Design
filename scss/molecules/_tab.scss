@@ -2,16 +2,16 @@
 .ml-tab {
     background-color: color(grayscale, gray-2);
     border: 0.1rem solid color(grayscale, gray-3);
+    
 
     &-container {
         display: flex;
         overflow-x: scroll;
-        // justify-content: space-between;
     }
 
     ::-webkit-scrollbar {display: none;}
 }
-
+    
 
 
 .ml-tab-content {

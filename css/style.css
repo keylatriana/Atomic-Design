@@ -1931,6 +1931,9 @@ table caption {
 .ml-tab {
   background-color: #bdbdbd;
   border: 0.1rem solid #9e9e9e;
+}
+/* line 7, ../scss/molecules/_tab.scss */
+.ml-tab-container {
   display: flex;
   overflow-x: scroll;
 }
