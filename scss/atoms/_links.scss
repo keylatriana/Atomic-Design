@@ -1,4 +1,4 @@
-.at-link{
+a, .at-link{
     @include link (color(primary,700))
 }
 .at-link__secondary{
@@ -13,17 +13,19 @@
     @include link (color(primary,700));
     font-weight: map-get($weights, "semi_bold");
     text-decoration: underline;
-        &:hover{
-            text-decoration: none;      
-            color:color(complementary,800);
-        }
+
+    &:hover{
+        text-decoration: none;      
+        color:color(complementary,800);
+    }
 }
 .at-link-underline__secondary{
     @include link (color(secondary,800));
     font-weight: map-get($weights, "semi_bold");
     text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-            color:color(complementary,200);
-        }
+
+    &:hover {
+        text-decoration: none;
+        color:color(complementary,200);
+    }
 }
