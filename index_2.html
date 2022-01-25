@@ -30,11 +30,14 @@
             <div id="buttons" class="ml-tab-content">
                 <h2>Botones </h2>
                 <div style="padding: 2rem; margin: 1rem 0rem">
-                    <!-- Solidos normal y redondeados-->
+                    <!-- Solidos-->
                     <h6>Solidos normales</h6>
                     <div>
-                        <p>Por defecto se configuran los elementos desde el mixin de buttons
-                            Se configuran los colores en el atom _buttons.scss
+                        <p>Por defecto se configuran los elementos desde el mixin de buttons <br>
+                            Se configuran los estilos en el atom <code>_buttons.scss</code>
+                            <br>
+                            <br>
+                            Para los botones sólidos solo se pasa el color de background al mixin.
                         </p>
                     </div>
                     <div style="margin-top: 3rem;">
@@ -45,7 +48,7 @@
                 </div>
                 <hr>
                 <div style="padding: 2rem; margin: 1rem 0rem">
-                    <!-- Outline normal y redondeados-->
+                    <!-- Outline-->
                     <h6>Botones outline</h6>
                     <div>
                         <p>Los botones de estilo Outline se obtienen con la clase <code>at-btn-outline</code>
@@ -53,17 +56,24 @@
                             <br>
                             Para configurar un color diferente para botones Outline se hace uso del mixin BUTTON con los siguientes parametros
                             <br>
+                            - <code>$bg</code> = color de background. <br>
+                            - <code>$color: #ffffff</code> = color de fuente. <br>
+                            - <code>$border-color: transparent</code> = color de borde. <br>
+                            - <code>$border-width: 0rem</code> = ancho de borde. <br>
+                            - <code>$border-radius: 0.3rem</code> = radio de los bordes del botón <br>
+                            <br>
+                            mixin
+                            <br>
                             <code>
-                                .at-btn-outline-color {<br>
-                                    @include button( transparent, color('coleccion', 'color'), color('coleccion', 'color' ) );<br>
-                                    border: 0.1rem solid color('coleccion', 'color' );<br>
+                                .at-btn-outline { <br>
+                                        @include button($bg, $color: #ffffff, $border-color: transparent, $border-width: 0rem, $border-radius: 0.3rem) { <br>
                                 }
                             </code>
                         </p>
                     </div>
                     <div style="margin-top: 3rem;">
-                        <button class="at-btn-sm at-btn-outline-primary">Botón outline</button>
-                        <button class="at-btn-sm at-btn-outline-secondary">Botón outline secundario</button>
+                        <button class="at-btn-outline">Botón outline</button>
+                        <button class="at-btn-outline__secondary">Botón outline secundario</button>
                     </div>
                 </div>
                 <hr>
@@ -71,7 +81,7 @@
                 <div>
                     <p>Los botones de estilo ghost, es decir con fondo transparente se obtienen con la clase <code>at-btn__ghost</code>
                         <br>
-                        <div style="background-color: blue;">
+                        <div style="background-color: #0F3E4D; padding: 1rem">
                             <button class="at-btn__ghost">Boton fantasma</button>
                         </div>
                     </p>
@@ -115,17 +125,16 @@
 
             <!-- Sección menú de navegación -->
             <div id="nav-menu" class="ml-tab-content">
-                <h2>Menu de navegación</h2>
+                <h2>Menú de navegación</h2>
                 <div style="padding: 2rem; margin: 1rem 0rem">
-                    <h6>Pantalla grande (BreakPoint [lg])</h6>
+                    <h6>Menú horizontal</h6>
                     <div>
                         <p>
-                            Dependiendo de la orientación del menú se utilizan las clases  <code>ml-nav-list-column </code> o <code>ml-nav-list-row </code>.
+                            Dependiendo de la orientación del menú se utilizan las clases  <code>ml-nav-list-column </code> o <code>ml-nav-list-row</code>. <br>
                         </p>
-                        <br>
                     </div>
                     <nav>
-                        <ul class="ml-nav-list-row ml-nav-list-column" style="width: 40rem;">
+                        <ul class="ml-nav-list-row">
                             <li>
                                 <a href="#">Menu1</a>
                             </li>
@@ -138,22 +147,65 @@
                             <li>
                                 <a href="#">Menu4</a>
                             </li>
+                            <li>
+                                <a href="#">Menu5</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu6</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu7</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <br> <br>
+                    <p>
+                        Algunos iconos. <br>
+                    </p>
+                    <nav>
+                        <ul class="ml-nav-list-row">
+                            <li>
+                                <a href="#">Menu1 <i class="icon-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Menu2 <i class="icon-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Menu3</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu4</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu5 <i class="icon-instagram" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#">Menu6</a>
+                            </li>
+                            <li>
+                                <a href="#">Menu7 <i class="icon-facebook" aria-hidden="true"></i></a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <hr>
                 <div style="padding: 2rem; margin: 1rem 0rem">
-                    <h6>Pantalla pequeña (default)</h6>
+                    <h6>Menú Vertical</h6>
+                    <div>
+                        <p>
+                            Se pueden agregar estilos de link
+                        </p>
+                    </div>
                     <nav>
-                        <ul class="ml-nav-list-column" style="height: 20rem; width: 40rem;">
+                        <ul class="ml-nav-list-column">
                             <li>
-                                <a href="#">Menu1</a>
+                                <a class="at-link__underline" href="#">Menu1</a>
                             </li>
                             <li>
-                                <a href="#">Menu2</a>
+                                <a class="at-link-underline__secondary" href="#">Menu2</a>
                             </li>
                             <li>
-                                <a href="#">Menu3</a>
+                                <a class="at-link__secondary" href="#">Menu3</a>
                             </li>
                             <li>
                                 <a href="#">Menu4</a>
@@ -162,18 +214,18 @@
                     </nav>
                     <hr>
                     <nav>
-                        <ul class="ml-nav-list-column" style="height: 20rem; width: 40rem;">
+                        <ul class="ml-nav-list-column">
                             <li>
-                                <a href="#"><i class="icon-twitter at-inline-icon" aria-hidden="true"></i></a>
+                                <a href="#"> Menu1 <i class="icon-twitter" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon-facebook at-inline-icon" aria-hidden="true"></i></a>
+                                <a class="at-link__secondary" href="#"> Menu2 <i class="icon-facebook" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon-instagram at-inline-icon" aria-hidden="true"></i></a>
+                                <a class="at-link__secondary" href="#"> Menu3 <i class="icon-instagram" aria-hidden="true"></i></a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon-apple at-inline-icon" aria-hidden="true"></i></a>
+                                <a href="#"> Menu4 <i class="icon-apple" aria-hidden="true"></i></a>
                             </li>
                         </ul>
                     </nav>

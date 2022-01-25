@@ -6,24 +6,21 @@ button, .at-btn{
 .at-btn__secondary {
     @include button( color(secondary, 500) );
 }
+// botón terciario
 .at-btn__tertiary {
     @include button( color(complementary, 700) );
 }
+// botón con background transparente y borde
 .at-btn__ghost {     
-    @include button ( transparent, color(grayscale,white),transparent);
-    border: 0.1rem solid color(secondary, 500);
-    cursor:pointer;
-    overflow: hidden;     
+    @include button ( transparent, color(grayscale,white), color(secondary, 500), 0.1rem);
 }
-// botón con borde normal
+// botón con background blanco y borde normal
 .at-btn-outline {
-    @include button( transparent, color(primary, 500), color(primary, 500) );
-    border: 0.1rem solid color(primary, 500);
+    @include button( color(grayscale,white), color(primary, 500), color(primary, 500), 0.1rem);
 }
-// botón con borde secundario
-.at-btn-outline-secondary {
-    @include button( transparent, color(secondary, 500), color(secondary, 500) );
-    border: 0.1rem solid color(secondary, 500);
+// botón con background blanco y borde secundario
+.at-btn-outline__secondary {
+    @include button( color(grayscale,white), color(secondary, 500), color(secondary, 500), 0.1rem );
 }
 // boton de tabs (básico)
 .at-tab-btn {

@@ -65,42 +65,46 @@
 @mixin nav($direction) {
   flex-direction: $direction;
   justify-content: space-between;
+  list-style: none !important;
 }
 
 // ==========================================================================
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
-@mixin button($bg, $color: #ffffff, $border: transparent) {
-    border: none;
-    border-radius: 0.3rem;
-    color: $color;  
-    cursor:pointer;
-    font-family: $font-primary;
-    font-size: $font-size;
-    margin: 0.5rem 0;
-    padding: 0.6rem 1.2rem;
-    text-align: center;
-  // propiedades para botón outline
-  @if $bg == transparent{
-    background: transparent;
+@mixin button($bg, $color: #ffffff, $border-color: transparent, $border-width: 0rem, $border-radius: 0.3rem) {
+  
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  color: $color;  
+  cursor:pointer;
+  font-family: $font-primary;
+  font-size: $font-size;
+  margin: 0.5rem 0;
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+
+  // se trata de un boton ghost u outline
+  @if($bg == transparent or $bg == color(grayscale, white)) {
+    background: $bg;
+
     &:hover {
-      background: $border;
-      color: #ffffff;
+      background: $border-color;
+      color: color(grayscale, white);
       transition: background 0.2s ease;
       text-decoration: none;
     }
     &:focus {
-      background: darken($border, 7%);
+      background: darken($border-color, 7%);
       box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
-      color: #ffffff;
+      color: color(grayscale, white);
       outline: 0;
       text-decoration: none;
     }
     &:active {
-      background: darken($border, 10%);
+      background: darken($border-color, 10%);
     }
-    
-  // propiedades para botón con background
+
+    // Se trata de un botón sólido
   } @else{
     background: $bg;
     &:hover {
@@ -117,7 +121,7 @@
       background: darken($bg, 10%);
     }
   }
-  
+
   &.disabled,
   &:disabled {
     opacity: 0.55;
@@ -132,6 +136,7 @@
     }
   }
 }
+
 @mixin input($bg, $color, $border) {
   border: solid .2px $border;
   border-radius: 5px;
