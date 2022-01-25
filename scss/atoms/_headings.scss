@@ -1,79 +1,55 @@
 h1{
-    @include titles(color, font-family);
-    font-size: 3.6rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, font-family, 3.6rem, map-get($lineheight, lh-huge));
         @include mq-min(md){
-            line-height: map-get($lineheight , lh-huge);
-            font-size: 4rem;
+            @include titles(color, font-family, 4rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            font-size: 4.8rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 4.8rem, map-get($lineheight, lh-huge));
         }
 }
 h2{
-    @include titles(color, font-family);
-    font-size: 3.2rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, font-family, 3.2rem, map-get($lineheight , lh-huge));
         @include mq-min(md){
-            line-height: map-get($lineheight , lh-huge);
-            font-size: 3.6rem;
+            @include titles(color, font-family, 3.6rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            line-height: map-get($lineheight , lh-huge);
-            font-size: 4.4rem;
+            @include titles(color, font-family, 4.4rem, map-get($lineheight, lh-huge));
         }
 }
 h3{
-    @include titles(color, font-family);
-    font-size: 3rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, font-family, 3rem, map-get($lineheight , lh-huge));
         @include mq-min(md){
-            font-size: 3.4rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 3.4rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            font-size: 4.2rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 4.2rem, map-get($lineheight, lh-huge));
         }
 }
 h4{
-    @include titles(color, font-family);
-    font-size: 2.8rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, font-family, 2.8rem,map-get($lineheight , lh-huge));
         @include mq-min(md){
-            font-size: 3.2rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 3.2rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            font-size: 4rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 4rem, map-get($lineheight, lh-huge));
         }
 }
 h5{
-    @include titles(color, font-family);
-    font-size: 2.6rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, font-family, 2.6rem, map-get($lineheight , lh-huge));
         @include mq-min(md){
-            font-size: 3rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 3rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            font-size: 3.8rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 3.8rem, map-get($lineheight, lh-huge));
         }
 }
 h6{
-    @include titles(color, fontfamily);
-    font-size: 2.4rem;
-    line-height: map-get($lineheight , lh-huge);
+    @include titles(color, fontfamily, 2.4rem, map-get($lineheight , lh-huge));
         @include mq-min(md){
-            font-size: 2.8rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 2.8rem, map-get($lineheight, lh-huge));
         }
         @include mq-min(xl){
-            font-size: 3.6rem;
-            line-height: map-get($lineheight , lh-huge);
+            @include titles(color, font-family, 3.6rem, map-get($lineheight, lh-huge));
         }
 }
 
