@@ -136,11 +136,9 @@
     }
   }
 }
-
-@mixin input($bg, $color, $border) {
-  border: solid .2px $border;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px 0 color(grayscale, gray-4);
+@mixin input($bg, $color,  $border-style, $border-width,$border,$border-radius) {
+  border: $border-style $border-width $border;
+  border-radius:$border-radius;
   color: $color;
   cursor:pointer;
   font-family: $font-primary;
@@ -153,12 +151,12 @@
       background: $bg;
     }
     &:focus {
-      background: darken($bg, 7%);
+      background: darken($bg, 0%);
       box-shadow: 0 0 0 0.15rem rgba(color(primary,500), 0.25);
       outline: 0;
     }
     &:active {
-      background: darken($bg, 10%);
+      background: darken($bg, 0%);
     }
     
   // propiedades para input con background
@@ -187,6 +185,31 @@
     &:focus {
       box-shadow: none;
     }
+  }
+}
+@mixin select($bg, $color,  $border-style, $border-width,$border,$border-radius) {
+  border: $border-style $border-width $border;
+  border-radius: $border-radius;
+  color: $color;
+  cursor:pointer;
+  font-family: $font-primary;
+  margin: 0.5rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  // propiedades para input outline
+    &:hover {
+      outline-color:color(primary,500);
+    }
+    &:focus {
+      outline-color: rgba(color(primary,500), 0.5);
+    }
+    &:active {
+      outline-color: rgba(color(secondary,300), 0.5);
+    } 
+  &:disabled {
+    opacity: 0.55;
+    color: $color;
+    box-shadow: none;
+    cursor: auto;
   }
 }
 
