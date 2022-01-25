@@ -12,7 +12,10 @@
 <body>
     
     <main class="container">
-        <h1>Atomic Design: Elementos Básicos</h1>
+        <div class="d-md-flex" style="text-align: center;">
+            <img src="./image/logo-nivelics.png" width="150" height="100" alt="">
+           <h1 style="padding-top: 15px;">Atomic Design: Elementos Básicos</h1>
+        </div>
         <div class="validation-test">
 
             <div class="ml-tab">
@@ -242,7 +245,7 @@
                             <option value="">select</option>
                         </select>
                         <p> Estilo complementary de la etiqueta select.</p>
-                        <select name="complementary" id="">
+                        <select class="complementary" name="" id="">
                             <option value="">select</option>
                             <option value="">select</option>
                         </select>
@@ -269,17 +272,13 @@
                         <div class="file-select" >
                             <input type="file">
                         </div>
-                        <p> Para esta variación se utiliza la clase <code> file-error</code></p>
-                        <div class="file-error" >
+                        <p> Para esta variación se utiliza la clase <code> file-secondary</code></p>
+                        <div class="file-secondary" >
                             <input class="" type="file" >
                         </div>
-                        <p> Para esta variación se utiliza la clase <code> file-success</code></p>
-                        <div class="file-success"  >
+                        <p> Para esta variación se utiliza la clase <code> file-complementary</code></p>
+                        <div class="file-complementary"  >
                             <input type="file" >
-                        </div>
-                        <p> Para esta variación se utiliza la clase <code> file-warning</code></p>
-                        <div class="file-warning" >
-                            <input type="file">
                         </div>
                     </div>
                     <div class="validation-text__radio" style="margin-top: 3rem;">
@@ -382,17 +381,14 @@
                     <div style="padding: 2rem; margin: 1rem 0rem">
                         <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
                         <label >¿Cuál es tu género de musica favorita?</label>
-                          <label  for="musica1">
-                            <input class="error" type="checkbox" id="musica1" checked="checked"> Ballenato
-                        </label>
-                        <label for="musica2">
-                            <input class="error" type="checkbox" id="musica2" >Salsa
-                        </label>
-                        <label  for="musica3">
-                            <input  class="error"type="checkbox" id="musica3" > Bachata
-                        </label>
-                        <label  for="musica4">
-                            <input  class="error" type="checkbox" id="musica4">Otros
+                        <input  class="error" type="checkbox" id="music1" checked="checked"> 
+                        <label  for="music1">Ballenato</label>
+                        <input  class="error" type="checkbox" id="music2"> 
+                        <label  for="music2">Bachata</label> 
+                        <input  class="error" type="checkbox" id="music3"  >
+                        <label  for="music3"> Merengue</label> 
+                        <input  class="error" type="checkbox" id="music4" > 
+                        <label  for="music4">Otros</label> 
                         </label>
                       </div>   
                       <div style="padding: 2rem; margin: 1rem 0rem">
