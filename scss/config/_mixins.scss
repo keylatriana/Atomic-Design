@@ -288,16 +288,19 @@
 // Titulos : @include titles (color, font-family){}
 // ==========================================================================
 
-@mixin titles($color, $font-family){
+@mixin titles($color, $font-family,$font-size,$line-height){
     color: color(primary,500);
     font-family: $font-primary;
+    font-size: $font-size;
+    line-height: $line-height;
 }
 
 // ==========================================================================
 // Grid : @include grid (1rem, display);
 // ==========================================================================
 
-@mixin grid($gap, $display){
+@mixin grid($gap, $display,$grid-colums){
   display: grid;
   grid-gap: $gap;
+  grid-template-columns: $grid-colums;
 }

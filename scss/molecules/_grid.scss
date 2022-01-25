@@ -16,30 +16,17 @@
    }
 }
 .grid{
-   @include grid(1rem, display);
-   grid-template-columns: repeat(1, 1fr);
-   &.grid__item{
+   @include grid(1rem, display, repeat(1, 1fr));
+   &__item{
       align-items: center;
       display: flex;
       justify-content: center;
    }
    @include mq-min(md){
-      @include grid (1.5rem, display);   
-      grid-template-columns: repeat(2, 1fr); 
-      &.grid__item{
-         align-items: center;
-         display: flex;
-         justify-content: center;
-      }
+      @include grid (1.5rem, display, repeat(2, 1fr));
    }
    @include mq-min(xl){
-      @include grid(2rem, display);
-      grid-template-columns: repeat(3, 1fr);
-      &.grid__item{
-         align-items: center;
-         display: flex;
-         justify-content: center;
-      }
+      @include grid(2rem, display, repeat(3,1fr));
    }
 }
 

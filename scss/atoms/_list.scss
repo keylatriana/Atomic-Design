@@ -11,35 +11,14 @@ ul{
         padding-bottom: 1rem;
     }
     &.bullets{
+        color: color(complementary, 300);
         list-style: none;
         margin-left: 1rem;
         padding: 0;
         li:before{
-            color: color(complementary, 300);
             content: "\2665";
             padding-right: 8px;
-            
         }
-    }
-    &.check{
-        list-style: none;
-        margin-left: 1rem;
-        padding: 0;
-        li:before{
-            color: color(primary,600);
-            content: "\2714";
-            padding-right: 8px;
-            
-        }
-    }
-    &.square{
-        list-style: square;
-    }
-    &.circles{
-        list-style: circle;
-    }
-    &.inside{
-        list-style: inside;
     }
 }
 ol{ 
@@ -49,14 +28,5 @@ ol{
     list-style:decimal;
     li{
         padding-bottom: 1rem;
-    }
-    &.low-rom{
-        list-style: lower-roman;
-    }
-    &.up-rom{
-        list-style: upper-roman;
-    }
-    &.low-greek{
-        list-style: lower-greek;
     }
 }

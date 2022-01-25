@@ -465,19 +465,23 @@ h1 {
 @media (min-width: 720px) {
   /* line 1, ../scss/atoms/_headings.scss */
   h1 {
-    line-height: 6.4rem;
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 4rem;
+    line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
   /* line 1, ../scss/atoms/_headings.scss */
   h1 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 4.8rem;
     line-height: 6.4rem;
   }
 }
 
-/* line 14, ../scss/atoms/_headings.scss */
+/* line 10, ../scss/atoms/_headings.scss */
 h2 {
   color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
@@ -485,21 +489,25 @@ h2 {
   line-height: 6.4rem;
 }
 @media (min-width: 720px) {
-  /* line 14, ../scss/atoms/_headings.scss */
+  /* line 10, ../scss/atoms/_headings.scss */
   h2 {
-    line-height: 6.4rem;
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3.6rem;
+    line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 14, ../scss/atoms/_headings.scss */
+  /* line 10, ../scss/atoms/_headings.scss */
   h2 {
-    line-height: 6.4rem;
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 4.4rem;
+    line-height: 6.4rem;
   }
 }
 
-/* line 27, ../scss/atoms/_headings.scss */
+/* line 19, ../scss/atoms/_headings.scss */
 h3 {
   color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
@@ -507,21 +515,25 @@ h3 {
   line-height: 6.4rem;
 }
 @media (min-width: 720px) {
-  /* line 27, ../scss/atoms/_headings.scss */
+  /* line 19, ../scss/atoms/_headings.scss */
   h3 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3.4rem;
     line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 27, ../scss/atoms/_headings.scss */
+  /* line 19, ../scss/atoms/_headings.scss */
   h3 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 4.2rem;
     line-height: 6.4rem;
   }
 }
 
-/* line 40, ../scss/atoms/_headings.scss */
+/* line 28, ../scss/atoms/_headings.scss */
 h4 {
   color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
@@ -529,21 +541,25 @@ h4 {
   line-height: 6.4rem;
 }
 @media (min-width: 720px) {
-  /* line 40, ../scss/atoms/_headings.scss */
+  /* line 28, ../scss/atoms/_headings.scss */
   h4 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3.2rem;
     line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 40, ../scss/atoms/_headings.scss */
+  /* line 28, ../scss/atoms/_headings.scss */
   h4 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 4rem;
     line-height: 6.4rem;
   }
 }
 
-/* line 53, ../scss/atoms/_headings.scss */
+/* line 37, ../scss/atoms/_headings.scss */
 h5 {
   color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
@@ -551,21 +567,25 @@ h5 {
   line-height: 6.4rem;
 }
 @media (min-width: 720px) {
-  /* line 53, ../scss/atoms/_headings.scss */
+  /* line 37, ../scss/atoms/_headings.scss */
   h5 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3rem;
     line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 53, ../scss/atoms/_headings.scss */
+  /* line 37, ../scss/atoms/_headings.scss */
   h5 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3.8rem;
     line-height: 6.4rem;
   }
 }
 
-/* line 66, ../scss/atoms/_headings.scss */
+/* line 46, ../scss/atoms/_headings.scss */
 h6 {
   color: #26A0C4;
   font-family: "Josefin Sans", sans-serif;
@@ -573,15 +593,19 @@ h6 {
   line-height: 6.4rem;
 }
 @media (min-width: 720px) {
-  /* line 66, ../scss/atoms/_headings.scss */
+  /* line 46, ../scss/atoms/_headings.scss */
   h6 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 2.8rem;
     line-height: 6.4rem;
   }
 }
 @media (min-width: 1140px) {
-  /* line 66, ../scss/atoms/_headings.scss */
+  /* line 46, ../scss/atoms/_headings.scss */
   h6 {
+    color: #26A0C4;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 3.6rem;
     line-height: 6.4rem;
   }
@@ -1222,63 +1246,27 @@ ul li {
 }
 /* line 13, ../scss/atoms/_list.scss */
 ul.bullets {
+  color: #E39DB1;
   list-style: none;
   margin-left: 1rem;
   padding: 0;
 }
-/* line 17, ../scss/atoms/_list.scss */
+/* line 18, ../scss/atoms/_list.scss */
 ul.bullets li:before {
-  color: #E39DB1;
   content: "\2665";
   padding-right: 8px;
 }
-/* line 24, ../scss/atoms/_list.scss */
-ul.check {
-  list-style: none;
-  margin-left: 1rem;
-  padding: 0;
-}
-/* line 28, ../scss/atoms/_list.scss */
-ul.check li:before {
-  color: #1565c0;
-  content: "\2714";
-  padding-right: 8px;
-}
-/* line 35, ../scss/atoms/_list.scss */
-ul.square {
-  list-style: square;
-}
-/* line 38, ../scss/atoms/_list.scss */
-ul.circles {
-  list-style: circle;
-}
-/* line 41, ../scss/atoms/_list.scss */
-ul.inside {
-  list-style: inside;
-}
 
-/* line 45, ../scss/atoms/_list.scss */
+/* line 24, ../scss/atoms/_list.scss */
 ol {
   color: #0B4D38;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
   list-style: decimal;
 }
-/* line 50, ../scss/atoms/_list.scss */
+/* line 29, ../scss/atoms/_list.scss */
 ol li {
   padding-bottom: 1rem;
-}
-/* line 53, ../scss/atoms/_list.scss */
-ol.low-rom {
-  list-style: lower-roman;
-}
-/* line 56, ../scss/atoms/_list.scss */
-ol.up-rom {
-  list-style: upper-roman;
-}
-/* line 59, ../scss/atoms/_list.scss */
-ol.low-greek {
-  list-style: lower-greek;
 }
 
 /* line 1, ../scss/atoms/_links.scss */
@@ -1343,7 +1331,7 @@ ol.low-greek {
 /* line 16, ../scss/atoms/_links.scss */
 .at-link__underline:hover {
   text-decoration: none;
-  color: #a7425e;
+  color: #a73c5a;
 }
 
 /* line 21, ../scss/atoms/_links.scss */
@@ -1763,8 +1751,8 @@ p {
   grid-gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
 }
-/* line 21, ../scss/molecules/_grid.scss */
-.grid.grid__item {
+/* line 20, ../scss/molecules/_grid.scss */
+.grid__item {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -1776,12 +1764,6 @@ p {
     grid-gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
-  /* line 29, ../scss/molecules/_grid.scss */
-  .grid.grid__item {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
 }
 @media (min-width: 1140px) {
   /* line 18, ../scss/molecules/_grid.scss */
@@ -1789,12 +1771,6 @@ p {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-  }
-  /* line 38, ../scss/molecules/_grid.scss */
-  .grid.grid__item {
-    align-items: center;
-    display: flex;
-    justify-content: center;
   }
 }
 
