@@ -65,14 +65,13 @@
 @mixin nav($direction) {
   flex-direction: $direction;
   justify-content: space-between;
-  list-style: none !important;
+  list-style: none;
 }
 
 // ==========================================================================
 // Mixins para la generación de los botones : @include button( ... );
 // ==========================================================================
 @mixin button($bg, $color: #ffffff, $border-color: transparent, $border-width: 0rem, $border-radius: 0.3rem) {
-  
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   color: $color;  
@@ -104,7 +103,7 @@
       background: darken($border-color, 10%);
     }
 
-    // Se trata de un botón sólido
+  // Se trata de un botón sólido
   } @else{
     background: $bg;
     &:hover {
@@ -136,6 +135,10 @@
     }
   }
 }
+
+// ==========================================================================
+// Mixins para la generación de los inputs : @include input( ... );
+// ==========================================================================
 @mixin input($bg, $color,  $border-style, $border-width,$border,$border-radius) {
   border: $border-style $border-width $border;
   border-radius:$border-radius;
@@ -187,6 +190,10 @@
     }
   }
 }
+
+// ==========================================================================
+// Mixins para la generación de los select : @include button( ... );
+// ==========================================================================
 @mixin select($bg, $color,  $border-style, $border-width,$border,$border-radius) {
   border: $border-style $border-width $border;
   border-radius: $border-radius;
@@ -214,7 +221,7 @@
 }
 
 // ==========================================================================
-// Mixins para links @include text(1.2rem,1.6) 
+// Mixins para links @include link() 
 // ==========================================================================
 @mixin link ($color){
   color: $color;
@@ -236,31 +243,8 @@
 // Mixins para el texto @include text(1.2rem,1.6) 
 // ==========================================================================
 @mixin text($tamano, $line-height) {
-      font-size: $tamano;
-      line-height:$line-height;
-}
-
-// ==========================================================================
-// Mixins Avatar Perfil
-// ==========================================================================
-@mixin perfil($width, $height, $border) {
-  .perfil {
-    width: $width;
-    height: $width;
-    border: $border;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: 0.3s;
-    cursor: pointer;
-    img {
-      display: block;
-      height: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      object-position: center;
-      width: 100%;
-    }
-  }
+  font-size: $tamano;
+  line-height:$line-height;
 }
 
 // ==========================================================================
@@ -306,6 +290,9 @@
   }
 }
 
+// ==========================================================================
+// Mixins para el texto @include linear-gradient() 
+// ==========================================================================
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
   background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
@@ -313,7 +300,7 @@
 }
 
 // ==========================================================================
-// Titulos : @include titles (color, font-family){}
+// Mixins para Titulos : @include titles (color, font-family...)
 // ==========================================================================
 
 @mixin titles($color, $font-family,$font-size,$line-height){
@@ -324,7 +311,7 @@
 }
 
 // ==========================================================================
-// Grid : @include grid (1rem, display);
+// Mixins para Grid : @include grid (1rem, display);
 // ==========================================================================
 
 @mixin grid($gap, $display,$grid-colums){
