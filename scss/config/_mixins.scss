@@ -75,13 +75,6 @@
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   color: $color;  
-  cursor:pointer;
-  font-family: $font-primary;
-  font-size: $font-size;
-  margin: 0.5rem 0;
-  padding: 0.6rem 1.2rem;
-  text-align: center;
-
   // se trata de un boton ghost u outline
   @if($bg == transparent or $bg == color(grayscale, white)) {
     background: $bg;
@@ -102,7 +95,6 @@
     &:active {
       background: darken($border-color, 10%);
     }
-
   // Se trata de un botón sólido
   } @else{
     background: $bg;
@@ -143,10 +135,6 @@
   border: $border-style $border-width $border;
   border-radius:$border-radius;
   color: $color;
-  cursor:pointer;
-  font-family: $font-primary;
-  margin: 0.5rem;
-  padding: 0.5rem;
   // propiedades para input outline
   @if $bg == transparent{
     background: transparent;
@@ -178,17 +166,19 @@
     }
   }
   &:disabled {
-    opacity: 0.55;
     color: $color;
-    box-shadow: none;
-    cursor: auto;
     &:hover {
       background: $bg;
     }
-    &:focus {
-      box-shadow: none;
-    }
   }
+}
+
+// ==========================================================================
+// Mixins para la generación de los select : @include textarea( ... );
+// ==========================================================================
+@mixin textarea($height, $width) {
+  height: $height;
+  width: $width;
 }
 
 // ==========================================================================
@@ -223,19 +213,10 @@
 // ==========================================================================
 // Mixins para links @include link() 
 // ==========================================================================
-@mixin link ($color){
+@mixin link ($color, $colorHover){
   color: $color;
-  display: inline-block;
-  outline: 0;
-  text-decoration: none;
-  transition: color .1s ease-out;
-  vertical-align: middle;
-
   &:hover{
-    color: color(secondary,900);
-  }
-  &:focus{
-    outline: dotted;
+    color: $colorHover;
   }
 }
 
@@ -303,9 +284,7 @@
 // Mixins para Titulos : @include titles (color, font-family...)
 // ==========================================================================
 
-@mixin titles($color, $font-family,$font-size,$line-height){
-    color: color(primary,500);
-    font-family: $font-primary;
+@mixin titles($font-size,$line-height){
     font-size: $font-size;
     line-height: $line-height;
 }

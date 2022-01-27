@@ -1,20 +1,25 @@
 input,textarea{
-    @include input( transparent, color(grayscale,black),solid, .2rem,color(primary,700),5px);
-    &.secondary{
-      @include input( transparent, color(grayscale,black),solid, .2rem, color(secondary,700), 5px);
-    }
-    &.complementary {
-      @include input(transparent, color(grayscale,black),solid, .2rem, color(complementary,700), 5px);
-    }
-    &.error{
-      @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,error), 5px);
-    }
-    &.success{
-      @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,success), 5px);
-    }
-    &.warning{
-      @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,warning), 5px);
-    }
+  @extend %input;
+  @include input( transparent, color(grayscale,black),solid, .2rem,color(primary,700),5px);
+  &.secondary{
+    @include input( transparent, color(grayscale,black),solid, .2rem, color(secondary,700), 5px);
+  }
+  &.complementary {
+    @include input(transparent, color(grayscale,black),solid, .2rem, color(complementary,700), 5px);
+  }
+  &.error{
+    @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,error), 5px);
+  }
+  &.success{
+    @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,success), 5px);
+  }
+  &.warning{
+    @include input( transparent, color(grayscale,black),solid, .2rem, color(alert,warning), 5px);
+  }
+}
+
+textarea{
+  @include textarea(200px, 300px)
 }
 // ==========================================================================
 // Estilo de Radio Button
@@ -43,8 +48,6 @@ input[type="radio"]{
     &:checked{
       background-color:color(secondary,500); 
       border: color(grayscale,white) 3px double ;
-      height: map-get($sizes, tiny);
-      width: map-get($sizes, tiny);
     }
   }
   &.complementary{
@@ -52,8 +55,6 @@ input[type="radio"]{
     &:checked{
       background-color:color(complementary,500); 
       border: color(grayscale,white) 3px double ;
-      height: map-get($sizes, tiny);
-      width: map-get($sizes, tiny);
     }
   }
   &.error{
@@ -61,8 +62,6 @@ input[type="radio"]{
     &:checked{
       background-color:color(alert,error); 
       border: color(grayscale,white) 3px double ;
-      height: map-get($sizes, tiny);
-      width: map-get($sizes, tiny);
     }
   }
   &.success{
@@ -70,8 +69,6 @@ input[type="radio"]{
     &:checked{
       background-color:color(alert,success); 
       border: color(grayscale,white) 3px double ;
-      height: map-get($sizes, tiny);
-      width: map-get($sizes, tiny);
     }
   }
   &.warning{
@@ -79,8 +76,6 @@ input[type="radio"]{
     &:checked{
       background-color:color(alert,warning); 
       border: color(grayscale,white) 3px double ;
-      height: map-get($sizes, tiny);
-      width: map-get($sizes, tiny);
     }
   }
 }
@@ -90,10 +85,7 @@ select{
   background-position: 92%;
   background-repeat: no-repeat;
   background-size: .65em auto, 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
+  @include appearance(none);
   @include select( transparent, color(grayscale,black),solid, .2rem,color(primary,700), 5px);
     &.secondary{
       @include select( transparent, color(grayscale,black),solid, .2rem, color(secondary,700), 5px);

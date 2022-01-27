@@ -1,5 +1,9 @@
 //propiedades básicas de botón
-button, .at-btn{
+button{
+    @extend %button;
+}
+
+.at-btn{
     @include button( color(primary,500) );
 }
 // botón secundario
@@ -24,9 +28,9 @@ button, .at-btn{
 }
 // boton de tabs (básico)
 .at-tab-btn {
-    background-color: inherit;
+    background: none;
+    border: 0;
     border-radius: 0.3rem 0.3rem 0rem 0rem;
-    font-size: $font-size;
     margin: 0rem;
     outline: none;
     padding: 14px 16px;

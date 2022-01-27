@@ -1,0 +1,37 @@
+%button{
+    cursor:pointer;
+    font-family: $font-primary;
+    font-size: $font-size;
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+}
+
+%link{
+    outline: 0;
+    text-decoration: none;
+    transition: color .1s ease-out;
+    &:focus{
+      outline: dotted;
+    }
+}
+
+%input{
+  cursor: pointer;
+  font-family: $font-primary;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  &:disabled {
+    opacity: 0.55;
+    box-shadow: none;
+    cursor: auto;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+%titles{
+  color: color(primary,500);
+  font-family: $font-primary;
+}
