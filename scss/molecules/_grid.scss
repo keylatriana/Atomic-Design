@@ -1,20 +1,3 @@
-.container {
-   width: 100%;
-   padding: {
-      left: 1rem;
-      right: 1rem;
-   };
-   margin: {
-      left: auto;
-      right: auto;
-   };
-   @include mq-min(md) {
-      max-width: map-get($breakpoints, "lg") - 100px ;
-   }
-   @include mq-min(lg) {
-      max-width: 1140px;
-   }
-}
 .grid{
    @include grid(1rem, display, repeat(12, 1fr));
    @include mq-max(sm) {
