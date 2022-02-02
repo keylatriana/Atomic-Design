@@ -16,17 +16,52 @@
    }
 }
 .grid{
-   @include grid(1rem, display, repeat(1, 1fr));
+   @include grid(1rem, display, repeat(12, 1fr));
+   @include mq-max(sm) {
+      grid-gap: 0;
+   }
    &__item{
       align-items: center;
       display: flex;
       justify-content: center;
    }
-   @include mq-min(md){
-      @include grid (1.5rem, display, repeat(2, 1fr));
+}
+
+@for $i from 1 through 12 {
+   .grid-#{$i} {
+      grid-column: span ($i);
    }
-   @include mq-min(xl){
-      @include grid(2rem, display, repeat(3,1fr));
+}
+
+@include mq-min(sm) {
+   @for $i from 1 through 12 {
+      .grid-sm-#{$i} {
+         grid-column: span ($i);
+      }
+   }
+}
+
+@include mq-min(md) {
+   @for $i from 1 through 12 {
+      .grid-md-#{$i} {
+         grid-column: span ($i);
+      }
+   }
+}
+
+@include mq-min(lg) {
+   @for $i from 1 through 12 {
+      .grid-lg-#{$i} {
+         grid-column: span ($i);
+      }
+   }
+}
+
+@include mq-min(xl) {
+   @for $i from 1 through 12 {
+      .grid-xl-#{$i} {
+         grid-column: span ($i);
+      }
    }
 }
 

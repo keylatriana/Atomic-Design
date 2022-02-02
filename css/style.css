@@ -1731,31 +1731,325 @@ p {
 .grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(12, 1fr);
 }
-/* line 20, ../scss/molecules/_grid.scss */
+@media (max-width: 539px) {
+  /* line 18, ../scss/molecules/_grid.scss */
+  .grid {
+    grid-gap: 0;
+  }
+}
+/* line 23, ../scss/molecules/_grid.scss */
 .grid__item {
   align-items: center;
   display: flex;
   justify-content: center;
 }
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-1 {
+  grid-column: span 1;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-2 {
+  grid-column: span 2;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-3 {
+  grid-column: span 3;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-4 {
+  grid-column: span 4;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-5 {
+  grid-column: span 5;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-6 {
+  grid-column: span 6;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-7 {
+  grid-column: span 7;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-8 {
+  grid-column: span 8;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-9 {
+  grid-column: span 9;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-10 {
+  grid-column: span 10;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-11 {
+  grid-column: span 11;
+}
+
+/* line 31, ../scss/molecules/_grid.scss */
+.grid-12 {
+  grid-column: span 12;
+}
+
+@media (min-width: 540px) {
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-1 {
+    grid-column: span 1;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-2 {
+    grid-column: span 2;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-3 {
+    grid-column: span 3;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-4 {
+    grid-column: span 4;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-5 {
+    grid-column: span 5;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-6 {
+    grid-column: span 6;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-7 {
+    grid-column: span 7;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-8 {
+    grid-column: span 8;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-9 {
+    grid-column: span 9;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-10 {
+    grid-column: span 10;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-11 {
+    grid-column: span 11;
+  }
+
+  /* line 38, ../scss/molecules/_grid.scss */
+  .grid-sm-12 {
+    grid-column: span 12;
+  }
+}
 @media (min-width: 720px) {
-  /* line 18, ../scss/molecules/_grid.scss */
-  .grid {
-    display: grid;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-1 {
+    grid-column: span 1;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-2 {
+    grid-column: span 2;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-3 {
+    grid-column: span 3;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-4 {
+    grid-column: span 4;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-5 {
+    grid-column: span 5;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-6 {
+    grid-column: span 6;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-7 {
+    grid-column: span 7;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-8 {
+    grid-column: span 8;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-9 {
+    grid-column: span 9;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-10 {
+    grid-column: span 10;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-11 {
+    grid-column: span 11;
+  }
+
+  /* line 46, ../scss/molecules/_grid.scss */
+  .grid-md-12 {
+    grid-column: span 12;
+  }
+}
+@media (min-width: 960px) {
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-1 {
+    grid-column: span 1;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-2 {
+    grid-column: span 2;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-3 {
+    grid-column: span 3;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-4 {
+    grid-column: span 4;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-5 {
+    grid-column: span 5;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-6 {
+    grid-column: span 6;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-7 {
+    grid-column: span 7;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-8 {
+    grid-column: span 8;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-9 {
+    grid-column: span 9;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-10 {
+    grid-column: span 10;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-11 {
+    grid-column: span 11;
+  }
+
+  /* line 54, ../scss/molecules/_grid.scss */
+  .grid-lg-12 {
+    grid-column: span 12;
   }
 }
 @media (min-width: 1140px) {
-  /* line 18, ../scss/molecules/_grid.scss */
-  .grid {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-1 {
+    grid-column: span 1;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-2 {
+    grid-column: span 2;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-3 {
+    grid-column: span 3;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-4 {
+    grid-column: span 4;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-5 {
+    grid-column: span 5;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-6 {
+    grid-column: span 6;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-7 {
+    grid-column: span 7;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-8 {
+    grid-column: span 8;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-9 {
+    grid-column: span 9;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-10 {
+    grid-column: span 10;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-11 {
+    grid-column: span 11;
+  }
+
+  /* line 62, ../scss/molecules/_grid.scss */
+  .grid-xl-12 {
+    grid-column: span 12;
   }
 }
-
 /* line 1, ../scss/molecules/_navigation.scss */
 .ml-nav-list, .ml-nav-list-column, .ml-nav-list-row {
   display: flex;
