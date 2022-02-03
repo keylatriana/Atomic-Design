@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
-    <script src="index.js"></script>
+    <script src="js/index.js"></script> 
     <title>Atomic Design</title>
 </head>
 
@@ -655,35 +655,40 @@
             <div id="grilla" class="ml-tab-content">
                 <h2>Grilla de imagenes</h2>
                 <p>
-                    Para configurar la grilla de imagenes, desde el archivo grid.scss se modifican el espacio entre cada
-                    imagen, con el valor de gap y el numero de columnas en la propiedad: repeat (#de columnas, 1fr); 
+                    Para configurar la grilla de imagenes, en el archivo grid.scss se pueden observar las clases que debemos
+                    agregar a cada elemento de la grilla para que que tome el numero de columnas segun el breakpoint;
+                    Por ejemplo si deseamos que nuestra grilla tenga 3 columnas en el breakpoint lg debemos agregar la clase: grid-12
+                    seguida de la clase del breakpoint y el numero con el cual se completarian las 12 columnas. En este caso, 
+                    que queremos que se vean 3 columnas agregamos la clase grid-lg-4. La idea de usar estos numeros es para 
+                    completar un total de 12 columnas, 3*4 = 12
                 </p>
-                <div class="grid-xl-3">
-                    <div class="grid__item" >
+                <div class="grid">
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/220/300/300.jpg?hmac=ImzlQmvXraECs9x98iDhbi3WDtXFHRyH6rjFhT2_kiI" width="250" height="250" alt="Calle nocturna">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/409/300/300.jpg?hmac=jl6buMPqzMeSEuAieeUISi1bDiaWpI7JQAX0wM7qkf0" width="250" height="250" alt="Bicicleta">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/171/300/300.jpg?hmac=hEdWdS7PgEYliDZkkie5BXb5e69BDAf2jnyt4feIiWg" width="250" height="250" alt="Gotas">
                     </div>
-                    <div class="grid__item" >
+            
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/896/300/300.jpg?hmac=L1NW2qfuu-zMwP-9p_ZuwTYp3jkv6JuW6uxockJrRSI" width="250" height="250" alt="Atardecer">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/993/300/300.jpg?hmac=4GoIWE9T9XBxKLwUxVidze3r0k9sTybobEF2oRvjSLE" width="250" height="250" alt="Montaña">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/1049/300/300.jpg?hmac=fl1v8mlNmSUktkvNKdn5gGCLlgVllm0rYfkE3Bx9QfI" width="250" height="250" alt="Roca">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/383/300/300.jpg?hmac=kHvlx_u4NdH5T113u1zp_vWeeO9r94Hn6U9IqLfuCXg" width="250" height="250" alt="aviones">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/82/300/300.jpg?hmac=VnMN7sxSNePsckkp3Rql5brpsqFiYq3Hb1S-RlIjkd0" width="250" height="250" alt="Flores">
                     </div>
-                    <div class="grid__item" >
+                    <div class="grid-12 grid-lg-4">
                         <img src="https://i.picsum.photos/id/648/300/300.jpg?hmac=xfgy9aIr4ZX0c_J0DNIlGKXLUMxAc201OJU2bj7ejpg" width="250" height="250" alt="Bosque">
                     </div>
                 </div>
@@ -862,6 +867,6 @@
                 </div>
             </div>
         </div>
-    </main>  
+    </main> 
 </body>
 </html>

@@ -1,5 +1,5 @@
 .grid{
-   @include grid(1rem, display, repeat(12, 1fr));
+   @include grid(1rem, grid, repeat(12, 1fr));
    @include mq-max(sm) {
       grid-gap: 0;
    }

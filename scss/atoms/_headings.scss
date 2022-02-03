@@ -2,18 +2,18 @@ h1,h2,h3,h4,h5,h6{
     @extend %titles;
 }
 h1{
-    @include titles(3.6rem, map-get($lineheight, lh-huge));
+    @include titles(map-get($sizes, medium), map-get($lineheight, lh-huge));
     @include mq-min(md){
         @include titles(4rem, map-get($lineheight, lh-huge));
     }
     @include mq-min(xl){
-        @include titles(4.8rem, map-get($lineheight, lh-huge));
+        @include titles(map-get($sizes, large), map-get($lineheight, lh-huge));
     }
 }
 h2{
     @include titles(3.2rem, map-get($lineheight , lh-huge));
     @include mq-min(md){
-        @include titles(3.6rem, map-get($lineheight, lh-huge));
+        @include titles(map-get($sizes, medium), map-get($lineheight, lh-huge));
     }
     @include mq-min(xl){
         @include titles(4.4rem, map-get($lineheight, lh-huge));
@@ -47,12 +47,12 @@ h5{
     }
 }
 h6{
-    @include titles(2.4rem, map-get($lineheight , lh-huge));
+    @include titles(map-get($sizes, half), map-get($lineheight , lh-huge));
     @include mq-min(md){
         @include titles(2.8rem, map-get($lineheight, lh-huge));
     }
     @include mq-min(xl){
-        @include titles(3.6rem, map-get($lineheight, lh-huge));
+        @include titles(map-get($sizes, medium), map-get($lineheight, lh-huge));
     }
 }
 

@@ -8,10 +8,19 @@
        left: auto;
        right: auto;
     };
+    &.full {
+      padding: 0;
+      @include mq-min(lg) {
+         padding: {
+            left: 2rem;
+            right: 2rem;
+         };
+      }
+   }
     @include mq-min(md) {
        max-width: map-get($breakpoints, "lg") - 100px ;
     }
     @include mq-min(lg) {
        max-width: 1140px;
-    }
+    } 
  } 
