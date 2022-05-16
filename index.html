@@ -6,54 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/index.js"></script> 
-    <title>Atomic Design</title>
+    <title>Atomic Design Base</title>
 </head>
 
 <body>
     <main class="container">
-        <div class="d-md-flex jc-center">
-            <img src="./image/logo-nivelics.png" width="215" height="59" alt="">
+        <div class="d-flex jc-center mb-base">
+            <img src="./image/logo-nivelics.png" width="215" alt="">
         </div>
-        <h1 style="padding-top: 15px; text-align: center;">Atomic Design: Elementos Básicos</h1>
-        <div class="validation-test">
-
-            <div class="ml-tab">
-                <div class="ml-tab-container">
-                    <button class="at-tab-btn" onclick="openTab(event, 'buttons')">Botones</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'links')">Links</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'nav-menu')">Menú de navegación</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'inputs')">Inputs</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'tables')">Tablas</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'headings')">Titulos y listas</button>
-                    <button class="at-tab-btn" onclick="openTab(event, 'grilla')">Grilla y Flexbox</button>
+        <h1 class="d-md-flex jc-center mb-base">Atomic Design: Elementos Básicos</h1>
+        <div>
+            <div class="tab">
+                <div class="tab__container d-md-flex">
+                    <button class="btn__tab active" onclick="openTab(event, 'buttons')">Botones</button>
+                    <button class="btn__tab" onclick="openTab(event, 'links')">Links</button>
+                    <button class="btn__tab" onclick="openTab(event, 'nav-menu')">Menú de navegación</button>
+                    <button class="btn__tab" onclick="openTab(event, 'inputs')">Inputs</button>
+                    <button class="btn__tab" onclick="openTab(event, 'tables')">Tablas</button>
+                    <button class="btn__tab" onclick="openTab(event, 'headings')">Titulos y listas</button>
+                    <button class="btn__tab" onclick="openTab(event, 'grilla')">Grilla y Flexbox</button>
                 </div>
             </div>
             <!-- Sección de botones -->
-            <div id="buttons" class="ml-tab-content">
-                <h2>Botones </h2>
-                <div style="padding: 2rem; margin: 1rem 0rem">
+            <div id="buttons" class="tab__content">
+                <h2>Botones sólidos</h2>
+                <div class="mb-base">
                     <!-- Solidos-->
-                    <h6>Solidos normales</h6>
-                    <div>
-                        <p>Por defecto se configuran los elementos desde el mixin de buttons <br>
-                            Se configuran los estilos en el atom <code>_buttons.scss</code>
-                            <br>
-                            <br>
-                            Para los botones sólidos solo se pasa el color de background al mixin.
-                        </p>
-                    </div>
-                    <div style="margin-top: 3rem;">
-                        <button class="at-btn">Botón Primario</button>
-                        <button class="at-btn__secondary ">Botón Secundario</button>
-                        <button class="at-btn__tertiary ">Botón Terciario</button>
+                    <p>Por defecto se configuran los elementos desde el mixin de buttons 
+                        <br>
+                        Se configuran los estilos en el atom <code>_buttons.scss</code>
+                        <br>
+                        Para los botones sólidos solo se pasa el color de background al mixin.
+                    </p>
+                    <div class="d-md-flex jc-center mt-base">
+                        <button>Botón Primario</button>
+                        <button class="btn btn--secondary">Botón Secundario</button>
+                        <button class="btn btn--complementary">Botón Complementario</button>
                     </div>
                 </div>
                 <hr>
-                <div style="padding: 2rem; margin: 1rem 0rem">
+                <div class="mb-base">
                     <!-- Outline-->
-                    <h6>Botones outline</h6>
+                    <h2>Botones outline</h2>
                     <div>
-                        <p>Los botones de estilo Outline se obtienen con la clase <code>at-btn-outline</code>
+                        <p>Los botones de estilo Outline se obtienen con la clase <code>btn-outline</code>
                             <br>
                             <br>
                             Para configurar un color diferente para botones Outline se hace uso del mixin BUTTON con los siguientes parametros
@@ -63,442 +59,414 @@
                             - <code>$border-color: transparent</code> = color de borde. <br>
                             - <code>$border-width: 0rem</code> = ancho de borde. <br>
                             - <code>$border-radius: 0.3rem</code> = radio de los bordes del botón <br>
-                            <br>
-                            mixin
-                            <br>
-                            <code>
-                                .at-btn-outline { <br>
-                                        @include button($bg, $color: #ffffff, $border-color: transparent, $border-width: 0rem, $border-radius: 0.3rem) { <br>
-                                }
-                            </code>
                         </p>
-                    </div>
-                    <div style="margin-top: 3rem;">
-                        <button class="at-btn-outline">Botón outline</button>
-                        <button class="at-btn-outline__secondary">Botón outline secundario</button>
-                    </div>
-                </div>
-                <hr>
-                <h6>Botones "Ghost"</h6>
-                <div>
-                    <p>Los botones de estilo ghost, es decir con fondo transparente se obtienen con la clase <code>at-btn__ghost</code>
+                        <p><strong>Mixin</strong></p>
                         <br>
-                        <div style="background-color: #0F3E4D; padding: 1rem">
-                            <button class="at-btn__ghost">Boton fantasma</button>
+                        <code>
+                            .at-btn-outline { <br>
+                                @include button(<br>
+                                    $bg,
+                                    $color: #ffffff, <br>
+                                    $border-color: transparent,
+                                    $border-width: 0rem, <br>
+                                    $border-radius: 0.3rem<br>
+                                )<br>
+                            }<br>
+                        </code>
+                        <div class="d-md-flex jc-center">
+                            <button class="btn btn--outline">Botón outline</button>
+                            <button class="btn btn--outline-secondary">Botón outline secundario</button>
+                            <button class="btn btn--outline-complementary">Botón outline Complementario</button>
                         </div>
-                    </p>
+                    </div>
                 </div>
                 <hr>
-                <div style="padding: 2rem; margin: 1rem 0rem">
-                    <!-- Botones deshabilitados -->
-                    <h6>Deshabilitados</h6>
-                    <div>
-                        <p>Botones deshabilitados con la clase <code>disable</code>
-                        </p>
+                <div class="mb-base">
+                    <h2>Botones ghost</h2>
+                    <p>Los botones de estilo ghost, es decir con fondo transparente se obtienen con la clase <code>btn__ghost</code>
+                    </p>
+                    <div class="mt-base" style="background-color: #0F3E4D; padding: 1.5rem 1rem; text-align:center; border-radius: 5px;">
+                        <button class="btn btn--ghost">Boton fantasma</button>
                     </div>
-                    <div>
-                        <button class="at-btn disabled">Botón normal</button>
-                        <button class="at-btn__secondary disabled">Botón normal</button>
-                        <button class="at-btn__tertiary disabled">Botón normal</button>
-                        <button class="at-btn-outline disabled">Botón normal</button>
-                        <button class="at-btn-outline__secondary disabled">Botón normal</button>
+                </div>
+                <hr>
+                <div class="mb-base">
+                    <!-- Botones deshabilitados -->
+                    <h2>Deshabilitados</h2>
+                    <p>Botones deshabilitados con la clase <code>disable</code>
+                    </p>
+                    <div class="d-md-flex jc-center mt-base">
+                        <button class="btn disabled">Botón normal</button>
+                        <button class="btn btn--secondary disabled">Botón secundario</button>
+                        <button class="btn btn--complementary disabled">Botón complementario</button>
+                        <button class="btn btn--outline disabled">Botón outline</button>
+                        <button class="btn btn--outline-secondary disabled">Botón outline secundario</button>
                     </div>
                 </div>
             </div>
 
             <!-- Sección de links -->
-            <div id="links" class="ml-tab-content">
+            <div id="links" class="tab__content">
                 <h2>Links</h2>
-                <div style="padding: 2rem; margin: 1rem 0rem">
-                    <h6>Estilos</h6>
-                    <div>
-                        <p>La etiqueta <code>a</code> viene definida por defecto sin ningún tipo de decoración.</p>
-                        <p>Usando la clase <code>at-link__underline</code> se puede aplicar el clásico subrayado a las etiquetas de link.</p>
-                        <br>
-                    </div>
-                    <div>
-                        <a href="#" class="at-link">Este es un link básico</a> <br>
-                        <a href="#" class="at-link__secondary">Este es un link básico secundario</a> 
-                    </div>
-                    <a href="#" class="at-link__underline">Este es un link subrayado</a><br>
-                    <a href="#" class="at-link-underline__secondary">Este es un link subrayado</a>
+                <div class="mb-half">
+                    <p>La etiqueta <code>a</code> viene definida por defecto sin ningún tipo de decoración.</p>
+                    <p>Usando la clase <code>link--underline</code> se puede aplicar el clásico subrayado a las etiquetas de link.</p>
+                    <br>
+                    <a href="#">Este es un link básico</a> <br>
+                    <a href="#" class="link link--secondary">Este es un link básico secundario</a> <br>
+                    <a href="#" class="link link--underline">Este es un link subrayado</a><br>
+                    <a href="#" class="link link--underline-secondary">Este es un link subrayado secundario</a>
+                </div>
+                <hr>
+                <div class="mt-half">
+                    <h2>Links tipo botón</h2>
+                    <a href="#" class="btn">Link tipo botón</a>
+                    <a href="#" class="btn btn--secondary">Link tipo botón secundario</a>
+                    <a href="#" class="btn btn--complementary">Link tipo botón complementario</a>
                 </div>
             </div>
 
             <!-- Sección menú de navegación -->
-            <div id="nav-menu" class="ml-tab-content">
-                <h2>Menú de navegación</h2>
-                <div style="padding: 2rem; margin: 1rem 0rem">
-                    <h6>Menú horizontal</h6>
-                    <div>
-                        <p>
-                            Dependiendo de la orientación del menú se utilizan las clases  <code>ml-nav-list-column </code> o <code>ml-nav-list-row</code>. <br>
-                        </p>
-                    </div>
-                    <nav>
-                        <ul class="ml-nav-list-row">
-                            <li>
-                                <a href="#">Menu1</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu2</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu3</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu4</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu5</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu6</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu7</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <br> <br>
-                    <p>
-                        Algunos iconos. <br>
-                    </p>
-                    <nav>
-                        <ul class="ml-nav-list-row">
-                            <li>
-                                <a href="#">Menu1 <i class="icon-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">Menu2 <i class="icon-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">Menu3</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu4</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu5 <i class="icon-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">Menu6</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu7 <i class="icon-facebook" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            <div id="nav-menu" class="tab__content">
+                <h2>Menú horizontal</h2>
+                <p>
+                    Dependiendo de la orientación del menú se utilizan las clases  <code>nav__list--column </code> o <code>nav__list--row</code>. <br>
+                </p>
+                <br>
+                <nav class="nav__list nav__list--row">
+                    <a href="#">Menu1</a>
+                    <a href="#">Menu2</a>
+                    <a href="#">Menu3</a>
+                    <a href="#">Menu4</a>
+                    <a href="#">Menu5</a>
+                    <a href="#">Menu6</a>
+                    <a href="#">Menu7</a>
+                </nav>
+                <br> <br>
+                <p>
+                    Algunos iconos. 
+                </p>
+                <br>
+                <nav class="nav__list nav__list--row">
+                    <a href="#"><i class="icon-twitter" aria-hidden="true"></i> Twitter </a>
+                    <a href="#"><i class="icon-instagram" aria-hidden="true"></i>Instagram</a>
+                    <a href="#"><i class="icon-facebook" aria-hidden="true"></i> Facebook </a>
+                </nav>
+                <br>
                 <hr>
-                <div style="padding: 2rem; margin: 1rem 0rem">
-                    <h6>Menú Vertical</h6>
-                    <div>
-                        <p>
-                            Se pueden agregar estilos de link
-                        </p>
-                    </div>
-                    <nav>
-                        <ul class="ml-nav-list-column">
-                            <li>
-                                <a class="at-link__underline" href="#">Menu1</a>
-                            </li>
-                            <li>
-                                <a class="at-link-underline__secondary" href="#">Menu2</a>
-                            </li>
-                            <li>
-                                <a class="at-link__secondary" href="#">Menu3</a>
-                            </li>
-                            <li>
-                                <a href="#">Menu4</a>
-                            </li>
-                        </ul>
+                <div>
+                    <h2>Menú Vertical</h2>
+                    <p>
+                        Se pueden agregar estilos de link
+                    </p>
+                    <br>
+                    <nav class="nav__list nav__list--column">
+                        <a href="#">Menu1</a>
+                        <a href="#">Menu2</a>
+                        <a href="#">Menu3</a>
                     </nav>
+                    <br>
                     <hr>
-                    <nav>
-                        <ul class="ml-nav-list-column">
-                            <li>
-                                <a href="#"> Menu1 <i class="icon-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a class="at-link__secondary" href="#"> Menu2 <i class="icon-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a class="at-link__secondary" href="#"> Menu3 <i class="icon-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"> Menu4 <i class="icon-apple" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
+                    <br>
+                    <nav class="nav__list nav__list--column">
+                        <a href="#"><i class="icon-twitter" aria-hidden="true"></i> Twitter </a>
+                        <a href="#"><i class="icon-instagram" aria-hidden="true"></i>Instagram</a>
+                        <a href="#"><i class="icon-facebook" aria-hidden="true"></i> Facebook </a>
                     </nav>
                 </div>
             </div>
 
             <!-- Sección de Inputs -->
-            <div id="inputs" class="ml-tab-content">
+            <div id="inputs" class="tab__content">
                 <div class="validation-text__input container">
-                    <h2> Input </h2>
+                    <h2> Input</h2>
+                    <p>La etiqueta <code>input</code> cuenta con un estilo base.
+                        <br>
+                        La clase <code>secondary</code> permite que el input se presente con bordes del color secundario.
+                        <br>
+                        La clase <code>complementary</code> permite que el input se presente con bordes del color complementary. 
+                    </p>
+                    <br>
+                    <form action="" class="form">
+                        <input type="text " placeholder="Input base o primary">
+                        <input class="inp--secondary" type="text" placeholder="Input secondary">
+                        <input class="inp--complementary" type="text" placeholder="Input complementary">
+                        <input class="inp--error" type="text" placeholder="Input error">
+                        <input class="inp--success" type="text" placeholder="Input success">
+                        <input class="inp--warning" type="text" placeholder="Input warning">
+                    </form>
+                    <br>
+                    <br>
                     <div>
-                        <p>Las etiquetas <code>inputs</code> cuentan con un estilo base y son los que se presentan como primera opción.
-                            <br>
-                            La clase <code>secondary</code> permite que el input se presente con bordes del color secundario  
-                            y <code>complementary</code> permite que el input se presente con bordes del color complementary. 
-                        </p>
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Estilos de Input-------</h6>
-                        <p> Este es el estilo base de la etiqueta input.</p>
-                        <input type="text " id="name" placeholder="Escribe tu nombre">
-                        <input class="secondary" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="complementary" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="error" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="success" type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="warning" type="text" id="name" placeholder="Escribe tu nombre">
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>------- Input Disabled-------</h6>
+                        <h2> Input disabled</h2>
                         <p>Inputs deshabilitados con disabled</p>
-                        <input type="text" disabled id="name" placeholder="Escribe tu nombre">
-                        <input class="secondary" disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <input class="complementary"  disabled type="text" id="name" placeholder="Escribe tu nombre">
-                        <textarea  class="warning" name="" id="" placeholder="warning" disabled></textarea>
-                        <select name="" id="" disabled>
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        
-                        <div class="file-select disabled" >
-                            <input type="file" disabled>
-                        </div>
+                        <form action="" class="form">
+                            <input type="text " disabled placeholder="Input base o primary">
+                            <input class="inp--secondary" disabled type="text" placeholder="Input secondary">
+                            <input class="inp--complementary" disabled type="text" placeholder="Input complementary">
+                            <input class="inp--error" disabled type="text" placeholder="Input error">
+                            <input class="inp--success" disabled type="text" placeholder="Input success">
+                            <input class="inp--warning" disabled type="text" placeholder="Input warning">
+                        </form>
                     </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Estilos de Textarea-------</h6>
-                        <p> Este es el estilo base del textarea.</p>
-                        <label for="">textarea</label>
-                        <textarea  name="" id="" placeholder="Escriba su comentario"></textarea>
-                        <textarea  class="secondary" name="" id="" placeholder="Estilo secondary"></textarea>
-                        <textarea class="complementary" name="" id="" placeholder="Estilo complementary"></textarea>
-                        <textarea  class="error" name="" id="" placeholder="Clase Error"></textarea>
-                        <textarea class="success" name="" id="" placeholder="Clase Success"></textarea>
-                        <textarea  class="warning" name="" id="" placeholder="Clase warning"></textarea>
+                    <br><br>
+                    <div>
+                        <h2>Textarea</h2>
+                        <form action="" class="form">
+                            <textarea  name="" id="" placeholder="Textarea base o primary"></textarea>
+                            <textarea  class="textarea--secondary" name="" id="" placeholder="Textarea secondary"></textarea>
+                            <textarea class="textarea--complementary" name="" id="" placeholder="Textarea complementary"></textarea>
+                            <textarea  class="textarea--error" name="" id="" placeholder="Textarea Error"></textarea>
+                            <textarea class="textarea--success" name="" id="" placeholder="Textarea Success"></textarea>
+                            <textarea  class="textarea--warning" name="" id="" placeholder="Textarea warning"></textarea>
+                        </form>
                     </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Estilos de Select-------</h6>
-                        <p> Este es el estilo base de la etiqueta select.</p>
-                        <label for="">Select</label>
-                        <select name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        <p> Este es el estilo secondary de la etiqueta select.</p>
-                        <select class="secondary" name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        <p> Estilo complementary de la etiqueta select.</p>
-                        <select class="complementary" name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        <p> Para esta variación se utiliza la clase <code>error</code></p>
-                        <select class="error" name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        <p> Para esta variación se utiliza la clase <code>success</code></p>
-                        <select class="success" name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
-                        <p> Para esta variación se utiliza la clase <code> warning</code></p>
-                        <select class="warning" name="" id="">
-                            <option value="">select</option>
-                            <option value="">select</option>
-                        </select>
+                    <br><br>
+                    <div>
+                        <h2>Select</h6>
+                        <form action="" class="form">
+                            <select name="" id="">
+                                <option value="">Select base</option>
+                                <option value="">select</option>
+                            </select>
+                            <select class="select--secondary" name="" id="">
+                                <option value="">Select secundario</option>
+                                <option value="">select</option>
+                            </select>
+                            <select class="select--complementary" name="" id="">
+                                <option value="">Select complementary</option>
+                                <option value="">select</option>
+                            </select>
+                            <select class="select--error" name="" id="">
+                                <option value="">Select error</option>
+                                <option value="">select</option>
+                            </select>
+                            <select class="select--success" name="" id="">
+                                <option value="">Select success</option>
+                                <option value="">select</option>
+                            </select>
+                            <select class="select--warning" name="" id="">
+                                <option value="">Select warning</option>
+                                <option value="">select</option>
+                            </select>
+                            <select disabled name="" id="">
+                                <option value="">Select disabled</option>
+                                <option value="">select</option>
+                            </select>
+                        </form>
                     </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <h6>-------Estilos de Input tipo File-------</h6>
+                    <br><br>
+                    <div>
+                        <h6>Input File</h6>
                         <p> Este  es el estilo base de la etiqueta input, en el div que envuelve el
-                             input de debe poner la clase <code>file-select</code></p>
-                        <div class="file-select" >
-                            <input type="file">
-                        </div>
-                        <p> Para esta variación se utiliza la clase <code> file-secondary</code></p>
-                        <div class="file-secondary" >
-                            <input class="" type="file" >
-                        </div>
-                        <p> Para esta variación se utiliza la clase <code> file-complementary</code></p>
-                        <div class="file-complementary"  >
-                            <input type="file" >
-                        </div>
+                             input de debe poner la clase <code>inp--file</code></p>
+                        <form action="" class="form">
+                            <div class="form__item inp--file" >
+                                <input type="file">
+                            </div>
+                            <hr>
+                            <p> class="<code>inp--file--secondary</code>"</p>
+                            <div class="form__item inp--file inp--file--secondary" >
+                                <input class="" type="file" >
+                            </div>
+                            <hr>
+                            <p> class="<code>inp--file--complementary</code>"</p>
+                            <div class="form__item inp--file inp--file--complementary"  >
+                                <input type="file" >
+                            </div>
+                            <hr>
+                            <p> Disabled</p>
+                            <div class="form__item inp--file disabled">
+                                <input type="file" disabled>
+                            </div>
+                        </form>
                     </div>
-                    <div class="validation-text__radio" style="margin-top: 3rem;">
+                    <br><br>
+                    <div class="mb-base">
                         <h2> Radio Button</h2>
                         <div style="padding: 2rem; margin: 1rem 0rem">
-                            <p>1-. Estilo base de los inputs tipo radio</p>
-                            <label for="genero">Género</label>
-                            <input type="radio" name="genero" id="Femenino" checked="checked">
-                            <label for="Femenino">Femenino</label>
-                            <input type="radio" name="genero" id="Masculino">
-                            <label for="Masculino">Masculino</label>
-                            <input type="radio" name="genero" id="indistinto">
-                            <label for="indistinto">Prefiero no decirlo</label>
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" name="radioBase" id="radioBase">
+                                    <label for="base">Estilo base</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" name="radioBaseChecked" id="radioBaseChecked" checked="checked">
+                                    <label for="radioBaseChecked">Estilo base checked</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" disabled name="radioBaseChecked" id="radioBaseChecked" checked="checked">
+                                    <label for="radioBaseChecked">Estilo base checked</label>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" class="radio--secondary" name="radioSecondary" id="radioSecondary">
+                                    <label for="radioSecondary">Estilo secondary</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" class="radio--secondary" name="radioSecondary" id="radioSecondaryChecked" checked="checked">
+                                    <label for="radioSecondaryChecked">Estilo secondary checked</label>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" class="radio--complementary" name="radioComplementary" id="radioComplementary">
+                                    <label for="radioComplementary">Estilo complementary</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" class="radio--complementary" name="radioComplementary" id="radioComplementaryChecked" checked="checked">
+                                    <label for="radioComplementaryChecked">Estilo complementary checked</label>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" class="radio--error" name="radioError" id="radioError">
+                                    <label for="radioError">Estilo error</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" class="radio--error" name="radioError" id="radioErrorChecked" checked="checked">
+                                    <label for="radioErrorChecked">Estilo error checked</label>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" class="radio--success" name="radioSuccess" id="radioSuccess">
+                                    <label for="radioSuccess">Estilo success</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" class="radio--success" name="radioSuccess" id="radioSuccessChecked" checked="checked">
+                                    <label for="radioSuccessChecked">Estilo success checked</label>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <form action="" class="form">
+                                <div class="form__item">
+                                    <input type="radio" class="radio--warning" name="radioWarning" id="radioWarning">
+                                    <label for="radioWarning">Estilo warning</label>
+                                </div>
+                                <div class="form__item">
+                                    <input type="radio" class="radio--warning" name="radioWarning" id="radioWarningChecked" checked="checked">
+                                    <label for="radioWarningChecked">Estilo warning checked</label>
+                                </div>
+                            </form>
                         </div>
-                        <div style="padding: 2rem; margin: 1rem 0rem">
-                            <p>2-. Estilo secondary de los inputs tipo radio</p>
-                            <label for="gen">Género</label>
-                            <input class="secondary" type="radio" name="gen" id="Femenino1" checked="checked">
-                            <label for="Femenino1">Femenino</label>
-                            <input class="secondary" type="radio" name="gen" id="Masculino1">
-                            <label for="Masculino1">Masculino</label>
-                            <input class="secondary" type="radio" name="gen" id="indistinto1">
-                            <label for="indistinto1">Prefiero no decirlo</label>
-                        </div>
-                        <div style="padding: 2rem; margin: 1rem 0rem">
-                            <p>3-. Estilo complementary de los inputs tipo radio</p>
-                            <label for="gen1">Género</label>
-                            <input class="complementary" type="radio" name="gen1" id="Femenino2" checked="checked">
-                            <label for="Femenino2">Femenino</label>
-                            <input class="complementary" type="radio" name="gen1" id="Masculino2">
-                            <label for="Masculino2">Masculino</label>
-                            <input class="complementary" type="radio" name="gen1" id="indistinto2">
-                            <label for="indistinto2">Prefiero no decirlo</label>
-                        </div>
-                        <div style="padding: 2rem; margin: 1rem 0rem" >
-                            <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
-                            <label for="gener">Género</label>
-                            <input class="error"type="radio" name="gener" id="mujer" checked="checked">
-                            <label for="mujer">Femenino</label>
-                            <input class="error" type="radio" name="gener" id="hombre">
-                            <label  for="hombre">Masculino</label>
-                            <input class="error" type="radio" name="gener" id="preferencia">
-                            <label  for="preferencia">Prefiero no decirlo</label>
-                          </div>
-                          <div style="padding: 2rem; margin: 1rem 0rem" >
-                            <p>Para esta variación se necesita poner la clase <code>success</code> en los input</p>
-                            <label for="gener5">Género</label>
-                            <input class="success" type="radio" name="gener5" id="mujeres" checked="checked">
-                            <label  for="mujeres">Femenino</label>
-                            <input class="success" type="radio" name="gener5" id="hombres">
-                            <label  for="hombres">Masculino</label>
-                            <input class="success" type="radio" name="gener5" id="preferencias">
-                            <label  for="preferencias">Prefiero no decirlo</label>
-                          </div>
-                          <div style="padding: 2rem; margin: 1rem 0rem">
-                            <p>Para esta variación se necesita poner la clase <code>warning</code> en los input</p>
-                            <label for="fut">¿Te gusta el fútbol?</label>
-                            <input class="warning" type="radio" name="fut" id="yes" checked="checked">
-                            <label  for="yes">Si</label>
-                            <input class="warning" type="radio" name="fut" id="no">
-                            <label for="no">No</label>
-                            <input class="warning" type="radio" name="fut" id="talvez">
-                            <label for="talvez">Más o menos</label>
-                          </div>
-              
                     </div>
                 </div>
-                <div class="validation-text__check" style="margin-top: 3rem;" >
-                    <h2>ChexBox</h2>
-                    <div  style="padding: 2rem; margin: 1rem 0rem">
-                        <p>1-. Estilo base de los inputs tipo checkbox.</p>
-                      <label >¿Cuál es tu género de película favorita?</label>
-                        <input type="checkbox" id="pelicula1" checked="checked"><label for="pelicula1">Romance</label>
-                        <input type="checkbox" id="pelicula2"><label  for="pelicula2"> Acción</label>
-                        <input type="checkbox" id="pelicula3"><label  for="pelicula3"> Ciencia Ficción</label> 
-                        <input type="checkbox" id="pelicula4"><label  for="pelicula4">Thrillers</label> 
-                        <input type="checkbox" id="pelicula5"><label  for="pelicula5"> Terror</label> 
-                        <input type="checkbox" id="pelicula6"><label  for="pelicula6">Otros</label> 
-                    </div>
-                    <div  style="padding: 2rem; margin: 1rem 0rem">
-                        <p>2-. Estilo secondary de los inputs tipo checkbox.</p>
-                      <label >¿Cuál es tu género de película favorita?</label>
-                        <input class="secondary" type="checkbox" id="peli1" checked="checked"><label for="peli1">Romance</label>
-                        <input  class="secondary" type="checkbox" id="peli2"><label  for="peli2"> Acción</label>
-                        <input class="secondary"  type="checkbox" id="peli3"><label  for="peli3"> Ciencia Ficción</label> 
-                        <input  class="secondary" type="checkbox" id="peli4"><label  for="peli4">Thrillers</label> 
-                        <input  class="secondary" type="checkbox" id="peli5"><label  for="peli5"> Terror</label> 
-                        <input class="secondary"  type="checkbox" id="peli6"><label  for="peli6">Otros</label> 
-                    </div>
-                    <div  style="padding: 2rem; margin: 1rem 0rem">
-                        <p>3-. Estilo complementary de los inputs tipo checkbox.</p>
-                      <label >¿Cuál es tu género de película favorita?</label>
-                        <input class="complementary" type="checkbox" id="pelic1" checked="checked"><label for="pelic1">Romance</label>
-                        <input class="complementary" type="checkbox" id="pelic2"><label  for="pelic2"> Acción</label>
-                        <input class="complementary" type="checkbox" id="pelic3"><label  for="pelic3"> Ciencia Ficción</label> 
-                        <input class="complementary" type="checkbox" id="pelic4"><label  for="pelic4">Thrillers</label> 
-                        <input class="complementary" type="checkbox" id="pelic5"><label  for="pelic5"> Terror</label> 
-                        <input class="complementary" type="checkbox" id="pelic6"><label  for="pelic6">Otros</label> 
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>Para esta variación se necesita poner la clase <code>error</code> en los input</p>
-                        <label >¿Cuál es tu género de musica favorita?</label>
-                        <input  class="error" type="checkbox" id="music1" checked="checked"> 
-                        <label  for="music1">Ballenato</label>
-                        <input  class="error" type="checkbox" id="music2"> 
-                        <label  for="music2">Bachata</label> 
-                        <input  class="error" type="checkbox" id="music3"  >
-                        <label  for="music3"> Merengue</label> 
-                        <input  class="error" type="checkbox" id="music4" > 
-                        <label  for="music4">Otros</label> 
-                        </label>
-                      </div>   
-                      <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>Para esta variación se necesita poner la clase <code>success</code> en los input</p>
-                        <label >¿Cuál es tu género de película favorita?</label>
-                          <input  class="success" type="checkbox" id="movi1" checked="checked"> 
-                          <label  for="movi1">Romance</label>
-                          <input  class="success" type="checkbox" id="movi4"> 
-                          <label  for="movi4">Thrillers</label> 
-                          <input  class="success" type="checkbox" id="movi5"  >
-                          <label  for="movi5"> Terror</label> 
-                          <input  class="success" type="checkbox" id="movi6" > 
-                          <label  for="movi6">Otros</label> 
-                      </div>                      
-                      <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>Para esta variación se necesita poner la clase <code>warning</code> en los input</p>
-                        <label >¿Cuál es tu género de película favorita?</label>
-                          <input  class="warning" type="checkbox" id="movie1" checked="checked"> 
-                          <label  for="movie1">Romance</label>
-                          <input class="warning" type="checkbox" id="movie2">
-                          <label  for="movie2"> Acción</label>
-                          <input class="warning" type="checkbox" id="movie3"  >
-                          <label  for="movie3"> Ciencia Ficción</label> 
-                          <input class="warning" type="checkbox" id="movie4"> 
-                          <label  for="movie4">Thrillers</label> 
-                          <input class="warning"type="checkbox" id="movie5"  >
-                          <label  for="movie5"> Terror</label> 
-                          <input class="warning" type="checkbox" id="movie6" > 
-                          <label  for="movie6">Otros</label> 
-                      </div>
-          
+                <br><br>
+                <div class="mb-base">
+                    <h2>CheckBox</h2>
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" name="checkboxBase" id="checkboxBase">
+                            <label for="checkboxBase">Estilo base</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" name="checkboxBaseChecked" id="checkboxBaseChecked" checked="checked">
+                            <label for="checkboxBaseChecked">Estilo base checked</label>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--secondary" name="checkboxSecondary" id="checkboxSecondary">
+                            <label for="checkboxSecondary">Estilo secondary</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--secondary" name="checkboxSecondaryChecked" id="checkboxSecondaryChecked" checked="checked">
+                            <label for="checkboxSecondaryChecked">Estilo secondary checked</label>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--complementary" name="checkboxComplementary" id="checkboxComplementary">
+                            <label for="checkboxComplementary">Estilo complementary</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--complementary" name="checkboxComplementaryChecked" id="checkboxComplementaryChecked" checked="checked">
+                            <label for="checkboxComplementaryChecked">Estilo complementary checked</label>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--error" name="checkboxError" id="checkboxError">
+                            <label for="checkboxError">Estilo error</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--error" name="checkboxErrorChecked" id="checkboxErrorChecked" checked="checked">
+                            <label for="checkboxErrorChecked">Estilo error checked</label>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--success" name="checkboxSuccess" id="checkboxSuccess">
+                            <label for="checkboxSuccess">Estilo success</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--success" name="checkboxSuccessChecked" id="checkboxSuccessChecked" checked="checked">
+                            <label for="checkboxSuccessChecked">Estilo success checked</label>
+                        </div>
+                    </form>
+
+                    <hr>
+                    
+                    <form action="" class="form">
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--warning" name="checkboxWarning" id="checkboxWarning">
+                            <label for="checkboxWarnings">Estilo warning</label>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" class="checkbox--warning" name="checkboxWarningChecked" id="checkboxWarningChecked" checked="checked">
+                            <label for="checkboxWarningChecked">Estilo warning checked</label>
+                        </div>
+                    </form>
                 </div>
-                <div class="validation-text__submit" style="margin-top: 3rem;">
-                    <h2>Input Type Submit and Type Button</h2>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>-----------Estilo Base-----------</p>  
-                        <p> Estilo base de la etiqueta input Type Submit and Type Button. </p>
-                        <input type="submit" value="Type Submit">
-                        <input type="button" value="Type Button">
-                    </div>
-                    <div style="padding: 2rem; margin: 1rem 0rem">
-                        <p>-----------Estilo Solido-----------</p> 
-                        <p>El primer input posee la clase <code>input-btn</code> que se presenta del color primario (base) 
-                        , el segundo input posee la clase <code>input-btn__secondary</code> y se presenta del color secundario(base)
-                        el segundo input posee la clase <code>input-btn__tertiary</code> y se presenta del color secundario(base)..
-                        </p>
-                        <input class="input-btn" type="button" value="Ver información"> 
-                        <input class="input-btn__secondary" type="button" value="Ver información"> 
-                        <input class="input-btn__tertiary" type="button" value="Ver información"> 
-                    </div>
+                <br><br>
+                <div class="mb-base">
+                    <h2>Input Type Submit & Type Button</h2>
+                    <input type="button" value="Type Button">
+                    <input class="btn--secondary" type="button" value="Type Button secundario"> 
+                    <input class="btn--complementary" type="button" value="Type Button complementario"> 
+
+                    <hr>
+
+                    <input type="submit" value="Type Submit">
+                    <input class="btn--secondary" type="submit" value="Type Submit secundario"> 
+                    <input class="btn--complementary" type="submit" value="Type Submit complementario"> 
                 </div>     
             </div>
             <!-- Sección de tablas -->
-            <div id="tables" class="ml-tab-content">
+            <div id="tables" class="tab__content">
                 <h2>Diseño de tablas Simple</h2>
                 <p>Se aplicó un estilo base de la etiqueta table, que pinta la cabecera de la tabla
                  del color primario (base). Si se utiliza la clase <code>table-simple</code>
                 se aplicará un diseño diferente para el responsive. </p>
-                <table class="table-simple" summary="Los grupos de música punk más famosos del Reino Unido">
+                <table summary="Los grupos de música punk más famosos del Reino Unido">
                 <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
                 <thead>
                     <tr>
@@ -547,12 +515,12 @@
                     </tr>
                 </tfoot>
                 </table>
-                <div style="margin-top: 3rem;">
+                <div class="mt-thumb">
                     <!--Estructura de una tabla de diseño de color negro , puede modificarse de color -->
                     <h2>Diseño de Tabla Black</h2>
                     <p>Para otro diseño de tabla se puede utilizar la clase <code>table-black</code>, esta clase brinda 
                     un estilo para desktop y otro estilo para responsive.</p>
-                    <table class="table-black" summary="Los grupos de música punk más famosos del Reino Unido">
+                    <table class="table table--black" summary="Los grupos de música punk más famosos del Reino Unido">
                     <caption>Un resumen de los grupos de música punk más famosos del Reino Unido</caption>
                     <thead>
                         <tr>
@@ -605,12 +573,12 @@
             </div>
 
             <!-- Sección de titulos y listas -->
-            <div id="headings" class="ml-tab-content">
+            <div id="headings" class="tab__content">
             <p>
                 Para los headings se configura desde el mixin la fuente y el color de estos
                 y los tamaños se configuran desde el archivo headings.scss 
             </p>
-                <div style="text-align: center;">
+                <div>
                     <h1>Esto es un H1</h1>
                     <h2>Esto es un H2</h2>
                     <h3>Esto es un H3</h3>
@@ -652,7 +620,7 @@
                   </ol>
             </div>
             <!-- Sección grillas -->
-            <div id="grilla" class="ml-tab-content">
+            <div id="grilla" class="tab__content">
                 <h2>Grilla de imagenes</h2>
                 <p>
                     Para configurar la grilla de imagenes, en el archivo grid.scss se pueden observar las clases que debemos
@@ -695,7 +663,7 @@
                 <hr>
                 <h2>FlexBox</h2>
                 <!-- Flex Directions -->
-                <div style="padding: 2rem; margin: 1rem 0rem">
+                <div class="mt-base">
                     <h6>Flex Direction</h6>
                     <div>
                         <p>Se asigna la clase <code>d-flex</code> para implementar contenedores flex.</p>
@@ -713,7 +681,7 @@
                     </div>
                 </div>
                 <hr>
-                <div style="padding: 2rem; margin: 1rem 0rem">
+                <div class="mt-base">
                     <h6>Flex Direction Responsive</h6>
                 <div>
                     <p>Las clases de direccion se han configurado en los diferentes breakpoints basicos.</p>
@@ -737,7 +705,7 @@
                 </div>
                 <hr>
                 <!-- Justificación de contenido -->
-                <div style="padding: 2rem; margin: 1rem 0rem">
+                <div class="mt-base">
                     <h6>Justificación de contenido</h6>
                     <div>
                         <p>Define la distribución del contenido en el eje horizontal</p>
@@ -818,7 +786,7 @@
                 </div>
                 <hr>
                 <!-- Alineación vertical de contenido -->
-                <div style="padding: 2rem; margin: 1rem 0rem">
+                <div class="mt-base">
                     <h6>Alineación Vertical</h6>
                     <div>
                         <p>Las siguientes clases ajustan la posición del contenido en el eje vetical, ya sea arriba del contenedor, al final, en el centro o de estilo justificado cubriendo todo el alto del mismo.</p>

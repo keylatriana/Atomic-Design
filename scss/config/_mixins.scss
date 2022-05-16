@@ -62,10 +62,10 @@
 // ==========================================================================
 // Mixins para la orientación de la barra de navegación: @include nav( ... );
 // ==========================================================================
-@mixin nav($direction) {
+@mixin nav($direction, $space, $list-style) {
   flex-direction: $direction;
-  justify-content: space-between;
-  list-style: none;
+  justify-content: $space;
+  list-style: $list-style;
 }
 
 // ==========================================================================
@@ -100,6 +100,7 @@
     background: $bg;
     &:hover {
       background: darken($bg, 7%);
+      color: color(grayscale, white);
       transition: background 0.2s ease;
       text-decoration: none;
     }
@@ -184,8 +185,8 @@
 // ==========================================================================
 // Mixins para la generación de los select : @include button( ... );
 // ==========================================================================
-@mixin select($bg, $color,  $border-style, $border-width,$border,$border-radius) {
-  border: $border-style $border-width $border;
+@mixin select($color, $border-style, $border-width, $border-color, $border-radius) {
+  border: $border-style $border-width $border-color;
   border-radius: $border-radius;
   color: $color;
   cursor:pointer;
@@ -297,4 +298,15 @@
   display: grid;
   grid-gap: $gap;
   grid-template-columns: $grid-colums;
+}
+
+// ==========================================================================
+// Mixins para la generación de los spaciados ( margins y paddings )
+// ==========================================================================
+@mixin list-spacing($className, $styleName) {
+  @each $name, $space in $sizes {
+    #{$className}-#{$name} {
+      #{$styleName}: $space;
+    }
+  }
 }

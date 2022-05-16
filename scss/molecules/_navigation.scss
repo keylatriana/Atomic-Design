@@ -1,16 +1,17 @@
-.ml-nav-list {
+.nav__list {
     display:flex;
     font-size: map-get($sizes, "thumb");
     font-weight: map-get($weights, "semi_bold");    
-}
-// menu de navegacion vertical (pantalla pequeña)
-.ml-nav-list-column {
-    @extend .ml-nav-list;
-    @include nav(column);
-}
-
-// menu de navegacion horizontal (ideal para pantalla grande)
-.ml-nav-list-row {
-    @extend .ml-nav-list;
-    @include nav(row);
+    &--column {
+        @include nav(column, start, none);
+        a{
+            margin-bottom: 1rem;
+        }
+    }
+    &--row {
+        @include nav(row, start, none);
+        a{
+            margin-right: 1rem;
+        }
+    }
 }

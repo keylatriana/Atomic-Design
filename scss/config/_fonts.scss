@@ -1,5 +1,5 @@
 $font-size         : 1.6rem;
-$font-primary      : 'Josefin Sans', sans-serif;
+$font-primary      : 'nunito', sans-serif;
 $font-icon         : 'iconFont'; 
 
 // ==========================================================================
@@ -7,36 +7,36 @@ $font-icon         : 'iconFont';
 // ==========================================================================
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('../fonts/Josefin/JosefinSans-Medium.woff2') format('woff2'),
-        url('../fonts/Josefin/JosefinSans-Medium.woff') format('woff');
+    font-family: 'nunito';
+    src: url('../fonts/nunito/Nunito-Medium.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('../fonts/Josefin/JosefinSans-Bold.woff2') format('woff2'),
-        url('../fonts/Josefin/JosefinSans-Bold.woff') format('woff');
+    font-family: 'nunito';
+    src: url('../fonts/nunito/Nunito-Bold.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('../fonts/Josefin/JosefinSans-Regular.woff2') format('woff2'),
-        url('../fonts/Josefin/JosefinSans-Regular.woff') format('woff');
+    font-family: 'nunito';
+    src: url('../fonts/nunito/Nunito-Regular.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('../fonts/Josefin/JosefinSans-SemiBold.woff2') format('woff2'),
-        url('../fonts/Josefin/JosefinSans-SemiBold.woff') format('woff');
+    font-family: 'nunito';
+    src: url('../fonts/nunito/Nunito-SemiBold.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;

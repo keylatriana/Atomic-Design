@@ -7,13 +7,13 @@ ul{
     font-family: $font-primary;
     font-size: map-get($sizes,base);
     list-style: disc;
+    margin-left: 2rem;
     li{
         padding-bottom: 1rem;
     }
     &.bullets{
         color: color(complementary, 300);
         list-style: none;
-        margin-left: 1rem;
         padding: 0;
         li{
             padding-left: 22px;
@@ -21,7 +21,6 @@ ul{
             &:before{
                 content: "\2665";
                 left: 0;
-                padding-right: 8px;
                 position: absolute;
                 top: 0;
             }
@@ -31,8 +30,9 @@ ul{
 ol{ 
     color: color(secondary,900);
     font-family: $font-primary;
-    font-size: map-get($sizes ,base );
-    list-style:decimal;
+    font-size: map-get($sizes, base);
+    list-style: decimal;
+    margin-left: 2rem;
     li{
         padding-bottom: 1rem;
     }

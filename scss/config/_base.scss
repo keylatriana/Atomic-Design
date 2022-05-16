@@ -12,8 +12,12 @@ body {
   font-family: $font-primary;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
   font-size: map-get($sizes,base);
 	height: 100%;
 }
+
+code{
+  background: color(grayscale, gray-1);
+  font-size: map-get($sizes,small);
+}
+

@@ -1,29 +1,16 @@
 a{
     @extend %link;
 }
-.at-link{
-    @include link (color(primary,700),color(secondary,500))
-}
-.at-link__secondary{
-    @include link (color(secondary,400),color(complementary,300));
-}
-  
-// Link subrayado
-.at-link__underline{
-    @include link (color(primary,700),color(complementary,300));
-    font-weight: map-get($weights, "semi_bold");
-    text-decoration: underline;
-
-    &:hover{
-        text-decoration: none;      
+.link{
+    &--secondary{
+        @include link (color(secondary,500),color(complementary,300));
     }
-}
-.at-link-underline__secondary{
-    @include link (color(secondary,800),color(complementary,200));
-    font-weight: map-get($weights, "semi_bold");
-    text-decoration: underline;
-
-    &:hover {
-        text-decoration: none;
+    &--underline{
+        @include link (color(primary,500),color(complementary,300));
+        text-decoration: underline;
+        &-secondary{
+            @include link (color(secondary,500),color(complementary,300));
+            text-decoration: underline;
+        }
     }
 }

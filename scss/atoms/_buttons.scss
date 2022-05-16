@@ -1,47 +1,36 @@
-//propiedades básicas de botón
-button{
+button,
+input[type="submit"],
+input[type="button"]{
     @extend %button;
-}
-
-.at-btn{
-    @include button( color(primary,500) );
-}
-// botón secundario
-.at-btn__secondary {
-    @include button( color(secondary, 500) );
-}
-// botón terciario
-.at-btn__tertiary {
-    @include button( color(complementary, 700) );
-}
-// botón con background transparente y borde
-.at-btn__ghost {     
-    @include button ( transparent, color(grayscale,white), color(secondary, 500), 0.1rem);
-}
-// botón con background blanco y borde normal
-.at-btn-outline {
-    @include button( color(grayscale,white), color(primary, 500), color(primary, 500), 0.1rem);
-}
-// botón con background blanco y borde secundario
-.at-btn-outline__secondary {
-    @include button( color(grayscale,white), color(secondary, 500), color(secondary, 500), 0.1rem );
-}
-// boton de tabs (básico)
-.at-tab-btn {
-    background: none;
-    border: 0;
-    border-radius: 0.3rem 0.3rem 0rem 0rem;
-    margin: 0rem;
-    outline: none;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-
-.at-tab-btn:hover {
-    background-color: color(grayscale, gray-3);
-}
-
-.at-tab-btn.active {
-    background-color: color(grayscale, gray-3);
-    border: none;
+    &.btn{
+        &--secondary {
+            @include button( color(secondary, 500) );
+        }
+        &--complementary {
+            @include button( color(complementary, 700) );
+        }
+        &--ghost {     
+            @include button ( transparent, color(grayscale,white), color(secondary, 500), 0.1rem);
+        }
+        &--outline {
+            @include button( color(grayscale,white), color(primary, 500), color(primary, 500), 0.1rem);
+            &-secondary {
+                @include button( color(grayscale,white), color(secondary, 500), color(secondary, 500), 0.1rem );
+            }
+            &-complementary {
+                @include button( color(grayscale,white), color(complementary, 700), color(complementary, 700), 0.1rem );
+            }
+        }
+        &__tab{
+            @include button( color(primary, 500), color(grayscale, white), transparent, 0, 0 );
+            margin: 0rem;
+            outline: none;
+            padding: 14px 16px;
+            transition: 0.3s;
+            &.active {
+                background-color: color(primary, 900);
+                border: none;
+            }
+        }
+    }
 }

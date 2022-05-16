@@ -32,3 +32,12 @@ $weights: (
    bold     :  700,
    extra_bold: 800
 );
+
+$breakpoints: (
+   xs   : 360px,
+   sm   : 540px,
+   md   : 720px,
+   lg   : 960px,
+   xl   : 1140px,
+   xxl  : 1440px
+);

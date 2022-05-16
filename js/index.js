@@ -6,11 +6,11 @@ window.onload = function() {
 // Manejo de tabs
 function openTab(evt, idSection) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("ml-tab-content");
+    tabcontent = document.getElementsByClassName("tab__content");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("at-tab-btn");
+    tablinks = document.getElementsByClassName("btn__tab");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }

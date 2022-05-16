@@ -1,14 +1,14 @@
 .container {
-    width: 100%;
-    padding: {
-       left: 1rem;
-       right: 1rem;
-    };
-    margin: {
-       left: auto;
-       right: auto;
-    };
-    &.full {
+   margin: {
+      left: auto;
+      right: auto;
+   };
+   padding: {
+      left: 1rem;
+      right: 1rem;
+   };
+   width: 100%;
+   &__full {
       padding: 0;
       @include mq-min(lg) {
          padding: {
@@ -17,10 +17,16 @@
          };
       }
    }
-    @include mq-min(md) {
-       max-width: map-get($breakpoints, "lg") - 100px ;
-    }
-    @include mq-min(lg) {
-       max-width: 1140px;
-    } 
- } 
+} 
+
+
+@include mq-min(md) {
+   .container{
+      max-width: map-get($breakpoints, "lg") - 100px ;
+   }
+}
+@include mq-min(lg) {
+   .container{
+      max-width: 1140px;
+   }
+} 
